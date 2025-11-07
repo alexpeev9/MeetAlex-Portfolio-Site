@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "title": "Alexander Peev | React Developer Portfolio",
+    "description": "Explore Alexander Peev's React development projects, process, and services tailored for modern web applications."
+  },
+  "navigation": {
+    "logoPrimary": "Alexander Peev",
+    "logoSecondary": "react.dev",
+    "items": [
+      { "id": "projects", "label": "Projects" },
+      { "id": "process", "label": "Process" },
+      { "id": "about", "label": "About" }
+    ],
+    "cta": "Start a Project",
+    "ariaMenu": "Primary navigation",
+    "ariaItemPrefix": "Go to",
+    "logoAria": "Alexander Peev developer home"
+  },
+  "hero": {
+    "headline": "Beautiful React experiences for modern teams",
+    "subheadline": "I help founders and product teams craft fast, accessible, and future-proof web applications.",
+    "primaryCta": "Schedule a Call",
+    "secondaryCta": "View Recent Work",
+    "primaryCtaUrl": "https://cal.com/peev",
+    "secondaryCtaUrl": "https://github.com/alexander-peev",
+    "imageSrc": "/hero-portrait.svg",
+    "imageAlt": "Abstract illustration representing Alexander Peev with a confident smile"
+  },
+  "process": {
+    "title": "Working together",
+    "description": "We partner closely to understand your goals, design the solution, and ship production-ready React applications.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Discovery Session",
+        "copy": "Share your vision and requirements so we can align on scope and priorities."
+      },
+      {
+        "step": "02",
+        "title": "Design & Build",
+        "copy": "I prototype UI flows, build in React + TypeScript, and iterate quickly with your feedback."
+      },
+      {
+        "step": "03",
+        "title": "Deploy & Support",
+        "copy": "Launch confidently with testing, documentation, and ongoing support options."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Selected projects",
+    "description": "A snapshot of products I've shipped for startups and established teams across SaaS, e-commerce, and internal tooling.",
+    "projects": [
+      {
+        "name": "SaaS Analytics Platform",
+        "tags": ["React", "Next.js", "Tailwind"],
+        "description": "Interactive dashboards that help operators monitor real-time metrics and automate alerts.",
+        "imageSrc": "/project-analytics.svg",
+        "imageAlt": "Analytics dashboard mockup with rising line chart",
+        "actions": [
+          { "label": "Case Study", "url": "https://www.linkedin.com/in/alexander-peev" },
+          { "label": "Live Demo", "url": "https://github.com/alexander-peev" }
+        ]
+      },
+      {
+        "name": "E-commerce Launchpad",
+        "tags": ["TypeScript", "React Query", "Stripe"],
+        "description": "Headless commerce storefront with dynamic content, checkout flows, and subscription billing.",
+        "imageSrc": "/project-commerce.svg",
+        "imageAlt": "E-commerce storefront mockup with product cards and checkout",
+        "actions": [
+          { "label": "Product Tour", "url": "https://www.linkedin.com/in/alexander-peev" },
+          { "label": "View Repo", "url": "https://github.com/alexander-peev" }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About Alexander",
+    "copy": "I'm a React developer based in Sofia, Bulgaria focused on building polished, resilient interfaces that feel effortless to use.",
+    "values": [
+      {
+        "title": "Custom Solutions",
+        "description": "Every project is designed around your product metrics, brand, and growth plans."
+      },
+      {
+        "title": "Reliable Delivery",
+        "description": "Transparent timelines, async updates, and fast iteration keep launches on track."
+      },
+      {
+        "title": "Performance Minded",
+        "description": "Built with modern tooling, accessibility, and lighthouse checks baked in."
+      },
+      {
+        "title": "Security First",
+        "description": "Implementing best practices for auth, API communication, and infrastructure."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's build something great",
+    "description": "Share your project details and let's explore how we can collaborate to ship your next release.",
+    "form": {
+      "nameLabel": "Your Name",
+      "emailLabel": "Email",
+      "messageLabel": "Project Notes",
+      "submit": "Send Message",
+      "namePlaceholder": "How should I address you?",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Tell me about the scope, timeline, and goals."
+    },
+    "cards": [
+      {
+        "title": "Book a intro call",
+        "description": "Grab a 30-minute slot to discuss goals, timelines, and next steps.",
+        "cta": "Schedule Now",
+        "url": "https://cal.com/peev"
+      },
+      {
+        "title": "Say hello",
+        "description": "Reach out on LinkedIn or email and I'll respond within one business day.",
+        "cta": "Contact Alexander",
+        "url": "mailto:hello@alexanderpeev.dev"
+      }
+    ],
+    "ariaCardPrefix": "Open resource"
+  },
+  "footer": {
+    "copyright": "© Alexander Peev. All rights reserved.",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alexander-peev" },
+      { "label": "GitHub", "url": "https://github.com/alexander-peev" },
+      { "label": "Privacy", "url": "https://alexanderpeev.dev/privacy" }
+    ]
+  },
+  "accessibility": {
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "primaryCta": "Schedule a call with Alexander Peev",
+    "secondaryCta": "View recent React work",
+    "timeline": "Project delivery step",
+    "projectLink": "View project resource",
+    "submitForm": "Send project inquiry"
+  }
+}

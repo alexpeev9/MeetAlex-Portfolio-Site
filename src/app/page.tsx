@@ -1,65 +1,135 @@
-import Image from "next/image";
+'use client';
+
+import { useMemo, useState } from 'react';
+import styles from './page.module.css';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import HeroSection from '@/components/sections/HeroSection';
+import ProcessSection from '@/components/sections/ProcessSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ContactSection, { ContactFormState } from '@/components/sections/ContactSection';
+import { getCopy, PortfolioProject, ProcessStep, ValueCard, ContactCard, ProjectAction } from '@/lib/getCopy';
+import { useMountedAnimations } from '@/hooks/useMountedAnimations';
+import { openInNewTab, scrollToId } from '@/utils/navigation';
+
+const copy = getCopy();
 
 export default function Home() {
+  const [formState, setFormState] = useState<ContactFormState>({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const { isMounted, getDelayStyle } = useMountedAnimations();
+
+  const navigation = useMemo(() => copy.navigation, []);
+  const hero = useMemo(() => copy.hero, []);
+  const process = useMemo(() => copy.process, []);
+  const portfolio = useMemo(() => copy.portfolio, []);
+  const about = useMemo(() => copy.about, []);
+  const contact = useMemo(() => copy.contact, []);
+  const accessibility = useMemo(() => copy.accessibility, []);
+  const footer = useMemo(() => copy.footer, []);
+
+  const processHighlights = useMemo<ProcessStep[]>(() => process.steps.slice(0, 3), [process]);
+  const projects = useMemo<PortfolioProject[]>(() => portfolio.projects, [portfolio]);
+  const values = useMemo<ValueCard[]>(() => about.values, [about]);
+  const contactCards = useMemo<ContactCard[]>(() => contact.cards, [contact]);
+  const footerLinks = useMemo<ProjectAction[]>(() => footer.links, [footer]);
+
+  const handleNavigate = (targetId: string) => {
+    scrollToId(targetId);
+  };
+
+  const handleHeroPrimary = () => {
+    openInNewTab(hero.primaryCtaUrl);
+  };
+
+  const handleHeroSecondary = () => {
+    openInNewTab(hero.secondaryCtaUrl);
+  };
+
+  const handleProjectAction = (url: string) => {
+    openInNewTab(url);
+  };
+
+  const handleContactResource = (url: string) => {
+    openInNewTab(url);
+  };
+
+  const handleFooterLink = (url: string) => {
+    openInNewTab(url);
+  };
+
+  const handleFormChange = (field: keyof ContactFormState, value: string) => {
+    setFormState((previous) => ({ ...previous, [field]: value }));
+  };
+
+  const handleFormSubmit = () => {
+    const defaultContactUrl = contactCards[1]?.url ?? 'mailto:hello@alexanderpeev.dev';
+    openInNewTab(defaultContactUrl);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className={styles.page}>
+      <Header
+        navigation={navigation}
+        onNavigate={handleNavigate}
+        isMounted={isMounted}
+        getDelayStyle={getDelayStyle}
+      />
+      <main className="flex-1">
+        <HeroSection
+          hero={hero}
+          processHighlights={processHighlights}
+          logoAccent={navigation.logoSecondary}
+          onPrimaryCta={handleHeroPrimary}
+          onSecondaryCta={handleHeroSecondary}
+          isMounted={isMounted}
+          getDelayStyle={getDelayStyle}
+          primaryCtaLabel={accessibility.primaryCta}
+          secondaryCtaLabel={accessibility.secondaryCta}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <ProcessSection
+          process={process}
+          timelineLabel={accessibility.timeline}
+          isMounted={isMounted}
+          getDelayStyle={getDelayStyle}
+        />
+        <ProjectsSection
+          portfolio={{ ...portfolio, projects }}
+          projectLinkLabel={accessibility.projectLink}
+          isMounted={isMounted}
+          getDelayStyle={getDelayStyle}
+          onProjectAction={handleProjectAction}
+        />
+        <AboutSection
+          about={{ ...about, values }}
+          supportingCopy={hero.subheadline}
+          accentLabel={navigation.logoSecondary}
+          isMounted={isMounted}
+          getDelayStyle={getDelayStyle}
+        />
+        <ContactSection
+          contact={{ ...contact, cards: contactCards }}
+          accessibility={accessibility}
+          formState={formState}
+          onFormChange={handleFormChange}
+          onSubmit={handleFormSubmit}
+          onCardActivate={handleContactResource}
+          isMounted={isMounted}
+          getDelayStyle={getDelayStyle}
+        />
       </main>
+      <Footer
+        footer={{ ...footer, links: footerLinks }}
+        linkAriaLabel={accessibility.projectLink}
+        onLinkActivate={handleFooterLink}
+        isMounted={isMounted}
+        getDelayStyle={getDelayStyle}
+      />
     </div>
   );
 }
