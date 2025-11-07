@@ -1,0 +1,195 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(147, 197, 253, 0.1), transparent 40%),
+    #020617;
+  color: #e2e8f0;
+}
+
+.section {
+  width: 100%;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 5rem 3.5rem;
+  }
+}
+
+.panel {
+  position: relative;
+  border-radius: 2rem;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 2.75rem;
+  box-shadow: 0 24px 72px -48px rgba(30, 64, 175, 0.75);
+  backdrop-filter: blur(14px);
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  pointer-events: none;
+}
+
+.heroVisual {
+  position: relative;
+  border-radius: 2.25rem;
+  overflow: hidden;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(30, 64, 175, 0.1));
+}
+
+.heroGlow {
+  position: absolute;
+  inset: -45%;
+  background: radial-gradient(circle at 65% 25%, rgba(56, 189, 248, 0.25), transparent 65%),
+    radial-gradient(circle at 15% 75%, rgba(147, 197, 253, 0.22), transparent 70%);
+  filter: blur(42px);
+  opacity: 0.75;
+  animation: pulseGlow 9s ease-in-out infinite;
+}
+
+.fadeIn {
+  animation: fadeIn 0.9s ease forwards;
+  opacity: 0;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.9s ease forwards;
+  opacity: 0;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(71, 85, 105, 0.7);
+  padding: 0.25rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5f5;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+.roleCard {
+  position: relative;
+  border-radius: 1.75rem;
+  background: rgba(15, 23, 42, 0.65);
+  padding: 2.5rem;
+  box-shadow: 0 28px 60px -42px rgba(14, 165, 233, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.roleCard:hover {
+  transform: translateY(-0.4rem) scale(1.01);
+  box-shadow: 0 34px 80px -44px rgba(14, 165, 233, 0.45);
+}
+
+.roleCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.roleCard:hover::before {
+  opacity: 1;
+}
+
+.gridTwo {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .gridTwo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.gridThree {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .gridThree {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.ctaPanel {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(15, 118, 110, 0.2));
+  box-shadow: 0 30px 90px -60px rgba(13, 148, 136, 0.45);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -40,6 +40,11 @@ export default function Home() {
   const footerLinks = useMemo<ProjectAction[]>(() => footer.links, [footer]);
 
   const handleNavigate = (targetId: string) => {
+    if (targetId === 'hire-page') {
+      window.location.href = '/hire';
+      return;
+    }
+
     scrollToId(targetId);
   };
 

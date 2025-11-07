@@ -35,6 +35,20 @@ export type ContactCard = {
   url: string;
 };
 
+export type HireBenefit = ValueCard;
+
+export type HirePosition = {
+  title: string;
+  location: string;
+  type: string;
+  summary: string;
+  tags: string[];
+  ctaLabel: string;
+  ctaUrl: string;
+};
+
+export type HirePoint = ValueCard;
+
 export type CopyShape = {
   metadata: {
     title: string;
@@ -88,6 +102,51 @@ export type CopyShape = {
     };
     cards: ContactCard[];
     ariaCardPrefix: string;
+  };
+  hire: {
+    hero: {
+      eyebrow: string;
+      headline: string;
+      subheadline: string;
+      primaryCta: string;
+      secondaryCta: string;
+      primaryCtaUrl: string;
+      secondaryCtaUrl: string;
+      imageSrc: string;
+      imageAlt: string;
+    };
+    benefits: {
+      title: string;
+      items: HireBenefit[];
+    };
+    roles: {
+      title: string;
+      description: string;
+      positions: HirePosition[];
+    };
+    process: {
+      title: string;
+      steps: ProcessStep[];
+    };
+    culture: {
+      title: string;
+      points: HirePoint[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      primaryLabel: string;
+      primaryUrl: string;
+      secondaryLabel: string;
+      secondaryUrl: string;
+    };
+    accessibility: {
+      primaryCta: string;
+      secondaryCta: string;
+      roleCta: string;
+      hirePrimary: string;
+      hireSecondary: string;
+    };
   };
   footer: {
     copyright: string;
