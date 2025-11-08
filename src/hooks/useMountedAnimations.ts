@@ -12,7 +12,7 @@ export const useMountedAnimations = (
 
   const getDelayStyle = (
     index = 0,
-    baseDelay = defaultBaseDelay,
+    baseDelay = defaultBaseDelay
   ): CSSProperties | undefined => {
     if (!isMounted) {
       return undefined;

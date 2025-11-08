@@ -1,141 +1,107 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import styles from './page.module.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import HeroSection from '@/components/sections/HeroSection';
-import ProcessSection from '@/components/sections/ProcessSection';
-import ProjectsSection from '@/components/sections/ProjectsSection';
-import AboutSection from '@/components/sections/AboutSection';
-import ContactSection, { ContactFormState } from '@/components/sections/ContactSection';
-import { getCopy, PortfolioProject, ProcessStep, ValueCard, ContactCard, ProjectAction } from '@/lib/getCopy';
-import { useMountedAnimations } from '@/hooks/useMountedAnimations';
-import { openInNewTab, scrollToId } from '@/utils/navigation';
+import CvEducation from "@/components/cv/CvEducation";
+import CvExperience from "@/components/cv/CvExperience";
+import CvHeader from "@/components/cv/CvHeader";
+import CvProjects from "@/components/cv/CvProjects";
+import CvSalary from "@/components/cv/CvSalary";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import { useMountedAnimations } from "@/hooks/useMountedAnimations";
+import { getCopy } from "@/lib/getCopy";
+import { openInNewTab, scrollToId } from "@/utils/navigation";
+import { useMemo } from "react";
+import styles from "./page.module.css";
 
-const copy = getCopy();
+const cvCopy = getCopy();
 
-export default function Home() {
-  const [formState, setFormState] = useState<ContactFormState>({
-    name: '',
-    email: '',
-    message: '',
-  });
-
+export default function CvPage() {
   const { isMounted, getDelayStyle } = useMountedAnimations();
+  const navigation = useMemo(() => cvCopy.navigation, []);
+  const footer = useMemo(() => cvCopy.footer, []);
+  const appAccessibility = useMemo(() => cvCopy.accessibility, []);
+  const cv = useMemo(() => cvCopy.cv, []);
 
-  const navigation = useMemo(() => copy.navigation, []);
-  const hero = useMemo(() => copy.hero, []);
-  const process = useMemo(() => copy.process, []);
-  const portfolio = useMemo(() => copy.portfolio, []);
-  const about = useMemo(() => copy.about, []);
-  const contact = useMemo(() => copy.contact, []);
-  const accessibility = useMemo(() => copy.accessibility, []);
-  const footer = useMemo(() => copy.footer, []);
-
-  const processHighlights = useMemo<ProcessStep[]>(() => process.steps.slice(0, 3), [process]);
-  const projects = useMemo<PortfolioProject[]>(() => portfolio.projects, [portfolio]);
-  const values = useMemo<ValueCard[]>(() => about.values, [about]);
-  const contactCards = useMemo<ContactCard[]>(() => contact.cards, [contact]);
-  const footerLinks = useMemo<ProjectAction[]>(() => footer.links, [footer]);
+  const headerNavigation = useMemo(
+    () => ({
+      ...navigation,
+      items: navigation.items,
+    }),
+    [navigation]
+  );
 
   const handleNavigate = (targetId: string) => {
-    if (targetId === 'hire-page') {
-      window.location.href = '/hire';
+    if (targetId === "hire-page") {
+      window.location.href = "/hire";
       return;
     }
 
-    if (targetId === 'cv-page') {
-      window.location.href = '/cv';
+    if (
+      targetId === "projects" ||
+      targetId === "process" ||
+      targetId === "about"
+    ) {
+      window.location.href = `/#${targetId}`;
       return;
     }
 
     scrollToId(targetId);
   };
 
-  const handleHeroPrimary = () => {
-    openInNewTab(hero.primaryCtaUrl);
-  };
-
-  const handleHeroSecondary = () => {
-    openInNewTab(hero.secondaryCtaUrl);
-  };
-
-  const handleProjectAction = (url: string) => {
-    openInNewTab(url);
-  };
-
-  const handleContactResource = (url: string) => {
-    openInNewTab(url);
-  };
-
   const handleFooterLink = (url: string) => {
     openInNewTab(url);
-  };
-
-  const handleFormChange = (field: keyof ContactFormState, value: string) => {
-    setFormState((previous) => ({ ...previous, [field]: value }));
-  };
-
-  const handleFormSubmit = () => {
-    const defaultContactUrl = contactCards[1]?.url ?? 'mailto:hello@alexanderpeev.dev';
-    openInNewTab(defaultContactUrl);
   };
 
   return (
     <div className={styles.page}>
       <Header
-        navigation={navigation}
+        navigation={headerNavigation}
         onNavigate={handleNavigate}
         isMounted={isMounted}
         getDelayStyle={getDelayStyle}
       />
       <main className="flex-1">
-        <HeroSection
-          hero={hero}
-          processHighlights={processHighlights}
-          logoAccent={navigation.logoSecondary}
-          onPrimaryCta={handleHeroPrimary}
-          onSecondaryCta={handleHeroSecondary}
-          isMounted={isMounted}
-          getDelayStyle={getDelayStyle}
-          primaryCtaLabel={accessibility.primaryCta}
-          secondaryCtaLabel={accessibility.secondaryCta}
-        />
-        <ProcessSection
-          process={process}
-          timelineLabel={accessibility.timeline}
+        <CvHeader
+          bio={cv.bio}
+          contact={cv.contact}
+          accessibility={cv.accessibility}
           isMounted={isMounted}
           getDelayStyle={getDelayStyle}
         />
-        <ProjectsSection
-          portfolio={{ ...portfolio, projects }}
-          projectLinkLabel={accessibility.projectLink}
+        <div className={styles.columns}>
+          <div>
+            <CvExperience
+              experience={cv.experience}
+              accessibility={cv.accessibility}
+              isMounted={isMounted}
+              getDelayStyle={getDelayStyle}
+            />
+          </div>
+          <div className="flex flex-col gap-10">
+            <CvEducation
+              education={cv.education}
+              accessibility={cv.accessibility}
+              isMounted={isMounted}
+              getDelayStyle={getDelayStyle}
+            />
+            <CvProjects
+              projects={cv.projects}
+              accessibility={cv.accessibility}
+              isMounted={isMounted}
+              getDelayStyle={getDelayStyle}
+            />
+          </div>
+        </div>
+        <CvSalary
+          salary={cv.salary}
           isMounted={isMounted}
           getDelayStyle={getDelayStyle}
-          onProjectAction={handleProjectAction}
         />
-        <AboutSection
-          about={{ ...about, values }}
-          supportingCopy={hero.subheadline}
-          accentLabel={navigation.logoSecondary}
-          isMounted={isMounted}
-          getDelayStyle={getDelayStyle}
-        />
-        <ContactSection
-          contact={{ ...contact, cards: contactCards }}
-          accessibility={accessibility}
-          formState={formState}
-          onFormChange={handleFormChange}
-          onSubmit={handleFormSubmit}
-          onCardActivate={handleContactResource}
-          isMounted={isMounted}
-          getDelayStyle={getDelayStyle}
-        />
+        <div className={styles.footerSpacing} aria-hidden="true" />
       </main>
       <Footer
-        footer={{ ...footer, links: footerLinks }}
-        linkAriaLabel={accessibility.projectLink}
+        footer={footer}
+        linkAriaLabel={appAccessibility.projectLink}
         onLinkActivate={handleFooterLink}
         isMounted={isMounted}
         getDelayStyle={getDelayStyle}

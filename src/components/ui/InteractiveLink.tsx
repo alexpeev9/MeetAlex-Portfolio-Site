@@ -1,5 +1,5 @@
-import { AnchorHTMLAttributes, KeyboardEvent, MouseEvent } from 'react';
-import { handleKeyboardActivation } from '@/utils/navigation';
+import { handleKeyboardActivation } from "@/utils/navigation";
+import { AnchorHTMLAttributes, KeyboardEvent, MouseEvent } from "react";
 
 type InteractiveLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   onActivate: () => void;
