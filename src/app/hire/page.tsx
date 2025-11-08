@@ -46,6 +46,11 @@ export default function HirePage() {
       return;
     }
 
+    if (targetId === 'cv-page') {
+      window.location.href = '/cv';
+      return;
+    }
+
     if (targetId === 'projects' || targetId === 'process' || targetId === 'about') {
       window.location.href = `/#${targetId}`;
       return;

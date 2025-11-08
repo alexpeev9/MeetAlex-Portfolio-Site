@@ -10,7 +10,8 @@
       { "id": "projects", "label": "Projects" },
       { "id": "process", "label": "Process" },
       { "id": "about", "label": "About" },
-      { "id": "hire-page", "label": "Hire" }
+      { "id": "hire-page", "label": "Hire" },
+      { "id": "cv-page", "label": "CV" }
     ],
     "cta": "Start a Project",
     "ariaMenu": "Primary navigation",
@@ -234,6 +235,131 @@
       "roleCta": "Provide details for this role",
       "hirePrimary": "Book a hiring conversation",
       "hireSecondary": "Request Alexander Peev's resume"
+    }
+  },
+  "cv": {
+    "bio": {
+      "name": "Alexander Peev",
+      "title": "React Developer",
+      "summary": "React Developer with experience delivering AI-assisted interfaces, e-commerce platforms, and modern web applications for global brands.",
+      "location": "Sofia, Bulgaria"
+    },
+    "contact": {
+      "phoneLabel": "Phone",
+      "phone": "+359 877 900 718",
+      "emailLabel": "Email",
+      "email": "alexpeev8@gmail.com",
+      "linkedin": "https://linkedin.com/in/alexpeev9",
+      "github": "https://github.com/alexpeev9"
+    },
+    "experience": {
+      "title": "Experience",
+      "roles": [
+        {
+          "title": "React Developer",
+          "company": "Blackdeep Technologies",
+          "period": "Jun 2024 - Present",
+          "description": "Building React applications with TypeScript, React Query, and Chakra UI to integrate AI features for image generation and chat experiences.",
+          "highlights": [
+            "Leading feature development across multiple React apps.",
+            "Integrating AI services for automation and personalization.",
+            "Driving UI consistency with shared component libraries."
+          ],
+          "stack": ["React", "TypeScript", "React Query", "Chakra UI", "AI Integrations"]
+        },
+        {
+          "title": "Fullstack Developer",
+          "company": "C4 Nexus Ltd",
+          "period": "Dec 2022 - May 2024",
+          "description": "Delivered e-commerce platforms for global brands using React, Chakra UI, and JavaScript across front-end and back-end flows.",
+          "highlights": [
+            "Launched PWA React Kit app with React + Chakra UI.",
+            "Maintained SFRA storefronts with custom integrations.",
+            "Collaborated with multinational team using Git, Jira, and Figma."
+          ],
+          "stack": ["React", "Chakra UI", "JavaScript", "Salesforce", "SASS"]
+        },
+        {
+          "title": "Fullstack Contract Developer",
+          "company": "Metal Expert Ltd",
+          "period": "Apr 2022 - Present",
+          "description": "Contract developer focusing on Next.js, TypeScript, and Tailwind CSS for dynamic web apps across multiple clients.",
+          "highlights": [
+            "Built Next.js SaaS app with Tailwind CSS and TypeScript.",
+            "Delivered Shopify storefront with Liquid and custom scripts.",
+            "Maintained WordPress e-commerce features for SMEs."
+          ],
+          "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shopify", "PHP"]
+        },
+        {
+          "title": "University Assistant",
+          "company": "University of Veliko Tarnovo",
+          "period": "Oct 2020 - May 2022",
+          "description": "Led web development courses covering ASP.NET Core, SQL, and C#; produced educational workshops and blog content.",
+          "highlights": [
+            "Delivered workshops on Java Spring applications.",
+            "Published technical blogs supporting curriculum.",
+            "Mentored students on .NET and desktop development."
+          ],
+          "stack": ["ASP.NET Core", "SQL", "C#", ".NET", "Teaching"]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "Master's degree",
+          "field": "Web Technologies and Software",
+          "period": "2023 - Present",
+          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo",
+          "linkLabel": "Master's transcript",
+          "link": "https://drive.google.com/file/d/1aH3ERiPAIhE746jLTSZFlPb5nyG4x6ZB/view"
+        },
+        {
+          "degree": "Bachelor's degree",
+          "field": "Software Engineering",
+          "period": "2019 - 2023",
+          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo",
+          "linkLabel": "Bachelor's diploma",
+          "link": "https://drive.google.com/file/d/1aH3ERiPAIhE746jLTSZFlPb5nyG4x6ZB/view"
+        },
+        {
+          "degree": "JavaScript Web Developer Diploma",
+          "field": "Software University",
+          "period": "2021",
+          "school": "SoftUni",
+          "linkLabel": "Certificate",
+          "link": "https://softuni.bg/certificates/details/133486/050776f5"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "items": [
+        {
+          "name": "MERN TypeScript App",
+          "description": "Full-stack application with authentication, authorization, and real-time features.",
+          "stack": ["React", "TypeScript", "SASS", "Jest", "Webpack"],
+          "link": "https://github.com/alexpeev9/SilverArticles"
+        },
+        {
+          "name": "Next.js 14 Web App",
+          "description": "Modern web application using Next.js 14, Tailwind CSS, and PostgreSQL.",
+          "stack": ["Next.js", "Tailwind CSS", "PostgreSQL"],
+          "link": "https://github.com/alexpeev9/NextJS-Dark-Souls-Weapons"
+        }
+      ]
+    },
+    "salary": {
+      "title": "Expected Salary",
+      "note": "For details regarding my expected salary, feel free to contact me directly."
+    },
+    "accessibility": {
+      "experience": "Experience entry",
+      "projectLink": "View project details",
+      "educationLink": "View education document",
+      "contactLink": "Open contact method"
     }
   },
   "footer": {

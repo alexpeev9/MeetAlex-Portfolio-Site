@@ -45,6 +45,11 @@ export default function Home() {
       return;
     }
 
+    if (targetId === 'cv-page') {
+      window.location.href = '/cv';
+      return;
+    }
+
     scrollToId(targetId);
   };
 

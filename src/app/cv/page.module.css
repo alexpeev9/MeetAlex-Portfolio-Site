@@ -1,0 +1,159 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
+  color: #e2e8f0;
+}
+
+.section {
+  width: 100%;
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 4.5rem 3rem 0;
+  }
+}
+
+.card {
+  border-radius: 1.75rem;
+  background: rgba(15, 23, 42, 0.72);
+  padding: 2.5rem;
+  box-shadow: 0 28px 80px -48px rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.timeline {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.timelineItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 0.82rem;
+  width: 0.2rem;
+  height: calc(100% - 1.25rem);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.2), rgba(30, 64, 175, 0.05));
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5f5;
+}
+
+.columns {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .columns {
+    grid-template-columns: 1.2fr 0.9fr;
+  }
+}
+
+.links {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.linkItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #bae6fd;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.linkItem:hover {
+  color: #f8fafc;
+  transform: translateX(0.2rem);
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.9s ease forwards;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 0.9s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gridTwo {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gridTwo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.footerSpacing {
+  height: 4rem;
+}

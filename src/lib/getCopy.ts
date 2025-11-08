@@ -49,6 +49,31 @@ export type HirePosition = {
 
 export type HirePoint = ValueCard;
 
+export type CvRole = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+};
+
+export type CvEducationItem = {
+  degree: string;
+  field: string;
+  period: string;
+  school: string;
+  linkLabel: string;
+  link: string;
+};
+
+export type CvProject = {
+  name: string;
+  description: string;
+  stack: string[];
+  link: string;
+};
+
 export type CopyShape = {
   metadata: {
     title: string;
@@ -146,6 +171,44 @@ export type CopyShape = {
       roleCta: string;
       hirePrimary: string;
       hireSecondary: string;
+    };
+  };
+  cv: {
+    bio: {
+      name: string;
+      title: string;
+      summary: string;
+      location: string;
+    };
+    contact: {
+      phoneLabel: string;
+      phone: string;
+      emailLabel: string;
+      email: string;
+      linkedin: string;
+      github: string;
+    };
+    experience: {
+      title: string;
+      roles: CvRole[];
+    };
+    education: {
+      title: string;
+      items: CvEducationItem[];
+    };
+    projects: {
+      title: string;
+      items: CvProject[];
+    };
+    salary: {
+      title: string;
+      note: string;
+    };
+    accessibility: {
+      experience: string;
+      projectLink: string;
+      educationLink: string;
+      contactLink: string;
     };
   };
   footer: {
