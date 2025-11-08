@@ -14,17 +14,17 @@ const CvEducation = ({ education, accessibility, isMounted, getDelayStyle }: CvE
   return (
     <section className={`${styles.section} ${isMounted ? styles.fadeInUp : ''}`} style={getDelayStyle(0, 0.24)}>
       <div className={`${styles.card} space-y-6`}>
-        <h2 className="text-2xl font-semibold text-slate-50 md:text-3xl">{education.title}</h2>
+        <h2 className={`text-2xl font-semibold md:text-3xl ${styles.heading}`}>{education.title}</h2>
         <div className="grid gap-4">
           {education.items.map((item, index) => (
             <div key={`${item.degree}-${item.school}`} className="space-y-2">
               <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-semibold text-slate-100">{item.degree}</h3>
-                <span className="text-sm text-sky-300">{item.field}</span>
-                <span className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">
+                <h3 className={`text-lg font-semibold ${styles.heading}`}>{item.degree}</h3>
+                <span className={`text-sm ${styles.subheading}`}>{item.field}</span>
+                <span className={`text-xs font-semibold uppercase tracking-[0.28em] ${styles.metaText}`}>
                   {item.period}
                 </span>
-                <p className="text-sm text-slate-300">{item.school}</p>
+                <p className={`text-sm ${styles.bodyText}`}>{item.school}</p>
               </div>
               <Link
                 href={item.link}

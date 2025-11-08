@@ -1,8 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f2218;
+  --foreground: #f3f7f1;
+  --surface-muted: #09140f;
+  --surface-card: rgba(19, 38, 28, 0.78);
+  --surface-card-border: rgba(209, 93, 93, 0.24);
+  --surface-card-shadow: 0 28px 80px -48px rgba(10, 24, 16, 0.9);
+  --surface-header: rgba(9, 20, 15, 0.8);
+  --surface-header-border: rgba(20, 84, 49, 0.55);
+  --gradient-page: linear-gradient(145deg, rgba(18, 46, 31, 0.97), rgba(9, 20, 15, 0.98));
+  --gradient-footer: linear-gradient(180deg, rgba(9, 20, 15, 0.95), rgba(5, 12, 9, 0.98));
+  --gradient-timeline: linear-gradient(180deg, rgba(241, 103, 103, 0.25), rgba(120, 16, 16, 0.07));
+  --accent-primary: #f87171;
+  --accent-primary-hover: #fb9c9c;
+  --accent-muted: rgba(244, 114, 114, 0.15);
+  --accent-tag-bg: rgba(208, 48, 48, 0.1);
+  --text-primary: #f3f7f1;
+  --text-secondary: rgba(243, 247, 241, 0.85);
+  --text-tertiary: rgba(211, 232, 220, 0.7);
+  --text-muted: rgba(184, 212, 195, 0.68);
+  --text-accent: #fecaca;
+  --text-accent-strong: #ffe1e1;
+  --text-nav: rgba(224, 244, 228, 0.92);
+  --text-nav-hover: #ffd6d6;
+  --text-footer: rgba(216, 240, 223, 0.88);
+  --text-footer-muted: rgba(170, 204, 179, 0.72);
+  --badge-text: #f6eaea;
+  --action-text: #062314;
+  --focus-ring: rgba(248, 113, 113, 0.6);
+  --focus-ring-offset: #06140d;
+  --timeline-dot-shadow: 0 0 0 4px rgba(248, 113, 113, 0.22);
 }
 
 @theme inline {

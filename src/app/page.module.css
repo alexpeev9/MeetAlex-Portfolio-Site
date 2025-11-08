@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
-  color: #e2e8f0;
+  background: var(--gradient-page);
+  color: var(--text-primary);
 }
 
 .section {
@@ -21,11 +21,11 @@
 
 .card {
   border-radius: 1.75rem;
-  background: rgba(15, 23, 42, 0.72);
+  background: var(--surface-card);
   padding: 2.5rem;
-  box-shadow: 0 28px 80px -48px rgba(15, 23, 42, 0.85);
+  box-shadow: var(--surface-card-shadow);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  border: 1px solid var(--surface-card-border);
 }
 
 .timeline {
@@ -46,8 +46,8 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 9999px;
-  background: #38bdf8;
-  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+  background: var(--accent-primary);
+  box-shadow: var(--timeline-dot-shadow);
 }
 
 .timelineItem:not(:last-child)::after {
@@ -58,7 +58,7 @@
   width: 0.2rem;
   height: calc(100% - 1.25rem);
   border-radius: 1rem;
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.2), rgba(30, 64, 175, 0.05));
+  background: var(--gradient-timeline);
 }
 
 .tagList {
@@ -74,12 +74,13 @@
   justify-content: center;
   padding: 0.35rem 1rem;
   border-radius: 9999px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: 1px solid var(--accent-primary);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #cbd5f5;
+  color: var(--text-accent-strong);
+  background: var(--accent-tag-bg);
 }
 
 .columns {
@@ -104,13 +105,19 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.9rem;
-  color: #bae6fd;
+  color: var(--text-accent);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .linkItem:hover {
-  color: #f8fafc;
+  color: var(--text-accent-strong);
   transform: translateX(0.2rem);
+}
+
+.linkItem:focus-visible {
+  color: var(--text-accent-strong);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
 }
 
 .fadeInUp {
@@ -156,4 +163,90 @@
 
 .footerSpacing {
   height: 4rem;
+}
+
+.footer {
+  border-top: 1px solid var(--surface-card-border);
+  background: var(--gradient-footer);
+}
+
+.headerBar {
+  border-bottom: 1px solid var(--surface-header-border);
+  background: var(--surface-header);
+  backdrop-filter: blur(16px);
+}
+
+.logoButton {
+  color: var(--text-accent);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logoButton:hover {
+  color: var(--text-accent-strong);
+}
+
+.logoBadge {
+  background: var(--accent-muted);
+  color: var(--badge-text);
+}
+
+.navLink {
+  color: var(--text-nav);
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--text-nav-hover);
+}
+
+.navLink:focus-visible {
+  color: var(--text-nav-hover);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.ctaButton {
+  background: var(--accent-primary);
+  color: var(--action-text);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: var(--accent-primary-hover);
+}
+
+.ctaButton:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+
+.footerText {
+  color: var(--text-footer-muted);
+}
+
+.footerLink {
+  color: var(--text-footer);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: var(--text-accent-strong);
+  transform: translateY(-0.2rem);
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+
+.bodyText {
+  color: var(--text-secondary);
+}
+
+.mutedText {
+  color: var(--text-tertiary);
+}
+
+.accentText {
+  color: var(--text-accent);
 }
