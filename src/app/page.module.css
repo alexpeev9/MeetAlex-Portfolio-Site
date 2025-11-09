@@ -6,6 +6,13 @@
   color: var(--text-primary);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 4rem 0 6rem;
+}
+
 .section {
   width: 100%;
   max-width: 74rem;
@@ -17,6 +24,11 @@
   .section {
     padding: 4.5rem 3rem 0;
   }
+}
+
+.sectionCompact {
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -152,7 +164,7 @@
 
 .gridTwo {
   display: grid;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {

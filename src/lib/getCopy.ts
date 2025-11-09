@@ -74,6 +74,35 @@ export type CvProject = {
   link: string;
 };
 
+export type CvLanguage = {
+  name: string;
+  level: string;
+};
+
+export type CvSkillCategory = {
+  title: string;
+  items: string[];
+};
+
+export type CvService = {
+  title: string;
+  description: string;
+};
+
+export type CvCertification = {
+  name: string;
+  issuer: string;
+  year: string;
+  linkLabel: string;
+  link: string;
+};
+
+export type CvTestimonial = {
+  quote: string;
+  name: string;
+  role: string;
+};
+
 export type CopyShape = {
   metadata: {
     title: string;
@@ -187,18 +216,47 @@ export type CopyShape = {
       email: string;
       linkedin: string;
       github: string;
+      hireCta: string;
+    };
+    skills: {
+      title: string;
+      intro: string;
+      categories: CvSkillCategory[];
     };
     experience: {
       title: string;
       roles: CvRole[];
     };
+    projects: {
+      title: string;
+      items: CvProject[];
+    };
+    services: {
+      title: string;
+      intro: string;
+      items: CvService[];
+    };
     education: {
       title: string;
       items: CvEducationItem[];
     };
-    projects: {
+    certifications: {
       title: string;
-      items: CvProject[];
+      items: CvCertification[];
+    };
+    testimonials: {
+      title: string;
+      intro: string;
+      items: CvTestimonial[];
+    };
+    languages: {
+      title: string;
+      listTitle: string;
+      items: CvLanguage[];
+      interests: {
+        title: string;
+        items: string[];
+      };
     };
     salary: {
       title: string;
@@ -209,6 +267,13 @@ export type CopyShape = {
       projectLink: string;
       educationLink: string;
       contactLink: string;
+      skillsCategory: string;
+      skillsTag: string;
+      serviceCard: string;
+      certificationLink: string;
+      testimonialQuote: string;
+      languageItem: string;
+      interestTag: string;
     };
   };
   footer: {

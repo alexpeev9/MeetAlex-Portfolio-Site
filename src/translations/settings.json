@@ -248,9 +248,57 @@
       "phoneLabel": "Phone",
       "phone": "+359 877 900 718",
       "emailLabel": "Email",
-      "email": "alexpeev8@gmail.com",
-      "linkedin": "https://linkedin.com/in/alexpeev9",
-      "github": "https://github.com/alexpeev9"
+      "email": "hello@alexanderpeev.dev",
+      "linkedin": "https://www.linkedin.com/in/alexander-peev",
+      "github": "https://github.com/alexander-peev",
+      "hireCta": "View hiring info"
+    },
+    "skills": {
+      "title": "Core Skills",
+      "intro": "Tooling and capabilities that support high-impact product teams.",
+      "categories": [
+        {
+          "title": "Frontend Engineering",
+          "items": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Chakra UI",
+            "React Query",
+            "Redux Toolkit"
+          ]
+        },
+        {
+          "title": "Architecture & Quality",
+          "items": [
+            "Design Systems",
+            "Component Libraries",
+            "Accessibility Audits",
+            "Performance Budgeting",
+            "Storybook",
+            "Playwright"
+          ]
+        },
+        {
+          "title": "Collaboration",
+          "items": [
+            "Product Discovery",
+            "Mentorship",
+            "Design Handoffs",
+            "Agile Facilitation"
+          ]
+        },
+        {
+          "title": "Tooling",
+          "items": [
+            "Vite",
+            "Webpack",
+            "Turborepo",
+            "GitHub Actions",
+            "CI/CD Pipelines"
+          ]
+        }
+      ]
     },
     "experience": {
       "title": "Experience",
@@ -265,7 +313,13 @@
             "Integrating AI services for automation and personalization.",
             "Driving UI consistency with shared component libraries."
           ],
-          "stack": ["React", "TypeScript", "React Query", "Chakra UI", "AI Integrations"]
+          "stack": [
+            "React",
+            "TypeScript",
+            "React Query",
+            "Chakra UI",
+            "AI Integrations"
+          ]
         },
         {
           "title": "Fullstack Developer",
@@ -313,7 +367,7 @@
           "field": "Web Technologies and Software",
           "period": "2023 - Present",
           "school": "St. Cyril and St. Methodius University of Veliko Tarnovo",
-          "linkLabel": "Master's transcript",
+          "linkLabel": "Master's diploma",
           "link": "https://drive.google.com/file/d/1aH3ERiPAIhE746jLTSZFlPb5nyG4x6ZB/view"
         },
         {
@@ -334,6 +388,25 @@
         }
       ]
     },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        {
+          "name": "AWS Certified Cloud Practitioner",
+          "issuer": "Amazon Web Services",
+          "year": "2024",
+          "linkLabel": "View credential",
+          "link": "https://www.credly.com/badges/aws-cloud-practitioner"
+        },
+        {
+          "name": "Advanced React Patterns",
+          "issuer": "Epic React",
+          "year": "2023",
+          "linkLabel": "Course completion",
+          "link": "https://epicreact.dev/certificates/alexander-peev"
+        }
+      ]
+    },
     "projects": {
       "title": "Projects",
       "items": [
@@ -351,6 +424,58 @@
         }
       ]
     },
+    "services": {
+      "title": "How I Can Help",
+      "intro": "Engagement models tailored to ship reliable, polished interfaces fast.",
+      "items": [
+        {
+          "title": "Product Engineering",
+          "description": "Feature delivery for complex React applications with type safety, testing, and observability built-in."
+        },
+        {
+          "title": "Design System Stewardship",
+          "description": "Codify UI foundations, document usage patterns, and accelerate adoption across squads."
+        },
+        {
+          "title": "Team Enablement",
+          "description": "Mentor engineers, refine workflows, and establish best practices that unlock sustainable delivery."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "intro": "Recent feedback from partners who shipped with me.",
+      "items": [
+        {
+          "quote": "Alex consistently transforms product requirements into delightful experiences while keeping the codebase maintainable for the entire team.",
+          "name": "Diana Petrova",
+          "role": "Head of Product, FlowState Labs"
+        },
+        {
+          "quote": "From accessibility budgets to release strategy, Alex brings clarity and structure that let us move faster without breaking quality.",
+          "name": "Luka Marinov",
+          "role": "Engineering Manager, NovaFin"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages & Interests",
+      "listTitle": "Languages",
+      "items": [
+        { "name": "English", "level": "Professional Working" },
+        { "name": "Bulgarian", "level": "Native" },
+        { "name": "German", "level": "Conversational" }
+      ],
+      "interests": {
+        "title": "Interests",
+        "items": [
+          "Design Systems",
+          "Open Source",
+          "Mountain Biking",
+          "Portrait Photography"
+        ]
+      }
+    },
     "salary": {
       "title": "Expected Salary",
       "note": "For details regarding my expected salary, feel free to contact me directly."
@@ -359,7 +484,14 @@
       "experience": "Experience entry",
       "projectLink": "View project details",
       "educationLink": "View education document",
-      "contactLink": "Open contact method"
+      "contactLink": "Open contact method",
+      "skillsCategory": "Skill group",
+      "skillsTag": "Skill item",
+      "serviceCard": "Service description",
+      "certificationLink": "View certification details",
+      "testimonialQuote": "Client testimonial",
+      "languageItem": "Language proficiency",
+      "interestTag": "Personal interest"
     }
   },
   "footer": {

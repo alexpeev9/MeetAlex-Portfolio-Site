@@ -2,14 +2,14 @@ import styles from "@/app/cv/page.module.css";
 import { CopyShape } from "@/lib/getCopy";
 import Link from "next/link";
 
-type CvEducationProps = {
-  education: CopyShape["cv"]["education"];
+type CvCertificationsProps = {
+  certifications: CopyShape["cv"]["certifications"];
   accessibility: CopyShape["cv"]["accessibility"];
   sectionId?: string;
   className?: string;
 };
 
-const CvEducation = ({ education, accessibility, sectionId, className }: CvEducationProps) => {
+const CvCertifications = ({ certifications, accessibility, sectionId, className }: CvCertificationsProps) => {
   const sectionClassName = [styles.section, styles.fadeInUp, className]
     .filter(Boolean)
     .join(" ");
@@ -18,33 +18,28 @@ const CvEducation = ({ education, accessibility, sectionId, className }: CvEduca
     <section id={sectionId} className={sectionClassName}>
       <div className={`${styles.card} space-y-6`}>
         <h2 className={`text-2xl font-semibold md:text-3xl ${styles.heading}`}>
-          {education.title}
+          {certifications.title}
         </h2>
-        <div className="grid gap-4">
-          {education.items.map((item) => (
-            <div key={`${item.degree}-${item.school}`} className="space-y-2">
+        <div className={styles.detailList}>
+          {certifications.items.map((item) => (
+            <article key={`${item.name}-${item.issuer}`} className={`${styles.innerCard} space-y-3`}>
               <div className="flex flex-col gap-1">
                 <h3 className={`text-lg font-semibold ${styles.heading}`}>
-                  {item.degree}
+                  {item.name}
                 </h3>
-                <span className={`text-sm ${styles.subheading}`}>
-                  {item.field}
+                <span className={styles.detailMeta}>
+                  {item.issuer} · {item.year}
                 </span>
-                <span
-                  className={`text-xs font-semibold uppercase tracking-[0.28em] ${styles.metaText}`}
-                >
-                  {item.period}
-                </span>
-                <p className={`text-sm ${styles.bodyText}`}>{item.school}</p>
               </div>
               <Link
                 href={item.link}
                 className={styles.linkItem}
-                aria-label={`${accessibility.educationLink}: ${item.linkLabel}`}
+                aria-label={`${accessibility.certificationLink}: ${item.name}`}
+                tabIndex={0}
               >
                 {item.linkLabel}
               </Link>
-            </div>
+            </article>
           ))}
         </div>
       </div>
@@ -52,4 +47,4 @@ const CvEducation = ({ education, accessibility, sectionId, className }: CvEduca
   );
 };
 
-export default CvEducation;
+export default CvCertifications;

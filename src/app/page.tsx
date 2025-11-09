@@ -1,51 +1,38 @@
 'use client';
 
+import CvCertifications from "@/components/cv/CvCertifications";
 import CvEducation from "@/components/cv/CvEducation";
 import CvExperience from "@/components/cv/CvExperience";
 import CvHeader from "@/components/cv/CvHeader";
+import CvHighlights from "@/components/cv/CvHighlights";
 import CvProjects from "@/components/cv/CvProjects";
 import CvSalary from "@/components/cv/CvSalary";
+import CvServices from "@/components/cv/CvServices";
+import CvSkills from "@/components/cv/CvSkills";
+import CvTestimonials from "@/components/cv/CvTestimonials";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { useMountedAnimations } from "@/hooks/useMountedAnimations";
 import { getCopy } from "@/lib/getCopy";
 import { openInNewTab, scrollToId } from "@/utils/navigation";
-import { useMemo } from "react";
 import styles from "./page.module.css";
 
 const cvCopy = getCopy();
+const sectionIds: Record<string, string> = {
+  projects: "cv-projects",
+  process: "cv-skills",
+  about: "cv-services",
+  "cv-page": "cv-overview",
+};
 
 export default function CvPage() {
-  const { isMounted, getDelayStyle } = useMountedAnimations();
-  const navigation = useMemo(() => cvCopy.navigation, []);
-  const footer = useMemo(() => cvCopy.footer, []);
-  const appAccessibility = useMemo(() => cvCopy.accessibility, []);
-  const cv = useMemo(() => cvCopy.cv, []);
-
-  const headerNavigation = useMemo(
-    () => ({
-      ...navigation,
-      items: navigation.items,
-    }),
-    [navigation]
-  );
-
   const handleNavigate = (targetId: string) => {
     if (targetId === "hire-page") {
       window.location.href = "/hire";
       return;
     }
 
-    if (
-      targetId === "projects" ||
-      targetId === "process" ||
-      targetId === "about"
-    ) {
-      window.location.href = `/#${targetId}`;
-      return;
-    }
-
-    scrollToId(targetId);
+    const mappedId = sectionIds[targetId] ?? targetId;
+    scrollToId(mappedId);
   };
 
   const handleFooterLink = (url: string) => {
@@ -54,57 +41,65 @@ export default function CvPage() {
 
   return (
     <div className={styles.page}>
-      <Header
-        navigation={headerNavigation}
-        onNavigate={handleNavigate}
-        isMounted={isMounted}
-        getDelayStyle={getDelayStyle}
-      />
-      <main className="flex-1">
+      <Header onNavigate={handleNavigate} />
+      <main className={styles.main}>
         <CvHeader
-          bio={cv.bio}
-          contact={cv.contact}
-          accessibility={cv.accessibility}
-          isMounted={isMounted}
-          getDelayStyle={getDelayStyle}
+          sectionId="cv-overview"
+          bio={cvCopy.cv.bio}
+          contact={cvCopy.cv.contact}
+          accessibility={cvCopy.cv.accessibility}
         />
-        <div className={styles.columns}>
-          <div>
-            <CvExperience
-              experience={cv.experience}
-              accessibility={cv.accessibility}
-              isMounted={isMounted}
-              getDelayStyle={getDelayStyle}
-            />
-          </div>
-          <div className="flex flex-col gap-10">
-            <CvEducation
-              education={cv.education}
-              accessibility={cv.accessibility}
-              isMounted={isMounted}
-              getDelayStyle={getDelayStyle}
-            />
-            <CvProjects
-              projects={cv.projects}
-              accessibility={cv.accessibility}
-              isMounted={isMounted}
-              getDelayStyle={getDelayStyle}
-            />
-          </div>
+        <CvSkills
+          sectionId="cv-skills"
+          skills={cvCopy.cv.skills}
+          accessibility={cvCopy.cv.accessibility}
+        />
+        <CvExperience
+          sectionId="cv-experience"
+          experience={cvCopy.cv.experience}
+          accessibility={cvCopy.cv.accessibility}
+        />
+        <CvProjects
+          sectionId="cv-projects"
+          projects={cvCopy.cv.projects}
+          accessibility={cvCopy.cv.accessibility}
+        />
+        <div className={`${styles.section} ${styles.gridTwo}`}>
+          <CvEducation
+            sectionId="cv-education"
+            className={styles.sectionCompact}
+            education={cvCopy.cv.education}
+            accessibility={cvCopy.cv.accessibility}
+          />
+          <CvCertifications
+            sectionId="cv-certifications"
+            className={styles.sectionCompact}
+            certifications={cvCopy.cv.certifications}
+            accessibility={cvCopy.cv.accessibility}
+          />
         </div>
-        <CvSalary
-          salary={cv.salary}
-          isMounted={isMounted}
-          getDelayStyle={getDelayStyle}
+        <CvServices
+          sectionId="cv-services"
+          services={cvCopy.cv.services}
+          accessibility={cvCopy.cv.accessibility}
         />
+        <CvHighlights
+          sectionId="cv-highlights"
+          languages={cvCopy.cv.languages}
+          accessibility={cvCopy.cv.accessibility}
+        />
+        <CvTestimonials
+          sectionId="cv-testimonials"
+          testimonials={cvCopy.cv.testimonials}
+          accessibility={cvCopy.cv.accessibility}
+        />
+        <CvSalary sectionId="cv-salary" salary={cvCopy.cv.salary} />
         <div className={styles.footerSpacing} aria-hidden="true" />
       </main>
       <Footer
-        footer={footer}
-        linkAriaLabel={appAccessibility.projectLink}
+        footer={cvCopy.footer}
+        linkAriaLabel={cvCopy.accessibility.projectLink}
         onLinkActivate={handleFooterLink}
-        isMounted={isMounted}
-        getDelayStyle={getDelayStyle}
       />
     </div>
   );
