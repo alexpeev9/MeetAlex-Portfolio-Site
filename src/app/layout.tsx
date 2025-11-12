@@ -1,6 +1,8 @@
 import { getCopy } from "@/lib/getCopy";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,7 +32,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div
+          className="flex min-h-screen flex-col"
+          style={{
+            background: "var(--gradient-page)",
+            color: "var(--text-primary)",
+          }}
+        >
+          <Header />
+          {children}
+          <Footer
+            footer={copy.footer}
+            linkAriaLabel={copy.accessibility.projectLink}
+          />
+        </div>
       </body>
     </html>
   );

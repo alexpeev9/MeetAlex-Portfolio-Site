@@ -5,13 +5,13 @@ const Header = () => {
   const navigation = copy.navigation;
   return (
     <header
-      className="sticky top-0 z-40 border-b backdrop-blur-lg"
+      className="sticky top-0 z-40 border-b backdrop-blur-xl transition-shadow duration-300"
       style={{
         background: "var(--surface-header)",
         borderColor: "var(--surface-header-border)",
       }}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-12">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-12 lg:py-6">
         <a
           href="#hero"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight text-(--text-accent) transition duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"

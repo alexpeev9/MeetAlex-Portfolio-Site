@@ -2,8 +2,6 @@ import CvCertifications from "@/components/cv/CvCertifications";
 import CvEducation from "@/components/cv/CvEducation";
 import CvExperience from "@/components/cv/CvExperience";
 import CvProjects from "@/components/cv/CvProjects";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import { getCopy } from "@/lib/getCopy";
 
@@ -11,14 +9,7 @@ const cvCopy = getCopy();
 
 export default function CvPage() {
   return (
-    <div
-      className="flex min-h-screen flex-col"
-      style={{
-        background: "var(--gradient-page)",
-        color: "var(--text-primary)",
-      }}
-    >
-      <Header />
+    <>
       <HeroSection sectionId="hero" />
       <main className="flex flex-col gap-16 pb-24 pt-16 sm:gap-20">
         <CvProjects
@@ -67,10 +58,6 @@ export default function CvPage() {
         />
         <CvSalary sectionId="salary" salary={cvCopy.cv.salary} /> */}
       </main>
-      <Footer
-        footer={cvCopy.footer}
-        linkAriaLabel={cvCopy.accessibility.projectLink}
-      />
-    </div>
+    </>
   );
 }

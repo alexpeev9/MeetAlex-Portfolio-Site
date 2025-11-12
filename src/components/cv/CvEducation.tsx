@@ -14,10 +14,7 @@ const CvEducation = ({
   sectionId,
   className,
 }: CvEducationProps) => {
-  const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-0 sm:pt-16",
-    className,
-  ]
+  const sectionClassName = ["mx-auto w-full max-w-6xl px-4 sm:px-0", className]
     .filter(Boolean)
     .join(" ");
 
