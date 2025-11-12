@@ -26,7 +26,7 @@ const Footer = ({ footer, linkAriaLabel, onLinkActivate }: FooterProps) => {
             <a
               key={link.label}
               href={link.url}
-              className="rounded-lg px-3 py-1 text-[var(--text-footer)] transition duration-300 hover:-translate-y-0.5 hover:text-[var(--text-accent-strong)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-4"
+              className="rounded-lg px-3 py-1 text-[var(--text-footer)] transition duration-300 hover:-translate-y-0.5 hover:text-[var(--text-accent-strong)] focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
               aria-label={`${linkAriaLabel}: ${link.label}`}
               tabIndex={0}
               onClick={(event: MouseEvent<HTMLAnchorElement>) => {

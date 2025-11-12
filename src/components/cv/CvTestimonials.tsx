@@ -1,4 +1,3 @@
-import styles from "@/app/cv/page.module.css";
 import { CopyShape } from "@/lib/getCopy";
 
 type CvTestimonialsProps = {
@@ -9,30 +8,39 @@ type CvTestimonialsProps = {
 };
 
 const CvTestimonials = ({ testimonials, accessibility, sectionId, className }: CvTestimonialsProps) => {
-  const sectionClassName = [styles.section, styles.fadeInUp, className]
+  const sectionClassName = [
+    "mx-auto w-full max-w-6xl px-6 pt-16 lg:px-12",
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className={`${styles.card} space-y-8`}>
+      <div className="space-y-8 rounded-[1.75rem] border border-[color:var(--surface-card-border)] bg-[var(--surface-card)] p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
         <div className="space-y-3">
-          <h2 className={`text-2xl font-semibold md:text-3xl ${styles.heading}`}>
+          <h2 className="text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
             {testimonials.title}
           </h2>
-          <p className={styles.bodyText}>{testimonials.intro}</p>
+          <p className="text-[var(--text-secondary)]">{testimonials.intro}</p>
         </div>
-        <div className={styles.testimonialGrid}>
+        <div className="grid gap-6 lg:grid-cols-2">
           {testimonials.items.map((item) => (
             <blockquote
               key={`${item.name}-${item.role}`}
-              className={styles.testimonialCard}
+              className="relative rounded-2xl border border-[color:var(--surface-card-border)] bg-white/15 p-8 [box-shadow:var(--surface-card-shadow)]"
               aria-label={`${accessibility.testimonialQuote}: ${item.name}`}
             >
-              <p className={styles.quoteText}>“{item.quote}”</p>
-              <footer className={styles.quoteSignature}>
-                <span className={`font-semibold ${styles.heading}`}>{item.name}</span>
-                <span className={styles.mutedText}>{item.role}</span>
+              <p className="text-base leading-7 text-[var(--text-secondary)]">
+                “{item.quote}”
+              </p>
+              <footer className="mt-6 flex flex-col gap-1 text-[var(--text-accent)]">
+                <span className="font-semibold text-[var(--text-primary)]">
+                  {item.name}
+                </span>
+                <span className="text-sm text-[var(--text-tertiary)]">
+                  {item.role}
+                </span>
               </footer>
             </blockquote>
           ))}

@@ -54,7 +54,7 @@ const Header = () => {
             <button
               key={item.id}
               type="button"
-              className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--text-nav)] transition duration-300 hover:text-[var(--text-nav-hover)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-3"
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--text-nav)] transition duration-300 hover:text-[var(--text-nav-hover)] focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
               aria-label={`${navigation.ariaItemPrefix} ${item.label}`}
               onClick={() => handleNavigate(item.id)}
               onKeyDown={(event) =>
@@ -67,7 +67,7 @@ const Header = () => {
         </nav>
         <button
           type="button"
-          className="hidden rounded-full bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-[var(--action-text)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-primary-hover)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-4 md:inline-flex"
+          className="hidden rounded-full bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-[var(--action-text)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-primary-hover)] focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)] md:inline-flex"
           aria-label={`${navigation.ariaItemPrefix} ${navigation.cta}`}
           onClick={() => handleNavigate("contact")}
           onKeyDown={(event) =>

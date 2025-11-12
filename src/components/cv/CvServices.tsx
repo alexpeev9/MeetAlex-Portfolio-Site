@@ -1,4 +1,3 @@
-import styles from "@/app/cv/page.module.css";
 import { CopyShape } from "@/lib/getCopy";
 
 type CvServicesProps = {
@@ -9,30 +8,35 @@ type CvServicesProps = {
 };
 
 const CvServices = ({ services, accessibility, sectionId, className }: CvServicesProps) => {
-  const sectionClassName = [styles.section, styles.fadeInUp, className]
+  const sectionClassName = [
+    "mx-auto w-full max-w-6xl px-6 pt-16 lg:px-12",
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className={`${styles.card} space-y-8`}>
+      <div className="space-y-8 rounded-[1.75rem] border border-[color:var(--surface-card-border)] bg-[var(--surface-card)] p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
         <div className="space-y-3">
-          <h2 className={`text-2xl font-semibold md:text-3xl ${styles.heading}`}>
+          <h2 className="text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
             {services.title}
           </h2>
-          <p className={styles.bodyText}>{services.intro}</p>
+          <p className="text-[var(--text-secondary)]">{services.intro}</p>
         </div>
-        <div className={styles.serviceGrid}>
+        <div className="grid gap-6 lg:grid-cols-3">
           {services.items.map((service) => (
             <article
               key={service.title}
-              className={`${styles.innerCard} space-y-3`}
+              className="space-y-3 rounded-xl border border-[color:var(--surface-card-border)] bg-white/10 p-7 [backdrop-filter:blur(12px)]"
               aria-label={`${accessibility.serviceCard}: ${service.title}`}
             >
-              <h3 className={`text-lg font-semibold ${styles.heading}`}>
+              <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                 {service.title}
               </h3>
-              <p className={styles.bodyText}>{service.description}</p>
+              <p className="text-[var(--text-secondary)]">
+                {service.description}
+              </p>
             </article>
           ))}
         </div>
