@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "@/app/page.module.css";
 import { getCopy } from "@/lib/getCopy";
 import { handleKeyboardActivation, scrollToId } from "@/utils/navigation";
 import { MouseEvent } from "react";
@@ -25,33 +24,37 @@ const Header = () => {
   const copy = getCopy();
   const navigation = copy.navigation;
   return (
-    <header className={`sticky top-0 z-40 ${styles.headerBar}`}>
+    <header
+      className="sticky top-0 z-40 border-b backdrop-blur-lg"
+      style={{
+        background: "var(--surface-header)",
+        borderColor: "var(--surface-header-border)",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-12">
         <button
           type="button"
-          className={`flex items-center gap-2 text-lg font-semibold tracking-tight transition-transform duration-300 hover:-translate-y-0.5 ${styles.logoButton} ${styles.fadeInUp}`}
+          className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[var(--text-accent)] transition duration-300 hover:-translate-y-0.5"
           aria-label={navigation.logoAria}
           onClick={handleLogoClick}
           onKeyDown={(event) =>
             handleKeyboardActivation(event, () => handleNavigate("hero"))
           }
         >
-          <span
-            className={`rounded-full px-3 py-1 text-sm font-semibold ${styles.logoBadge}`}
-          >
+          <span className="rounded-full bg-[var(--accent-muted)] px-3 py-1 text-sm font-semibold text-[var(--badge-text)]">
             {navigation.logoSecondary}
           </span>
           <span>{navigation.logoPrimary}</span>
         </button>
         <nav
-          className={`hidden items-center gap-10 md:flex ${styles.fadeInUp}`}
+          className="hidden items-center gap-10 md:flex"
           aria-label={navigation.ariaMenu}
         >
           {navigation.items.map((item) => (
             <button
               key={item.id}
               type="button"
-              className={`text-sm font-semibold uppercase tracking-[0.3em] transition duration-300 ${styles.navLink} ${styles.fadeInUp}`}
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--text-nav)] transition duration-300 hover:text-[var(--text-nav-hover)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-3"
               aria-label={`${navigation.ariaItemPrefix} ${item.label}`}
               onClick={() => handleNavigate(item.id)}
               onKeyDown={(event) =>
@@ -64,7 +67,7 @@ const Header = () => {
         </nav>
         <button
           type="button"
-          className={`hidden rounded-full px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 md:inline-flex ${styles.ctaButton} ${styles.fadeInUp}`}
+          className="hidden rounded-full bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-[var(--action-text)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-primary-hover)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-4 md:inline-flex"
           aria-label={`${navigation.ariaItemPrefix} ${navigation.cta}`}
           onClick={() => handleNavigate("contact")}
           onKeyDown={(event) =>

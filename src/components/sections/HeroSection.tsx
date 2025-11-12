@@ -45,7 +45,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               type="button"
               onClick={handlePrimaryClick}
               aria-label={accessibility.primaryCta}
-              className="inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-rose-600/30 transition hover:-translate-y-0.5 hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400"
+              className="inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-rose-600/30 transition hover:-translate-y-0.5 hover:bg-rose-500 focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
             >
               {hero.primaryCta}
             </button>
@@ -53,7 +53,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               type="button"
               onClick={handleSecondaryClick}
               aria-label={accessibility.secondaryCta}
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-600 transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-600 transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-500 focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
             >
               {hero.secondaryCta}
             </button>
@@ -88,7 +88,12 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
         </div>
         <div className="relative w-full flex-1">
           <div className="relative overflow-hidden rounded-3xl border border-rose-100 bg-white/80 p-6 shadow-[0_30px_80px_-35px_rgba(255,0,90,0.45)] backdrop-blur">
-            <div className="rounded-2xl bg-gradient-to-br from-rose-50 via-white to-white p-4">
+            <div
+              className="rounded-2xl p-4"
+              style={{
+                background: "linear-gradient(to bottom right, #fff0f5, #ffffff)",
+              }}
+            >
               <Image
                 src={hero.imageSrc}
                 alt={hero.imageAlt}
@@ -112,7 +117,12 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               </div>
             </div>
           </div>
-          <div className="absolute -left-6 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-rose-200/40 to-rose-100/10 blur-3xl" />
+          <div
+            className="absolute -left-6 -top-8 h-24 w-24 rounded-full blur-3xl"
+            style={{
+              background: "linear-gradient(to bottom right, rgba(255, 200, 210, 0.4), rgba(255, 220, 230, 0.1))",
+            }}
+          />
         </div>
       </div>
     </section>

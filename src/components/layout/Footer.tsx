@@ -1,4 +1,3 @@
-import styles from "@/app/page.module.css";
 import { CopyShape } from "@/lib/getCopy";
 import { handleKeyboardActivation } from "@/utils/navigation";
 import { MouseEvent } from "react";
@@ -11,15 +10,23 @@ type FooterProps = {
 
 const Footer = ({ footer, linkAriaLabel, onLinkActivate }: FooterProps) => {
   return (
-    <footer className={`${styles.footer} mt-12`}>
+    <footer
+      className="mt-12 border-t"
+      style={{
+        borderColor: "var(--surface-card-border)",
+        background: "var(--gradient-footer)",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm lg:flex-row lg:items-center lg:justify-between lg:px-12">
-        <span className={styles.footerText}>{footer.copyright}</span>
+        <span className="text-[var(--text-footer-muted)]">
+          {footer.copyright}
+        </span>
         <div className="flex flex-wrap gap-4">
           {footer.links.map((link) => (
             <a
               key={link.label}
               href={link.url}
-              className={`rounded-lg px-3 py-1 outline-none ${styles.footerLink} ${styles.fadeInUp}`}
+              className="rounded-lg px-3 py-1 text-[var(--text-footer)] transition duration-300 hover:-translate-y-0.5 hover:text-[var(--text-accent-strong)] focus-visible:outline focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-4"
               aria-label={`${linkAriaLabel}: ${link.label}`}
               tabIndex={0}
               onClick={(event: MouseEvent<HTMLAnchorElement>) => {

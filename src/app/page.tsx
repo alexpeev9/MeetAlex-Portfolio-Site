@@ -9,7 +9,6 @@ import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import { getCopy } from "@/lib/getCopy";
 import { openInNewTab } from "@/utils/navigation";
-import styles from "./page.module.css";
 
 const cvCopy = getCopy();
 
@@ -19,10 +18,16 @@ export default function CvPage() {
   };
 
   return (
-    <div className={styles.page}>
+    <div
+      className="flex min-h-screen flex-col"
+      style={{
+        background: "var(--gradient-page)",
+        color: "var(--text-primary)",
+      }}
+    >
       <Header />
       <HeroSection sectionId="hero" />
-      <main className={styles.main}>
+      <main className="flex flex-col gap-24 pt-16 pb-24">
         <CvProjects
           sectionId="projects"
           projects={cvCopy.cv.projects}
@@ -38,16 +43,16 @@ export default function CvPage() {
           skills={cvCopy.cv.skills}
           accessibility={cvCopy.cv.accessibility}
         /> */}
-        <div className={`${styles.section} ${styles.gridTwo}`}>
+        <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 pt-16 md:grid-cols-2 lg:px-12">
           <CvEducation
             sectionId="education"
-            className={styles.sectionCompact}
+            className="m-0 p-0"
             education={cvCopy.cv.education}
             accessibility={cvCopy.cv.accessibility}
           />
           <CvCertifications
             sectionId="certifications"
-            className={styles.sectionCompact}
+            className="m-0 p-0"
             certifications={cvCopy.cv.certifications}
             accessibility={cvCopy.cv.accessibility}
           />
