@@ -37,7 +37,7 @@ export default function CvPage() {
           languages={cvCopy.cv.languages}
           accessibility={cvCopy.cv.accessibility}
         /> */}
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 pt-12 sm:px-6 sm:pt-16 md:grid-cols-2 lg:px-12">
+        <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 pt-12 sm:px-6 sm:pt-16 md:grid-cols-2 lg:px-6">
           <CvEducation
             sectionId="education"
             className="pt-0"

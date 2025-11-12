@@ -9,7 +9,7 @@ type CvHighlightsProps = {
 
 const CvHighlights = ({ languages, accessibility, sectionId, className }: CvHighlightsProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 lg:px-12",
+    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 xl:px-0",
     className,
   ]
     .filter(Boolean)

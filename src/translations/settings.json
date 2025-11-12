@@ -17,21 +17,21 @@
     "logoAria": "Alexander Peev developer home"
   },
   "hero": {
-    "eyebrow": "Senior React developer",
-    "headline": "Beautiful React experiences for modern teams",
-    "subheadline": "I help founders and product teams craft fast, accessible, and future-proof web applications.",
-    "primaryCta": "Schedule a Call",
-    "secondaryCta": "View Recent Work",
+    "eyebrow": "Meet Alexander",
+    "headline": "Interfaces your customers actually enjoy",
+    "subheadline": "I thrive on untangling complex releases, calming stakeholders, and shipping polished interfaces teams are proud to show.",
+    "primaryCta": "Read My Story",
+    "secondaryCta": "See What I’ve Shipped",
     "primaryCtaUrl": "https://cal.com/peev",
     "secondaryCtaUrl": "https://github.com/alexander-peev",
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
-      { "label": "Years shipping React apps", "value": "5+" },
-      { "label": "Production launches", "value": "26" },
-      { "label": "Avg. response time", "value": "<24h" }
+      { "label": "Years growing with product teams", "value": "5+" },
+      { "label": "Launches led end-to-end", "value": "26" },
+      { "label": "Average response time", "value": "<24h" }
     ],
-    "trustedTitle": "Trusted by product teams at",
+    "trustedTitle": "Recent teams I’ve partnered with",
     "trustedBrands": ["FlowState Labs", "NovaFin", "Blackdeep Technologies"]
   },
   "process": {
