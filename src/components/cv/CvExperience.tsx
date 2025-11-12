@@ -9,7 +9,7 @@ type CvExperienceProps = {
 
 const CvExperience = ({ experience, accessibility, sectionId, className }: CvExperienceProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-6 pt-16 lg:px-12",
+    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 lg:px-12",
     className,
   ]
     .filter(Boolean)
@@ -17,8 +17,8 @@ const CvExperience = ({ experience, accessibility, sectionId, className }: CvExp
 
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className="space-y-8 rounded-[1.75rem] border border-[color:var(--surface-card-border)] bg-[var(--surface-card)] p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
-        <h2 className="text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+      <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
+        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {experience.title}
         </h2>
         <div className="grid gap-7">
@@ -49,24 +49,24 @@ const CvExperience = ({ experience, accessibility, sectionId, className }: CvExp
               />
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-[var(--text-primary)]">
+                  <h3 className="text-xl font-semibold text-(--text-primary)">
                     {role.title}
                   </h3>
-                  <p className="text-sm text-[var(--text-accent)]">
+                  <p className="text-sm text-(--text-accent)">
                     {role.company}
                   </p>
                 </div>
                 <span
-                  className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--text-muted)]"
+                  className="text-xs font-semibold uppercase tracking-[0.28em] text-(--text-muted)"
                 >
                   {role.period}
                 </span>
               </div>
-              <p className="text-sm leading-6 text-[var(--text-secondary)]">
+              <p className="text-sm leading-6 text-(--text-secondary)">
                 {role.description}
               </p>
               <ul
-                className="list-disc space-y-2 pl-5 text-sm text-[var(--text-secondary)]"
+                className="list-disc space-y-2 pl-5 text-sm text-(--text-secondary)"
               >
                 {role.highlights.map((highlight) => (
                   <li key={`${role.title}-${highlight}`}>{highlight}</li>
@@ -76,7 +76,7 @@ const CvExperience = ({ experience, accessibility, sectionId, className }: CvExp
                 {role.stack.map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center justify-center rounded-full border border-[color:var(--accent-primary)] bg-[var(--accent-tag-bg)] px-4 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[var(--text-accent-strong)]"
+                    className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-(--text-accent-strong)"
                   >
                     {item}
                   </span>

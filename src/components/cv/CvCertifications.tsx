@@ -12,33 +12,38 @@ const CvCertifications = ({
   certifications,
   accessibility,
   sectionId,
+  className,
 }: CvCertificationsProps) => {
+  const sectionClassName = [
+    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-0 sm:pt-16",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <section
-      id={sectionId}
-      className="mx-auto w-full max-w-6xl px-6 pt-16 lg:px-12"
-    >
-      <div className="space-y-6 rounded-[1.75rem] border border-[color:var(--surface-card-border)] bg-[var(--surface-card)] p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
-        <h2 className="text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+    <section id={sectionId} className={sectionClassName}>
+      <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
+        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {certifications.title}
         </h2>
         <div className="grid gap-4">
           {certifications.items.map((item) => (
             <article
               key={`${item.name}-${item.issuer}`}
-              className="space-y-3 rounded-xl border border-[color:var(--surface-card-border)] bg-white/10 p-6 [backdrop-filter:blur(12px)]"
+              className="space-y-3 rounded-xl border border-(--surface-card-border) bg-white/10 p-6 [backdrop-filter:blur(12px)]"
             >
               <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-semibold text-[var(--text-primary)]">
+                <h3 className="text-lg font-semibold text-(--text-primary)">
                   {item.name}
                 </h3>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-(--text-tertiary)">
                   {item.issuer} · {item.year}
                 </span>
               </div>
               <Link
                 href={item.link}
-                className="inline-flex items-center gap-2 text-sm text-[var(--text-accent)] transition duration-300 hover:translate-x-1 hover:text-[var(--text-accent-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
+                className="inline-flex items-center gap-2 text-sm text-(--text-accent) transition duration-300 hover:translate-x-1 hover:text-(--text-accent-strong) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
                 aria-label={`${accessibility.certificationLink}: ${item.name}`}
                 tabIndex={0}
               >

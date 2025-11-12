@@ -18,7 +18,7 @@ const Footer = ({ footer, linkAriaLabel, onLinkActivate }: FooterProps) => {
       }}
     >
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm lg:flex-row lg:items-center lg:justify-between lg:px-12">
-        <span className="text-[var(--text-footer-muted)]">
+        <span className="text-(--text-footer-muted)">
           {footer.copyright}
         </span>
         <div className="flex flex-wrap gap-4">
@@ -26,7 +26,7 @@ const Footer = ({ footer, linkAriaLabel, onLinkActivate }: FooterProps) => {
             <a
               key={link.label}
               href={link.url}
-              className="rounded-lg px-3 py-1 text-[var(--text-footer)] transition duration-300 hover:-translate-y-0.5 hover:text-[var(--text-accent-strong)] focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
+              className="rounded-lg px-3 py-1 text-(--text-footer) transition duration-300 hover:-translate-y-0.5 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
               aria-label={`${linkAriaLabel}: ${link.label}`}
               tabIndex={0}
               onClick={(event: MouseEvent<HTMLAnchorElement>) => {

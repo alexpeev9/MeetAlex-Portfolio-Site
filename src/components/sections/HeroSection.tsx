@@ -23,29 +23,32 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
   return (
     <section
       id={sectionId}
-      className="relative isolate flex h-[calc(100vh-5rem)] w-full items-center"
+      className="relative isolate flex w-full items-center justify-center px-4 sm:px-6 lg:px-12"
+      style={{
+        minHeight: "calc(100vh - 5rem)",
+        background:
+          "radial-gradient(circle at top left, rgba(255,0,102,0.12), transparent 55%), radial-gradient(circle at bottom right, rgba(255,0,51,0.18), transparent 60%), var(--gradient-page)",
+      }}
     >
-      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,102,0.13),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,0,51,0.2),transparent_65%)]" /> */}
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
-        <div className="flex w-full flex-1 flex-col gap-10">
-          <div className="flex flex-col gap-6">
+      <div className="relative z-10 grid w-full max-w-6xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+        <div className="flex w-full flex-col gap-10 text-center lg:text-left">
+          <div className="flex flex-col items-center gap-6 lg:items-start">
             <span className="inline-flex w-fit items-center gap-3 rounded-full border border-rose-200 bg-white/70 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-rose-500 shadow-sm">
               {hero.eyebrow}
             </span>
-            <h1 className="text-4xl font-semibold leading-tight text-slate-900 md:text-5xl lg:text-[3.5rem]">
+            <h1 className="text-4xl font-semibold leading-tight text-slate-900 md:text-[2.9rem] lg:text-[3.5rem]">
               {hero.headline}
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
               {hero.subheadline}
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <button
               type="button"
               onClick={handlePrimaryClick}
               aria-label={accessibility.primaryCta}
-              className="inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-rose-600/30 transition hover:-translate-y-0.5 hover:bg-rose-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
+              className="inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-rose-600/30 transition hover:-translate-y-0.5 hover:bg-rose-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.primaryCta}
             </button>
@@ -53,7 +56,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               type="button"
               onClick={handleSecondaryClick}
               aria-label={accessibility.secondaryCta}
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-600 transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--focus-ring-offset)]"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-600 transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.secondaryCta}
             </button>
@@ -87,11 +90,12 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
           </div>
         </div>
         <div className="relative w-full flex-1">
-          <div className="relative overflow-hidden rounded-3xl border border-rose-100 bg-white/80 p-6 shadow-[0_30px_80px_-35px_rgba(255,0,90,0.45)] backdrop-blur">
+          <div className="relative overflow-hidden rounded-3xl border border-rose-100 bg-white/85 p-6 shadow-[0_30px_80px_-35px_rgba(255,0,90,0.45)] backdrop-blur">
             <div
               className="rounded-2xl p-4"
               style={{
-                background: "linear-gradient(to bottom right, #fff0f5, #ffffff)",
+                background:
+                  "linear-gradient(to bottom right, #fff0f5, #ffffff)",
               }}
             >
               <Image
@@ -120,7 +124,8 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
           <div
             className="absolute -left-6 -top-8 h-24 w-24 rounded-full blur-3xl"
             style={{
-              background: "linear-gradient(to bottom right, rgba(255, 200, 210, 0.4), rgba(255, 220, 230, 0.1))",
+              background:
+                "linear-gradient(to bottom right, rgba(255, 200, 210, 0.4), rgba(255, 220, 230, 0.1))",
             }}
           />
         </div>
