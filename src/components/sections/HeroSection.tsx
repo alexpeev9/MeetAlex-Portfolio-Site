@@ -28,9 +28,10 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
         minHeight: "calc(100vh - 5rem)",
         background:
           "radial-gradient(circle at top left, rgba(255,0,102,0.12), transparent 55%), radial-gradient(circle at bottom right, rgba(255,0,51,0.18), transparent 60%), var(--gradient-page)",
+        overflow: "hidden",
       }}
     >
-      <div className="relative z-10 grid w-full max-w-6xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+      <div className="hero-fade-in relative z-10 grid w-full max-w-6xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
         <div className="flex w-full flex-col gap-10 text-center lg:text-left">
           <div className="flex flex-col items-center gap-6 lg:items-start">
             <span className="inline-flex w-fit items-center gap-3 rounded-full border border-rose-200 bg-white/70 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-rose-500 shadow-sm">
@@ -89,7 +90,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             </div>
           </div>
         </div>
-        <div className="relative w-full flex-1">
+        <div className="hero-fade-in-delayed relative w-full flex-1">
           <div className="relative overflow-hidden rounded-3xl border border-rose-100 bg-white/85 p-6 shadow-[0_30px_80px_-35px_rgba(255,0,90,0.45)] backdrop-blur">
             <div
               className="rounded-2xl p-4"
