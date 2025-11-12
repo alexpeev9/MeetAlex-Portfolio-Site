@@ -8,10 +8,8 @@
     "logoSecondary": "react.dev",
     "items": [
       { "id": "projects", "label": "Projects" },
-      { "id": "process", "label": "Process" },
-      { "id": "about", "label": "About" },
-      { "id": "hire-page", "label": "Hire" },
-      { "id": "cv-page", "label": "CV" }
+      { "id": "experience", "label": "Experience" },
+      { "id": "education", "label": "Education" }
     ],
     "cta": "Start a Project",
     "ariaMenu": "Primary navigation",
@@ -19,14 +17,22 @@
     "logoAria": "Alexander Peev developer home"
   },
   "hero": {
+    "eyebrow": "Senior React developer",
     "headline": "Beautiful React experiences for modern teams",
     "subheadline": "I help founders and product teams craft fast, accessible, and future-proof web applications.",
     "primaryCta": "Schedule a Call",
     "secondaryCta": "View Recent Work",
     "primaryCtaUrl": "https://cal.com/peev",
     "secondaryCtaUrl": "https://github.com/alexander-peev",
-    "imageSrc": "/hero-portrait.svg",
-    "imageAlt": "Abstract illustration representing Alexander Peev with a confident smile"
+    "imageSrc": "/alexpeev9.webp",
+    "imageAlt": "Image of Alexander Peev with a confident smile",
+    "metrics": [
+      { "label": "Years shipping React apps", "value": "5+" },
+      { "label": "Production launches", "value": "26" },
+      { "label": "Avg. response time", "value": "<24h" }
+    ],
+    "trustedTitle": "Trusted by product teams at",
+    "trustedBrands": ["FlowState Labs", "NovaFin", "Blackdeep Technologies"]
   },
   "process": {
     "title": "Working together",
@@ -60,7 +66,10 @@
         "imageSrc": "/project-analytics.svg",
         "imageAlt": "Analytics dashboard mockup with rising line chart",
         "actions": [
-          { "label": "Case Study", "url": "https://www.linkedin.com/in/alexander-peev" },
+          {
+            "label": "Case Study",
+            "url": "https://www.linkedin.com/in/alexander-peev"
+          },
           { "label": "Live Demo", "url": "https://github.com/alexander-peev" }
         ]
       },
@@ -71,7 +80,10 @@
         "imageSrc": "/project-commerce.svg",
         "imageAlt": "E-commerce storefront mockup with product cards and checkout",
         "actions": [
-          { "label": "Product Tour", "url": "https://www.linkedin.com/in/alexander-peev" },
+          {
+            "label": "Product Tour",
+            "url": "https://www.linkedin.com/in/alexander-peev"
+          },
           { "label": "View Repo", "url": "https://github.com/alexander-peev" }
         ]
       }
@@ -497,7 +509,10 @@
   "footer": {
     "copyright": "© Alexander Peev. All rights reserved.",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alexander-peev" },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alexander-peev"
+      },
       { "label": "GitHub", "url": "https://github.com/alexander-peev" },
       { "label": "Privacy", "url": "https://alexanderpeev.dev/privacy" }
     ]

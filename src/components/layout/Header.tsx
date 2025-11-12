@@ -2,18 +2,26 @@
 
 import styles from "@/app/page.module.css";
 import { getCopy } from "@/lib/getCopy";
-import { handleKeyboardActivation } from "@/utils/navigation";
+import { handleKeyboardActivation, scrollToId } from "@/utils/navigation";
 import { MouseEvent } from "react";
 
-type HeaderProps = {
-  onNavigate: (targetId: string) => void;
-};
+const Header = () => {
+  const sectionIds: Record<string, string> = {
+    projects: "cv-projects",
+    process: "cv-skills",
+    about: "cv-services",
+  };
 
-const Header = ({ onNavigate }: HeaderProps) => {
+  const handleNavigate = (targetId: string) => {
+    const mappedId = sectionIds[targetId] ?? targetId;
+    scrollToId(mappedId);
+  };
+
   const handleLogoClick = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    onNavigate("hero");
+    scrollToId("hero");
   };
+
   const copy = getCopy();
   const navigation = copy.navigation;
   return (
@@ -25,7 +33,7 @@ const Header = ({ onNavigate }: HeaderProps) => {
           aria-label={navigation.logoAria}
           onClick={handleLogoClick}
           onKeyDown={(event) =>
-            handleKeyboardActivation(event, () => onNavigate("hero"))
+            handleKeyboardActivation(event, () => handleNavigate("hero"))
           }
         >
           <span
@@ -45,9 +53,9 @@ const Header = ({ onNavigate }: HeaderProps) => {
               type="button"
               className={`text-sm font-semibold uppercase tracking-[0.3em] transition duration-300 ${styles.navLink} ${styles.fadeInUp}`}
               aria-label={`${navigation.ariaItemPrefix} ${item.label}`}
-              onClick={() => onNavigate(item.id)}
+              onClick={() => handleNavigate(item.id)}
               onKeyDown={(event) =>
-                handleKeyboardActivation(event, () => onNavigate(item.id))
+                handleKeyboardActivation(event, () => handleNavigate(item.id))
               }
             >
               {item.label}
@@ -58,9 +66,9 @@ const Header = ({ onNavigate }: HeaderProps) => {
           type="button"
           className={`hidden rounded-full px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 md:inline-flex ${styles.ctaButton} ${styles.fadeInUp}`}
           aria-label={`${navigation.ariaItemPrefix} ${navigation.cta}`}
-          onClick={() => onNavigate("contact")}
+          onClick={() => handleNavigate("contact")}
           onKeyDown={(event) =>
-            handleKeyboardActivation(event, () => onNavigate("contact"))
+            handleKeyboardActivation(event, () => handleNavigate("contact"))
           }
         >
           {navigation.cta}

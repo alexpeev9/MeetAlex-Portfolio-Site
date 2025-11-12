@@ -118,6 +118,7 @@ export type CopyShape = {
     logoAria: string;
   };
   hero: {
+    eyebrow: string;
     headline: string;
     subheadline: string;
     primaryCta: string;
@@ -126,6 +127,12 @@ export type CopyShape = {
     secondaryCtaUrl: string;
     imageSrc: string;
     imageAlt: string;
+    metrics: {
+      label: string;
+      value: string;
+    }[];
+    trustedTitle: string;
+    trustedBrands: string[];
   };
   process: {
     title: string;
