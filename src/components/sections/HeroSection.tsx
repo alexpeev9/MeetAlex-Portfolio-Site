@@ -1,8 +1,7 @@
 'use client';
 
-import { getCopy } from '@/lib/getCopy';
-import { openInNewTab } from '@/utils/navigation';
-import Image from 'next/image';
+import { getCopy } from "@/lib/getCopy";
+import Image from "next/image";
 
 type HeroSectionProps = {
   sectionId?: string;
@@ -11,14 +10,6 @@ type HeroSectionProps = {
 const HeroSection = ({ sectionId }: HeroSectionProps) => {
   const copy = getCopy();
   const { hero, accessibility, cv } = copy;
-
-  const handlePrimaryClick = () => {
-    openInNewTab(hero.primaryCtaUrl);
-  };
-
-  const handleSecondaryClick = () => {
-    openInNewTab(hero.secondaryCtaUrl);
-  };
 
   return (
     <section
@@ -45,22 +36,24 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-            <button
-              type="button"
-              onClick={handlePrimaryClick}
+            <a
+              href={hero.primaryCtaUrl}
+              target="_blank"
+              rel="noreferrer"
               aria-label={accessibility.primaryCta}
               className="inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-rose-600/30 transition hover:-translate-y-0.5 hover:bg-rose-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.primaryCta}
-            </button>
-            <button
-              type="button"
-              onClick={handleSecondaryClick}
+            </a>
+            <a
+              href={hero.secondaryCtaUrl}
+              target="_blank"
+              rel="noreferrer"
               aria-label={accessibility.secondaryCta}
               className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-600 transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.secondaryCta}
-            </button>
+            </a>
           </div>
           <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {hero.metrics.map((metric) => (

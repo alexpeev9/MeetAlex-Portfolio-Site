@@ -1,5 +1,3 @@
-'use client';
-
 import CvCertifications from "@/components/cv/CvCertifications";
 import CvEducation from "@/components/cv/CvEducation";
 import CvExperience from "@/components/cv/CvExperience";
@@ -8,15 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import { getCopy } from "@/lib/getCopy";
-import { openInNewTab } from "@/utils/navigation";
 
 const cvCopy = getCopy();
 
 export default function CvPage() {
-  const handleFooterLink = (url: string) => {
-    openInNewTab(url);
-  };
-
   return (
     <div
       className="flex min-h-screen flex-col"
@@ -77,7 +70,6 @@ export default function CvPage() {
       <Footer
         footer={cvCopy.footer}
         linkAriaLabel={cvCopy.accessibility.projectLink}
-        onLinkActivate={handleFooterLink}
       />
     </div>
   );
