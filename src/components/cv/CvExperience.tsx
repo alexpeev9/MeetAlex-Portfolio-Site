@@ -1,8 +1,19 @@
+import Image from "next/image";
 import { getCopy } from "../../lib/getCopy";
 
 type CvExperienceProps = {
   sectionId?: string;
   className?: string;
+};
+
+const getCompanyLogo = (company: string): string | null => {
+  const logoMap: Record<string, string> = {
+    "Blackdeep Technologies": "/images/companies/blackdeep-technologies.webp",
+    "C4 Nexus Ltd": "/images/companies/c4nexus.jpg",
+    "Self Employed": "/images/companies/contract.jpg",
+    "University of Veliko Tarnovo": "/images/companies/univeristy.webp",
+  };
+  return logoMap[company] || null;
 };
 
 const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
@@ -26,6 +37,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
         <div className="grid gap-7">
           {experience.roles.map((role, index) => {
             const isLast = index === experience.roles.length - 1;
+            const logoPath = getCompanyLogo(role.company);
             return (
               <article
                 key={`${role.title}-${role.company}`}
@@ -50,13 +62,24 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
                   }}
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-(--text-primary)">
-                      {role.title}
-                    </h3>
-                    <p className="text-sm text-(--text-accent)">
-                      {role.company}
-                    </p>
+                  <div className="flex items-center gap-3">
+                    {logoPath && (
+                      <Image
+                        src={logoPath}
+                        alt={`${role.company} logo`}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 rounded-lg object-contain"
+                      />
+                    )}
+                    <div>
+                      <h3 className="text-xl font-semibold text-(--text-primary)">
+                        {role.title}
+                      </h3>
+                      <p className="text-sm text-(--text-accent)">
+                        {role.company}
+                      </p>
+                    </div>
                   </div>
                   <span className="text-xs font-semibold tracking-[0.28em] text-(--text-muted) uppercase">
                     {role.period}
