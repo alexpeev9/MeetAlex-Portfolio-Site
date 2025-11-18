@@ -40,16 +40,68 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               />
             </div>
             <div className="mt-6 flex flex-col gap-4">
-              <div className="flex flex-col gap-1 text-center lg:text-left">
-                <span className="text-sm font-medium tracking-[0.28em] text-blue-500 uppercase">
-                  {cv.bio.title}
-                </span>
-                <span className="text-2xl font-semibold text-slate-900">
-                  {cv.bio.name}
-                </span>
-                <span className="text-sm font-medium text-blue-500">
-                  {cv.bio.location}
-                </span>
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                <div className="flex flex-col gap-1 text-center lg:text-left">
+                  <span className="text-sm font-medium tracking-[0.28em] text-blue-500 uppercase">
+                    {cv.bio.title}
+                  </span>
+                  <span className="text-2xl font-semibold text-slate-900">
+                    {cv.bio.name}
+                  </span>
+                  <span className="text-sm font-medium text-blue-500">
+                    {cv.bio.location}
+                  </span>
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-end">
+                  <a
+                    href={cv.contact.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Visit ${cv.contact.linkedinLabel} profile`}
+                    className="inline-flex items-center justify-center gap-15 opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                    tabIndex={0}
+                  >
+                    <Image
+                      src="/images/icons/linkedin.png"
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="h-16 w-16"
+                    />
+                  </a>
+                  <a
+                    href={cv.contact.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Visit ${cv.contact.githubLabel} profile`}
+                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                    tabIndex={0}
+                  >
+                    <Image
+                      src="/images/icons/github.png"
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="h-16 w-16"
+                    />
+                  </a>
+                  <a
+                    href={cv.contact.youtube}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Visit ${cv.contact.youtubeLabel} channel`}
+                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                    tabIndex={0}
+                  >
+                    <Image
+                      src="/images/icons/youtube.png"
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="h-16 w-16"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +127,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               {hero.subheadline}
             </p>
           </div>
-          {/* <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <a
               href={hero.primaryCtaUrl}
               target="_blank"
@@ -94,7 +146,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             >
               {hero.secondaryCta}
             </a>
-          </div> */}
+          </div>
           <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
@@ -107,7 +159,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <span className="text-xs tracking-[0.28em] text-slate-400 uppercase">
               {hero.trustedTitle}
             </span>
@@ -121,7 +173,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

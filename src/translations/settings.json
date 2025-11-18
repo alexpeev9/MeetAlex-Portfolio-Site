@@ -28,12 +28,12 @@
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
-      { "label": "Years growing with product teams", "value": "5+" },
-      { "label": "Launches led end-to-end", "value": "26" },
-      { "label": "Average response time", "value": "<24h" }
+      { "label": "Public open-source projects", "value": "12" },
+      { "label": "Programming book contributions", "value": "3" },
+      { "label": "Years teaching courses", "value": "2" }
     ],
-    "trustedTitle": "Currently located in",
-    "trustedBrands": ["Sofia, Bulgaria"]
+    "trustedTitle": "Interested in working in:",
+    "trustedBrands": ["Frontend", "Fullstack", "Contract"]
   },
   "process": {
     "title": "Working together",
@@ -262,8 +262,12 @@
       "phone": "+359 877 900 718",
       "emailLabel": "Email",
       "email": "hello@alexanderpeev.dev",
-      "linkedin": "https://www.linkedin.com/in/alexander-peev",
-      "github": "https://github.com/alexander-peev",
+      "linkedin": "https://www.linkedin.com/in/alexpeev9/",
+      "linkedinLabel": "LinkedIn",
+      "github": "https://github.com/alexpeev9",
+      "githubLabel": "GitHub",
+      "youtube": "https://www.youtube.com/@alexpeev9",
+      "youtubeLabel": "Youtube",
       "hireCta": "View hiring info"
     },
     "skills": {
