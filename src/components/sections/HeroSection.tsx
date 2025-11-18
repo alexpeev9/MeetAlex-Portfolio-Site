@@ -132,8 +132,8 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <a
               href={hero.primaryCtaUrl}
-              target="_blank"
-              rel="noreferrer"
+              // target="_blank"
+              // rel="noreferrer"
               aria-label={accessibility.primaryCta}
               className="inline-flex w-64 items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-8 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
@@ -141,8 +141,8 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             </a>
             <a
               href={hero.secondaryCtaUrl}
-              target="_blank"
-              rel="noreferrer"
+              // target="_blank"
+              // rel="noreferrer"
               aria-label={accessibility.secondaryCta}
               className="w-64inline-flex items-center justify-center rounded-full border border-blue-600 bg-white px-8 py-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase shadow-lg shadow-slate-200/30 transition hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >

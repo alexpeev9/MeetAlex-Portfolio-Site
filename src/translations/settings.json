@@ -24,8 +24,8 @@
     "subheadline2": "Open to new opportunities.",
     "primaryCta": "View Experience",
     "secondaryCta": "Explore Projects",
-    "primaryCtaUrl": "https://cal.com/peev",
-    "secondaryCtaUrl": "https://github.com/alexander-peev",
+    "primaryCtaUrl": "#experience",
+    "secondaryCtaUrl": "#projects",
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
