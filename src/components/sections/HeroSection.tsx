@@ -42,13 +42,13 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             <div className="mt-6 flex flex-col gap-4">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex flex-col gap-1 text-center lg:text-left">
-                  <span className="text-sm font-medium tracking-[0.28em] text-blue-500 uppercase">
-                    {cv.bio.title}
-                  </span>
                   <span className="text-2xl font-semibold text-slate-900">
                     {cv.bio.name}
                   </span>
-                  <span className="text-sm font-medium text-blue-500">
+                  {/* <span className="text-sm font-medium text-blue-500">
+                    {cv.bio.title}
+                  </span> */}
+                  <span className="text-md font-bold text-blue-500">
                     {cv.bio.location}
                   </span>
                 </div>
@@ -113,7 +113,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             }}
           />
         </div>
-        <div className="hero-fade-in order-2 flex w-full flex-col gap-10 text-center lg:order-1 lg:text-left">
+        <div className="hero-fade-in order-2 flex w-full flex-col gap-6 text-center lg:order-1 lg:text-left">
           <div className="flex flex-col items-center gap-6 lg:items-start">
             <span className="inline-flex w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm">
               {hero.eyebrow}
@@ -125,6 +125,8 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
               {hero.subheadline}
+              <br />
+              {hero.subheadline2}
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
@@ -133,7 +135,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               target="_blank"
               rel="noreferrer"
               aria-label={accessibility.primaryCta}
-              className="inline-flex items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-8 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
+              className="inline-flex w-64 items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-8 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.primaryCta}
             </a>
@@ -142,7 +144,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
               target="_blank"
               rel="noreferrer"
               aria-label={accessibility.secondaryCta}
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase shadow-lg shadow-slate-200/30 transition hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
+              className="w-64inline-flex items-center justify-center rounded-full border border-blue-600 bg-white px-8 py-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase shadow-lg shadow-slate-200/30 transition hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-500 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
             >
               {hero.secondaryCta}
             </a>

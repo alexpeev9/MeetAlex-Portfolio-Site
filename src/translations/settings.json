@@ -17,12 +17,13 @@
     "logoAria": "Alexander Peev developer home"
   },
   "hero": {
-    "eyebrow": "Meet Alexander",
+    "eyebrow": "Meet Alex",
     "headline": "Developer with",
     "headline2": "5+ years of experience",
-    "subheadline": "Working a 9-5 as a React Web Developer while also supporting and developing company and client websites. Open to new opportunities.",
-    "primaryCta": "Read My Story",
-    "secondaryCta": "See What I’ve Shipped",
+    "subheadline": "Working a 9-5 as a React Web Developer while also supporting and developing company and client websites.",
+    "subheadline2": "Open to new opportunities.",
+    "primaryCta": "View Experience",
+    "secondaryCta": "Explore Projects",
     "primaryCtaUrl": "https://cal.com/peev",
     "secondaryCtaUrl": "https://github.com/alexander-peev",
     "imageSrc": "/alexpeev9.webp",
@@ -252,7 +253,7 @@
   },
   "cv": {
     "bio": {
-      "name": "Alexander Peev",
+      "name": "Alexander Peev, 25",
       "title": "React Developer",
       "summary": "React Developer with experience delivering AI-assisted interfaces, e-commerce platforms, and modern web applications for global brands.",
       "location": "Sofia, Bulgaria"
@@ -342,23 +343,22 @@
           "title": "Fullstack Developer",
           "company": "C4 Nexus Ltd",
           "period": "Dec 2022 - May 2024",
-          "description": "Delivered e-commerce platforms for global brands using React, Chakra UI, and JavaScript across front-end and back-end flows.",
+          "description": "As a web developer, I developed both back-end and front-end features, and the main technologies I used were JavaScript and React.",
           "highlights": [
-            "Launched PWA React Kit app with React + Chakra UI.",
-            "Maintained SFRA storefronts with custom integrations.",
-            "Collaborated with multinational team using Git, Jira, and Figma."
+            "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
+            "Worked as a part of a multinational team while following the Scrum methodology."
           ],
           "stack": ["React", "Chakra UI", "JavaScript", "Salesforce", "SASS"]
         },
         {
           "title": "Fullstack Contract Developer",
-          "company": "Metal Expert Ltd",
+          "company": "Self Employed",
           "period": "Apr 2022 - Present",
-          "description": "Contract developer focusing on Next.js, TypeScript, and Tailwind CSS for dynamic web apps across multiple clients.",
+          "description": "As a contract developer, I work on diverse projects for different companies",
           "highlights": [
-            "Built Next.js SaaS app with Tailwind CSS and TypeScript.",
-            "Delivered Shopify storefront with Liquid and custom scripts.",
-            "Maintained WordPress e-commerce features for SMEs."
+            "Currently developing a showcase website for 'Metal Expert Ltd' using Next.js, TypeScript, and Tailwind CSS.",
+            "Develop and support an e-commerce site for 'Escape Structures Ltd' using WordPress, jQuery, and PHP.",
+            "Create and support an e-commerce site for 'Sober Coins Ltd' using Shopify, Liquid, and JavaScript."
           ],
           "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shopify", "PHP"]
         },
@@ -366,11 +366,9 @@
           "title": "University Assistant",
           "company": "University of Veliko Tarnovo",
           "period": "Oct 2020 - May 2022",
-          "description": "Led web development courses covering ASP.NET Core, SQL, and C#; produced educational workshops and blog content.",
           "highlights": [
-            "Delivered workshops on Java Spring applications.",
-            "Published technical blogs supporting curriculum.",
-            "Mentored students on .NET and desktop development."
+            "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
+            "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
           ],
           "stack": ["ASP.NET Core", "SQL", "C#", ".NET", "Teaching"]
         }
@@ -382,10 +380,8 @@
         {
           "degree": "Master's degree",
           "field": "Web Technologies and Software",
-          "period": "2023 - Present",
-          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo",
-          "linkLabel": "Master's diploma",
-          "link": "https://drive.google.com/file/d/1aH3ERiPAIhE746jLTSZFlPb5nyG4x6ZB/view"
+          "period": "2025 - Present",
+          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo"
         },
         {
           "degree": "Bachelor's degree",
