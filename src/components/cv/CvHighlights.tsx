@@ -1,23 +1,25 @@
-import { CopyShape } from "@/lib/getCopy";
+import { getCopy } from "../../lib/getCopy";
 
 type CvHighlightsProps = {
-  languages: CopyShape["cv"]["languages"];
-  accessibility: CopyShape["cv"]["accessibility"];
   sectionId?: string;
   className?: string;
 };
 
-const CvHighlights = ({ languages, accessibility, sectionId, className }: CvHighlightsProps) => {
+const CvHighlights = ({ sectionId, className }: CvHighlightsProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 xl:px-0",
+    "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
     className,
   ]
     .filter(Boolean)
     .join(" ");
 
+  const copy = getCopy();
+  const languages = copy.cv.languages;
+  const accessibility = copy.cv.accessibility;
+
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
+      <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
         <div className="space-y-3">
           <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
             {languages.title}
@@ -53,7 +55,7 @@ const CvHighlights = ({ languages, accessibility, sectionId, className }: CvHigh
               {languages.interests.items.map((interest) => (
                 <span
                   key={interest}
-                  className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-(--text-accent-strong)"
+                  className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold tracking-[0.08em] text-(--text-accent-strong) uppercase"
                   role="listitem"
                   aria-label={`${accessibility.interestTag}: ${interest}`}
                 >

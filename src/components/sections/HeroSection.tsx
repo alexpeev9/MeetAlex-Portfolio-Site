@@ -3,23 +3,12 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
 
-type HeroSectionProps = {
-  sectionId?: string;
-};
-
-const HeroSection = ({ sectionId }: HeroSectionProps) => {
+const HeroSection = () => {
   const copy = getCopy();
   const { hero, accessibility, cv } = copy;
 
   return (
-    <section
-      id={sectionId}
-      className="relative isolate flex w-full items-center justify-center px-4 pt-4 pb-16 sm:px-6 sm:pt-0 lg:px-12"
-      style={{
-        minHeight: "calc(100vh - 5rem)",
-        overflow: "hidden",
-      }}
-    >
+    <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-4 sm:px-6 lg:h-(--section-height) lg:px-12 lg:pt-0">
       <div className="relative z-10 grid w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
         <div className="hero-fade-in-delayed order-1 mx-auto w-full max-w-sm lg:order-2 lg:mx-0 lg:max-w-none">
           <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
@@ -52,7 +41,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
                     {cv.bio.location}
                   </span>
                 </div>
-                <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-end">
+                <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
                   <a
                     href={cv.contact.linkedin}
                     target="_blank"
@@ -66,7 +55,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
                       alt=""
                       width={64}
                       height={64}
-                      className="h-16 w-16"
+                      className="h-8 w-8"
                     />
                   </a>
                   <a
@@ -82,7 +71,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
                       alt=""
                       width={64}
                       height={64}
-                      className="h-16 w-16"
+                      className="h-8 w-8"
                     />
                   </a>
                   <a
@@ -98,7 +87,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
                       alt=""
                       width={64}
                       height={64}
-                      className="h-16 w-16"
+                      className="h-8 w-8"
                     />
                   </a>
                 </div>
@@ -115,7 +104,7 @@ const HeroSection = ({ sectionId }: HeroSectionProps) => {
         </div>
         <div className="hero-fade-in order-2 flex w-full flex-col gap-6 text-center lg:order-1 lg:text-left">
           <div className="flex flex-col items-center gap-6 lg:items-start">
-            <span className="inline-flex w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm">
+            <span className="hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm md:inline-flex">
               {hero.eyebrow}
             </span>
             <h1 className="text-4xl leading-tight font-semibold text-slate-900 md:text-[2.9rem] lg:text-[3.5rem]">

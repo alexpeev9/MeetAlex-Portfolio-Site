@@ -1,35 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #19191A;
-  --surface-muted: #E6E6E6;
+  --background: #ffffff;
+  --foreground: #19191a;
+  --surface-muted: #e6e6e6;
   --surface-card: rgba(255, 255, 255, 0.92);
   --surface-card-border: rgba(30, 111, 232, 0.32);
   --surface-card-shadow: 0 22px 60px -32px rgba(30, 111, 232, 0.2);
   --surface-header: rgba(255, 255, 255, 0.88);
   --surface-header-border: rgba(30, 111, 232, 0.42);
-  --gradient-page: linear-gradient(135deg, #FFFFFF 0%, #B8D9FF 25%, #8FC2FF 50%, #B8D9FF 75%, #FFFFFF 100%);
-  --gradient-footer: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(184, 217, 255, 0.95));
-  --gradient-timeline: linear-gradient(180deg, rgba(30, 111, 232, 0.25), rgba(95, 168, 255, 0.15));
-  --accent-primary: #1E6FE8;
-  --accent-primary-hover: #1A5FCC;
+  --gradient-page: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #b8d9ff 25%,
+    #8fc2ff 50%,
+    #b8d9ff 75%,
+    #ffffff 100%
+  );
+  --gradient-footer: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(184, 217, 255, 0.95)
+  );
+  --gradient-timeline: linear-gradient(
+    180deg,
+    rgba(30, 111, 232, 0.25),
+    rgba(95, 168, 255, 0.15)
+  );
+  --accent-primary: #1e6fe8;
+  --accent-primary-hover: #1a5fcc;
   --accent-muted: rgba(30, 111, 232, 0.18);
   --accent-tag-bg: rgba(184, 217, 255, 0.6);
-  --text-primary: #19191A;
+  --text-primary: #19191a;
   --text-secondary: rgba(25, 25, 26, 0.85);
   --text-tertiary: rgba(25, 25, 26, 0.7);
   --text-muted: rgba(25, 25, 26, 0.6);
-  --text-accent: #1E6FE8;
-  --text-accent-strong: #1A5FCC;
-  --text-nav: #1A5FCC;
-  --text-nav-hover: #1E6FE8;
+  --text-accent: #1e6fe8;
+  --text-accent-strong: #1a5fcc;
+  --text-nav: #1a5fcc;
+  --text-nav-hover: #1e6fe8;
   --text-footer: rgba(25, 25, 26, 0.82);
   --text-footer-muted: rgba(25, 25, 26, 0.65);
-  --badge-text: #1E6FE8;
-  --action-text: #FFFFFF;
+  --badge-text: #1e6fe8;
+  --action-text: #ffffff;
   --focus-ring: rgba(30, 111, 232, 0.6);
-  --focus-ring-offset: #FFFFFF;
+  --focus-ring-offset: #ffffff;
   --timeline-dot-shadow: 0 0 0 4px rgba(30, 111, 232, 0.2);
 }
 
@@ -38,6 +53,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --section-height: calc(min(100svh, 100vh) - (6rem + 5.25rem));
 }
 
 @media (prefers-color-scheme: dark) {

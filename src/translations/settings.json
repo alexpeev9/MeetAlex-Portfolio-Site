@@ -11,7 +11,7 @@
       { "id": "experience", "label": "Experience" },
       { "id": "education", "label": "Education" }
     ],
-    "cta": "Start a Project",
+    "cta": "Schedule a Chat",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
     "logoAria": "Alexander Peev developer home"
@@ -324,6 +324,7 @@
         {
           "title": "React Developer",
           "company": "Blackdeep Technologies",
+          "link": "https://blackdeep.tech",
           "period": "Jun 2024 - Present",
           "description": "Building React applications with TypeScript, React Query, and Chakra UI to integrate AI features for image generation and chat experiences.",
           "highlights": [
@@ -342,6 +343,7 @@
         {
           "title": "Fullstack Developer",
           "company": "C4 Nexus Ltd",
+          "link": "https://c4nexus.com",
           "period": "Dec 2022 - May 2024",
           "description": "As a web developer, I developed both back-end and front-end features, and the main technologies I used were JavaScript and React.",
           "highlights": [
@@ -351,10 +353,10 @@
           "stack": ["React", "Chakra UI", "JavaScript", "Salesforce", "SASS"]
         },
         {
-          "title": "Fullstack Contract Developer",
+          "title": "Contract Developer",
           "company": "Self Employed",
           "period": "Apr 2022 - Present",
-          "description": "As a contract developer, I work on diverse projects for different companies",
+          "description": "As a fullstack contract developer, I work on diverse projects for different companies",
           "highlights": [
             "Currently developing a showcase website for 'Metal Expert Ltd' using Next.js, TypeScript, and Tailwind CSS.",
             "Develop and support an e-commerce site for 'Escape Structures Ltd' using WordPress, jQuery, and PHP.",
@@ -365,6 +367,7 @@
         {
           "title": "University Assistant",
           "company": "University of Veliko Tarnovo",
+          "link": "https://www.uni-vt.bg",
           "period": "Oct 2020 - May 2022",
           "highlights": [
             "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
@@ -378,26 +381,17 @@
       "title": "Education",
       "items": [
         {
-          "degree": "Master's degree",
-          "field": "Web Technologies and Software",
+          "title": "Master's degree",
+          "description": "Web Technologies and Software",
           "period": "2025 - Present",
-          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo"
+          "subtitle": "St. Cyril and St. Methodius University of Veliko Tarnovo"
         },
         {
-          "degree": "Bachelor's degree",
-          "field": "Software Engineering",
+          "title": "Bachelor's degree",
+          "description": "Software Engineering",
           "period": "2019 - 2023",
-          "school": "St. Cyril and St. Methodius University of Veliko Tarnovo",
-          "linkLabel": "Bachelor's diploma",
-          "link": "https://drive.google.com/file/d/1aH3ERiPAIhE746jLTSZFlPb5nyG4x6ZB/view"
-        },
-        {
-          "degree": "JavaScript Web Developer Diploma",
-          "field": "Software University",
-          "period": "2021",
-          "school": "SoftUni",
-          "linkLabel": "Certificate",
-          "link": "https://softuni.bg/certificates/details/133486/050776f5"
+          "subtitle": "St. Cyril and St. Methodius University of Veliko Tarnovo",
+          "grade": "Excellent 5.51"
         }
       ]
     },
@@ -405,18 +399,20 @@
       "title": "Certifications",
       "items": [
         {
-          "name": "AWS Certified Cloud Practitioner",
-          "issuer": "Amazon Web Services",
-          "year": "2024",
-          "linkLabel": "View credential",
-          "link": "https://www.credly.com/badges/aws-cloud-practitioner"
+          "title": "JavaScript Web Developer Diploma",
+          "subtitle": "Software University (SoftUni)",
+          "period": "2021",
+          "grade": "Excellent 5.98",
+          "linkLabel": "Certificate",
+          "link": "https://softuni.bg/certificates/details/133486/050776f5"
         },
         {
-          "name": "Advanced React Patterns",
-          "issuer": "Epic React",
-          "year": "2023",
-          "linkLabel": "Course completion",
-          "link": "https://epicreact.dev/certificates/alexander-peev"
+          "title": "Data Structures Fundamentals",
+          "subtitle": "Software University (SoftUni)",
+          "period": "2021",
+          "grade": "Excellent 6.00",
+          "linkLabel": "Certificate",
+          "link": "https://softuni.bg/certificates/details/110044/16353ddd"
         }
       ]
     },
@@ -508,14 +504,14 @@
     }
   },
   "footer": {
-    "copyright": "© Alexander Peev. All rights reserved.",
+    "copyright": "",
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alexander-peev"
+        "url": "htthttps://www.linkedin.com/in/alexpeev9/"
       },
-      { "label": "GitHub", "url": "https://github.com/alexander-peev" },
-      { "label": "Privacy", "url": "https://alexanderpeev.dev/privacy" }
+      { "label": "GitHub", "url": "https://github.com/alexpeev9" },
+      { "label": "YouTube", "url": "https://www.youtube.com/@alexpeev9" }
     ]
   },
   "accessibility": {

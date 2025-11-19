@@ -38,15 +38,18 @@ export default function RootLayout({
             background: "var(--gradient-page)",
             color: "var(--text-primary)",
           }}
+          id="main"
         >
           <Header />
           {children}
-          <Footer
-            footer={copy.footer}
-            linkAriaLabel={copy.accessibility.projectLink}
-          />
+          <Footer linkAriaLabel={copy.accessibility.projectLink} />
         </div>
       </body>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></script>
     </html>
   );
 }

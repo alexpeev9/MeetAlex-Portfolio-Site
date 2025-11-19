@@ -1,24 +1,25 @@
-import { CopyShape } from "@/lib/getCopy";
 import Link from "next/link";
+import { getCopy } from "../../lib/getCopy";
 
 type CvProjectsProps = {
-  projects: CopyShape["cv"]["projects"];
-  accessibility: CopyShape["cv"]["accessibility"];
   sectionId?: string;
   className?: string;
 };
 
-const CvProjects = ({ projects, accessibility, sectionId, className }: CvProjectsProps) => {
+const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 xl:px-0",
+    "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
     className,
   ]
     .filter(Boolean)
     .join(" ");
 
+  const projects = getCopy().cv.projects;
+  const accessibility = getCopy().cv.accessibility;
+
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [backdrop-filter:blur(18px)] [box-shadow:var(--surface-card-shadow)]">
+      <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
         <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {projects.title}
         </h2>
@@ -31,7 +32,9 @@ const CvProjects = ({ projects, accessibility, sectionId, className }: CvProject
                 </h3>
                 <Link
                   href={project.link}
-                  className="inline-flex items-center gap-2 text-sm text-(--text-accent) transition duration-300 hover:translate-x-1 hover:text-(--text-accent-strong) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-(--text-accent) transition duration-300 hover:translate-x-1 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none"
                   aria-label={`${accessibility.projectLink}: ${project.name}`}
                 >
                   GitHub
@@ -44,7 +47,7 @@ const CvProjects = ({ projects, accessibility, sectionId, className }: CvProject
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-(--text-accent-strong)"
+                    className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold tracking-[0.08em] text-(--text-accent-strong) uppercase"
                   >
                     {tech}
                   </span>

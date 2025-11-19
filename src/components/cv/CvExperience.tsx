@@ -18,7 +18,7 @@ const getCompanyLogo = (company: string): string | null => {
 
 const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16 xl:px-0",
+    "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
     className,
   ]
     .filter(Boolean)
@@ -76,9 +76,20 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
                       <h3 className="text-xl font-semibold text-(--text-primary)">
                         {role.title}
                       </h3>
-                      <p className="text-sm text-(--text-accent)">
-                        {role.company}
-                      </p>
+                      {role.link ? (
+                        <a
+                          href={role.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-(--text-accent)"
+                        >
+                          {role.company}
+                        </a>
+                      ) : (
+                        <span className="text-sm text-(--text-accent)">
+                          {role.company}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <span className="text-xs font-semibold tracking-[0.28em] text-(--text-muted) uppercase">

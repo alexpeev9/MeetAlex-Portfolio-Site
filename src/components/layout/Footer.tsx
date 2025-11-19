@@ -1,11 +1,11 @@
-import { CopyShape } from "@/lib/getCopy";
+import { getCopy } from "@/lib/getCopy";
 
 type FooterProps = {
-  footer: CopyShape["footer"];
   linkAriaLabel: string;
 };
 
-const Footer = ({ footer, linkAriaLabel }: FooterProps) => {
+const Footer = ({ linkAriaLabel }: FooterProps) => {
+  const footer = getCopy().footer;
   return (
     <footer
       className="mt-12 border-t"
@@ -21,6 +21,8 @@ const Footer = ({ footer, linkAriaLabel }: FooterProps) => {
             <a
               key={link.label}
               href={link.url}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-lg px-3 py-1 text-(--text-footer) transition duration-300 hover:-translate-y-0.5 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
               aria-label={`${linkAriaLabel}: ${link.label}`}
             >
