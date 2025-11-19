@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Alexander Peev | React Developer Portfolio",
-    "description": "Explore Alexander Peev's React development projects, process, and services tailored for modern web applications."
+    "title": "Alexander Peev",
+    "description": "Web Developer With 5+ Years of Experience"
   },
   "navigation": {
     "logoPrimary": "Alexander Peev",
@@ -86,11 +86,11 @@
           "period": "Apr 2022 - Present",
           "description": "As a fullstack contract developer, I work on diverse projects for different companies",
           "highlights": [
-            "Currently developing a showcase website for 'Metal Expert Ltd' using Next.js, TypeScript, and Tailwind CSS.",
-            "Develop and support an e-commerce site for 'Escape Structures Ltd' using WordPress, jQuery, and PHP.",
-            "Create and support an e-commerce site for 'Sober Coins Ltd' using Shopify, Liquid, and JavaScript."
+            "Currently developing a showcase website for \"Metal Expert Ltd\" using Next.js, TypeScript, and Tailwind CSS.",
+            "Develop and support an e-commerce site for \"Escape Structures Ltd\" using WordPress, jQuery, and PHP.",
+            "Create and support an e-commerce site for \"Sober Coins Ltd\" using Shopify, Liquid, and JavaScript."
           ],
-          "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shopify", "PHP"]
+          "stack": ["Next.js", "Tailwind CSS", "Shopify"]
         },
         {
           "title": "University Assistant",
@@ -101,7 +101,7 @@
             "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
             "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
           ],
-          "stack": ["ASP.NET Core", "SQL", "C#", ".NET", "Teaching"]
+          "stack": ["ASP.NET Core", "SQL", "C#", ".NET"]
         }
       ]
     },
