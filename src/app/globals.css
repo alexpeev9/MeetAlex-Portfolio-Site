@@ -55,6 +55,7 @@
   --font-mono: var(--font-geist-mono);
 
   --section-height: calc(min(100svh, 100vh) - (6rem + 5.25rem));
+  --section-height-mobile: calc(min(100svh, 100vh) - (5.25rem));
 }
 
 @media (prefers-color-scheme: dark) {
