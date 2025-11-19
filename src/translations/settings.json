@@ -5,7 +5,6 @@
   },
   "navigation": {
     "logoPrimary": "Alexander Peev",
-    "logoSecondary": "react.dev",
     "items": [
       { "id": "projects", "label": "Projects" },
       { "id": "experience", "label": "Experience" },
@@ -32,291 +31,20 @@
       { "label": "Public open-source projects", "value": "12" },
       { "label": "Programming book contributions", "value": "3" },
       { "label": "Years teaching courses", "value": "2" }
-    ],
-    "trustedTitle": "Interested in working in:",
-    "trustedBrands": ["Frontend", "Fullstack", "Contract"]
-  },
-  "process": {
-    "title": "Working together",
-    "description": "We partner closely to understand your goals, design the solution, and ship production-ready React applications.",
-    "steps": [
-      {
-        "step": "01",
-        "title": "Discovery Session",
-        "copy": "Share your vision and requirements so we can align on scope and priorities."
-      },
-      {
-        "step": "02",
-        "title": "Design & Build",
-        "copy": "I prototype UI flows, build in React + TypeScript, and iterate quickly with your feedback."
-      },
-      {
-        "step": "03",
-        "title": "Deploy & Support",
-        "copy": "Launch confidently with testing, documentation, and ongoing support options."
-      }
     ]
-  },
-  "portfolio": {
-    "title": "Selected projects",
-    "description": "A snapshot of products I've shipped for startups and established teams across SaaS, e-commerce, and internal tooling.",
-    "projects": [
-      {
-        "name": "SaaS Analytics Platform",
-        "tags": ["React", "Next.js", "Tailwind"],
-        "description": "Interactive dashboards that help operators monitor real-time metrics and automate alerts.",
-        "imageSrc": "/project-analytics.svg",
-        "imageAlt": "Analytics dashboard mockup with rising line chart",
-        "actions": [
-          {
-            "label": "Case Study",
-            "url": "https://www.linkedin.com/in/alexander-peev"
-          },
-          { "label": "Live Demo", "url": "https://github.com/alexander-peev" }
-        ]
-      },
-      {
-        "name": "E-commerce Launchpad",
-        "tags": ["TypeScript", "React Query", "Stripe"],
-        "description": "Headless commerce storefront with dynamic content, checkout flows, and subscription billing.",
-        "imageSrc": "/project-commerce.svg",
-        "imageAlt": "E-commerce storefront mockup with product cards and checkout",
-        "actions": [
-          {
-            "label": "Product Tour",
-            "url": "https://www.linkedin.com/in/alexander-peev"
-          },
-          { "label": "View Repo", "url": "https://github.com/alexander-peev" }
-        ]
-      }
-    ]
-  },
-  "about": {
-    "title": "About Alexander",
-    "copy": "I'm a React developer based in Sofia, Bulgaria focused on building polished, resilient interfaces that feel effortless to use.",
-    "values": [
-      {
-        "title": "Custom Solutions",
-        "description": "Every project is designed around your product metrics, brand, and growth plans."
-      },
-      {
-        "title": "Reliable Delivery",
-        "description": "Transparent timelines, async updates, and fast iteration keep launches on track."
-      },
-      {
-        "title": "Performance Minded",
-        "description": "Built with modern tooling, accessibility, and lighthouse checks baked in."
-      },
-      {
-        "title": "Security First",
-        "description": "Implementing best practices for auth, API communication, and infrastructure."
-      }
-    ]
-  },
-  "contact": {
-    "title": "Let's build something great",
-    "description": "Share your project details and let's explore how we can collaborate to ship your next release.",
-    "form": {
-      "nameLabel": "Your Name",
-      "emailLabel": "Email",
-      "messageLabel": "Project Notes",
-      "submit": "Send Message",
-      "namePlaceholder": "How should I address you?",
-      "emailPlaceholder": "your@email.com",
-      "messagePlaceholder": "Tell me about the scope, timeline, and goals."
-    },
-    "cards": [
-      {
-        "title": "Book a intro call",
-        "description": "Grab a 30-minute slot to discuss goals, timelines, and next steps.",
-        "cta": "Schedule Now",
-        "url": "https://cal.com/peev"
-      },
-      {
-        "title": "Say hello",
-        "description": "Reach out on LinkedIn or email and I'll respond within one business day.",
-        "cta": "Contact Alexander",
-        "url": "mailto:hello@alexanderpeev.dev"
-      }
-    ],
-    "ariaCardPrefix": "Open resource"
-  },
-  "hire": {
-    "hero": {
-      "eyebrow": "Join the team",
-      "headline": "Help build products teams rely on every day",
-      "subheadline": "I partner with companies that care deeply about craftsmanship, accessibility, and resilient web platforms.",
-      "primaryCta": "Introduce Your Company",
-      "secondaryCta": "Download Hiring Brochure",
-      "primaryCtaUrl": "mailto:hello@alexanderpeev.dev",
-      "secondaryCtaUrl": "https://alexanderpeev.dev/hiring-brochure.pdf",
-      "imageSrc": "/hero-portrait.svg",
-      "imageAlt": "Illustration of Alexander Peev collaborating with a product team"
-    },
-    "benefits": {
-      "title": "What you can expect",
-      "items": [
-        {
-          "title": "Frontend leadership",
-          "description": "Lead React architecture decisions, mentor engineers, and unblock delivery across squads."
-        },
-        {
-          "title": "Product collaboration",
-          "description": "Translate roadmap goals into shipping milestones with PMs, designers, and stakeholders."
-        },
-        {
-          "title": "Quality obsessed",
-          "description": "Type-safe codebases, testing routines, and accessibility baked into every release."
-        },
-        {
-          "title": "Remote ready",
-          "description": "Comfortable with async-first workflows, documentation culture, and distributed teams."
-        }
-      ]
-    },
-    "roles": {
-      "title": "Roles I'm exploring",
-      "description": "I'm actively speaking with teams for mid-to-senior React positions where I can ship impactful product experiences.",
-      "positions": [
-        {
-          "title": "Senior React Engineer",
-          "location": "Remote, CET ±2",
-          "type": "Full-time",
-          "summary": "Own front-of-the-frontend architecture, drive design systems, and mentor teammates.",
-          "tags": ["React", "TypeScript", "Design Systems"],
-          "ctaLabel": "Share Your Role",
-          "ctaUrl": "mailto:hello@alexanderpeev.dev"
-        },
-        {
-          "title": "Lead Frontend Engineer",
-          "location": "Hybrid, Sofia",
-          "type": "Contract-to-hire",
-          "summary": "Partner with product leadership to deliver new verticals and scale engineering practices.",
-          "tags": ["Team Leadership", "React Query", "CI/CD"],
-          "ctaLabel": "Start a Conversation",
-          "ctaUrl": "mailto:hello@alexanderpeev.dev"
-        }
-      ]
-    },
-    "process": {
-      "title": "Collaborating with me",
-      "steps": [
-        {
-          "step": "01",
-          "title": "Intro chat",
-          "copy": "Tell me about your team, roadmap, and what success looks like in the first six months."
-        },
-        {
-          "step": "02",
-          "title": "Technical deep dive",
-          "copy": "We review your stack, challenges, and outline a plan for improving DX and product velocity."
-        },
-        {
-          "step": "03",
-          "title": "Working session",
-          "copy": "Collaborate on a real scenario so we can evaluate fit, collaboration style, and expectations."
-        }
-      ]
-    },
-    "culture": {
-      "title": "How I work",
-      "points": [
-        {
-          "title": "Outcome driven",
-          "description": "Measure impact through product metrics, not just ticket counts."
-        },
-        {
-          "title": "Transparent communication",
-          "description": "Clear async updates, documentation, and proactive stakeholder alignment."
-        },
-        {
-          "title": "Continuous improvement",
-          "description": "Always iterating on tooling, processes, and team rituals to keep quality high."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Hiring or partnering?",
-      "description": "Let's discuss how I can support your product roadmap, mentor your team, and deliver polished web experiences for your customers.",
-      "primaryLabel": "Book a Hiring Chat",
-      "primaryUrl": "https://cal.com/peev",
-      "secondaryLabel": "Request Resume",
-      "secondaryUrl": "mailto:hello@alexanderpeev.dev?subject=Resume%20Request"
-    },
-    "accessibility": {
-      "primaryCta": "Email Alexander Peev to introduce your company",
-      "secondaryCta": "Download Alexander Peev's hiring brochure",
-      "roleCta": "Provide details for this role",
-      "hirePrimary": "Book a hiring conversation",
-      "hireSecondary": "Request Alexander Peev's resume"
-    }
   },
   "cv": {
     "bio": {
       "name": "Alexander Peev, 25",
-      "title": "React Developer",
-      "summary": "React Developer with experience delivering AI-assisted interfaces, e-commerce platforms, and modern web applications for global brands.",
       "location": "Sofia, Bulgaria"
     },
     "contact": {
-      "phoneLabel": "Phone",
-      "phone": "+359 877 900 718",
-      "emailLabel": "Email",
-      "email": "hello@alexanderpeev.dev",
       "linkedin": "https://www.linkedin.com/in/alexpeev9/",
       "linkedinLabel": "LinkedIn",
       "github": "https://github.com/alexpeev9",
       "githubLabel": "GitHub",
       "youtube": "https://www.youtube.com/@alexpeev9",
-      "youtubeLabel": "Youtube",
-      "hireCta": "View hiring info"
-    },
-    "skills": {
-      "title": "Core Skills",
-      "intro": "Tooling and capabilities that support high-impact product teams.",
-      "categories": [
-        {
-          "title": "Frontend Engineering",
-          "items": [
-            "React",
-            "Next.js",
-            "TypeScript",
-            "Chakra UI",
-            "React Query",
-            "Redux Toolkit"
-          ]
-        },
-        {
-          "title": "Architecture & Quality",
-          "items": [
-            "Design Systems",
-            "Component Libraries",
-            "Accessibility Audits",
-            "Performance Budgeting",
-            "Storybook",
-            "Playwright"
-          ]
-        },
-        {
-          "title": "Collaboration",
-          "items": [
-            "Product Discovery",
-            "Mentorship",
-            "Design Handoffs",
-            "Agile Facilitation"
-          ]
-        },
-        {
-          "title": "Tooling",
-          "items": [
-            "Vite",
-            "Webpack",
-            "Turborepo",
-            "GitHub Actions",
-            "CI/CD Pipelines"
-          ]
-        }
-      ]
+      "youtubeLabel": "Youtube"
     },
     "experience": {
       "title": "Experience",
@@ -433,74 +161,11 @@
         }
       ]
     },
-    "services": {
-      "title": "How I Can Help",
-      "intro": "Engagement models tailored to ship reliable, polished interfaces fast.",
-      "items": [
-        {
-          "title": "Product Engineering",
-          "description": "Feature delivery for complex React applications with type safety, testing, and observability built-in."
-        },
-        {
-          "title": "Design System Stewardship",
-          "description": "Codify UI foundations, document usage patterns, and accelerate adoption across squads."
-        },
-        {
-          "title": "Team Enablement",
-          "description": "Mentor engineers, refine workflows, and establish best practices that unlock sustainable delivery."
-        }
-      ]
-    },
-    "testimonials": {
-      "title": "Testimonials",
-      "intro": "Recent feedback from partners who shipped with me.",
-      "items": [
-        {
-          "quote": "Alex consistently transforms product requirements into delightful experiences while keeping the codebase maintainable for the entire team.",
-          "name": "Diana Petrova",
-          "role": "Head of Product, FlowState Labs"
-        },
-        {
-          "quote": "From accessibility budgets to release strategy, Alex brings clarity and structure that let us move faster without breaking quality.",
-          "name": "Luka Marinov",
-          "role": "Engineering Manager, NovaFin"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Languages & Interests",
-      "listTitle": "Languages",
-      "items": [
-        { "name": "English", "level": "Professional Working" },
-        { "name": "Bulgarian", "level": "Native" },
-        { "name": "German", "level": "Conversational" }
-      ],
-      "interests": {
-        "title": "Interests",
-        "items": [
-          "Design Systems",
-          "Open Source",
-          "Mountain Biking",
-          "Portrait Photography"
-        ]
-      }
-    },
-    "salary": {
-      "title": "Expected Salary",
-      "note": "For details regarding my expected salary, feel free to contact me directly."
-    },
     "accessibility": {
       "experience": "Experience entry",
       "projectLink": "View project details",
       "educationLink": "View education document",
-      "contactLink": "Open contact method",
-      "skillsCategory": "Skill group",
-      "skillsTag": "Skill item",
-      "serviceCard": "Service description",
-      "certificationLink": "View certification details",
-      "testimonialQuote": "Client testimonial",
-      "languageItem": "Language proficiency",
-      "interestTag": "Personal interest"
+      "certificationLink": "View certification details"
     }
   },
   "footer": {
@@ -515,12 +180,7 @@
     ]
   },
   "accessibility": {
-    "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu",
     "primaryCta": "Schedule a call with Alexander Peev",
-    "secondaryCta": "View recent React work",
-    "timeline": "Project delivery step",
-    "projectLink": "View project resource",
-    "submitForm": "Send project inquiry"
+    "secondaryCta": "View recent React work"
   }
 }
