@@ -10,7 +10,7 @@
       { "id": "experience", "label": "Experience" },
       { "id": "education", "label": "Education" }
     ],
-    "cta": "Schedule a Chat",
+    "cta": "Schedule a Call",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
     "logoAria": "Alexander Peev developer home"
