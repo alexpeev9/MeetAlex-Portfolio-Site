@@ -11,7 +11,7 @@ const HeroHeadline: React.FC<HeroHeadlineProps> = ({ className }) => {
   return (
     <>
       <div
-        className={`flex flex-col items-center gap-3 lg:items-start lg:gap-6 ${className}`}
+        className={`flex flex-col items-center gap-6 lg:items-start ${className}`}
       >
         <span className="hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
           {hero.eyebrow}
@@ -28,7 +28,7 @@ const HeroHeadline: React.FC<HeroHeadlineProps> = ({ className }) => {
         </p>
       </div>
       <div
-        className={`flex flex-wrap items-center justify-center gap-4 pb-4 lg:justify-start lg:pb-0 ${className}`}
+        className={`flex flex-wrap items-center justify-center gap-4 lg:justify-start ${className}`}
       >
         <a
           href={hero.primaryCtaUrl}

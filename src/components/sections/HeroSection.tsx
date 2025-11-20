@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-4 sm:px-6 lg:h-(--section-height) lg:px-12 lg:pt-0">
       <div className="relative z-10 grid w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-        <div className="hero-fade-in-delayed order-1 mx-auto flex h-(--section-height-mobile) w-full max-w-sm flex-col items-center gap-4 sm:h-auto lg:order-2 lg:mx-0 lg:max-w-none">
+        <div className="hero-fade-in-delayed order-1 mx-auto flex h-(--section-height-mobile) w-full max-w-sm flex-col items-center justify-center gap-4 sm:h-auto lg:order-2 lg:mx-0 lg:max-w-none">
           <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
             <div
               className="rounded-2xl"
@@ -90,17 +90,16 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <HeroHeadline className="flex lg:hidden" />
         </div>
         <div className="hero-fade-in order-2 flex w-full flex-col gap-6 text-center lg:order-1 lg:text-left">
-          <HeroHeadline className="hidden lg:flex" />
+          <HeroHeadline />
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
                 <span className="text-3xl font-semibold text-slate-900">
                   {metric.value}
                 </span>
-                <span className="text-xs tracking-[0.26em] text-slate-900 uppercase">
+                <span className="px-10 text-xs tracking-[0.26em] text-slate-900 uppercase lg:px-0">
                   {metric.label}
                 </span>
               </div>
