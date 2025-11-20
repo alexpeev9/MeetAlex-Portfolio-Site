@@ -20,9 +20,14 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
   return (
     <section id={sectionId} className={sectionClassName}>
       <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
-        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
-          {projects.title}
-        </h2>
+        <div className="space-y-3">
+          <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
+            {projects.title}
+          </h2>
+          <p className="max-w-3xl text-base leading-7 text-(--text-secondary)">
+            {projects.description}
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           {projects.items.map((project) => (
             <article
@@ -47,50 +52,51 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
 
               {/* Content Area */}
               <div className="space-y-4 bg-(--surface-card) p-6">
-                <h3 className="text-xl font-semibold text-(--text-primary)">
-                  {project.name}
-                </h3>
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-xl font-semibold text-(--text-primary)">
+                    {project.name}
+                  </h3>
+                  {project.year && (
+                    <span className="text-xs font-semibold tracking-[0.28em] whitespace-nowrap text-(--text-muted) uppercase">
+                      {project.year}
+                    </span>
+                  )}
+                </div>
+
+                {/* Description */}
+                <p className="text-sm leading-7 text-(--text-secondary)">
+                  {project.description}
+                </p>
 
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-3">
-                  {/* {project.companyLink && (
-                    <Button
-                      href={project.companyLink}
-                      ariaLabel={`${project.companyLinkLabel}: ${project.name}`}
-                      buttonType="outline"
-                    >
-                      {project.companyLinkLabel}
-                    </Button>
-                  )} */}
                   {project.viewLink && (
                     <Button
                       href={project.viewLink}
                       ariaLabel={`${project.viewLinkLabel}: ${project.name}`}
                       buttonType="primary"
+                      disabled={project.viewLinkDisabled}
                     >
                       {project.viewLinkLabel}
-                      <svg
-                        className="ml-2 h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
+                      {!project.viewLinkDisabled && (
+                        <svg
+                          className="ml-2 h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      )}
                     </Button>
                   )}
                 </div>
-
-                {/* Description */}
-                <p className="text-sm leading-6 text-(--text-secondary)">
-                  {project.description}
-                </p>
               </div>
             </article>
           ))}

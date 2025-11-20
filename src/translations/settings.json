@@ -142,33 +142,40 @@
     },
     "projects": {
       "title": "Client Projects",
+      "description": "Beyond my full-time role, I work with various companies as a freelance developer, delivering custom web solutions tailored to their specific needs. Here are some recent projects I've completed.",
       "items": [
         {
           "name": "Company Showcase Site",
-          "description": "Developed a showcase site using Next.js, TypeScript and Tailwind CSS.",
+          "year": "2024",
+          "description": "Developed a modern showcase website for Bronze Initial Letters, featuring an elegant design that highlights historical manuscripts and bronze sculptures. Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and responsive navigation.",
           "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "companyLink": "https://bronze-initial-letters.com/",
-          "viewLink": "",
+          "companyLink": "",
+          "viewLink": "https://bronze-initial-letters.com/",
+          "viewLinkDisabled": false,
           "companyLinkLabel": "Company Site",
           "viewLinkLabel": "View Site",
           "image": "/images/projects/bronze.webp"
         },
         {
           "name": "Business Online Store",
-          "description": "Developed an e-commerce site using WordPress, jQuery and PHP.",
+          "year": "2022",
+          "description": "Created a fully functional e-commerce platform for Escape Structures, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout. Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
           "stack": ["WordPress", "jQuery", "PHP"],
-          "companyLink": "",
           "viewLink": "https://escapestructures.com/",
+          "viewLinkDisabled": false,
+          "companyLink": "",
           "companyLinkLabel": "Company Site",
           "viewLinkLabel": "View Site",
           "image": "/images/projects/escape.webp"
         },
         {
           "name": "Brand Online Store",
-          "description": "Developed an e-commerce site using Shopify, Liquid and JavaScript.",
+          "year": "2024",
+          "description": "Built a custom Shopify storefront for Sobriety Pins, featuring a modern design that aligns with the brand's mission. Includes product collections, custom theme development using Liquid templates, and enhanced functionality through JavaScript.",
           "stack": ["Shopify", "Liquid", "JavaScript"],
-          "companyLink": "https://sobrietypins.store",
-          "viewLink": "",
+          "viewLink": "https://sobrietypins.store",
+          "viewLinkDisabled": true,
+          "companyLink": "",
           "companyLinkLabel": "Company Site",
           "viewLinkLabel": "View Site",
           "image": "/images/projects/sobriety.webp"
