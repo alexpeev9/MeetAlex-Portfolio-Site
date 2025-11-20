@@ -141,19 +141,37 @@
       ]
     },
     "projects": {
-      "title": "Projects",
+      "title": "Client Projects",
       "items": [
         {
-          "name": "MERN TypeScript App",
-          "description": "Full-stack application with authentication, authorization, and real-time features.",
-          "stack": ["React", "TypeScript", "SASS", "Jest", "Webpack"],
-          "link": "https://github.com/alexpeev9/SilverArticles"
+          "name": "Company Showcase Site",
+          "description": "Developed a showcase site using Next.js, TypeScript and Tailwind CSS.",
+          "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+          "companyLink": "https://bronze-initial-letters.com/",
+          "viewLink": "",
+          "companyLinkLabel": "Company Site",
+          "viewLinkLabel": "View Site",
+          "image": "/images/projects/bronze.webp"
         },
         {
-          "name": "Next.js 14 Web App",
-          "description": "Modern web application using Next.js 14, Tailwind CSS, and PostgreSQL.",
-          "stack": ["Next.js", "Tailwind CSS", "PostgreSQL"],
-          "link": "https://github.com/alexpeev9/NextJS-Dark-Souls-Weapons"
+          "name": "Business Online Store",
+          "description": "Developed an e-commerce site using WordPress, jQuery and PHP.",
+          "stack": ["WordPress", "jQuery", "PHP"],
+          "companyLink": "",
+          "viewLink": "https://escapestructures.com/",
+          "companyLinkLabel": "Company Site",
+          "viewLinkLabel": "View Site",
+          "image": "/images/projects/escape.webp"
+        },
+        {
+          "name": "Brand Online Store",
+          "description": "Developed an e-commerce site using Shopify, Liquid and JavaScript.",
+          "stack": ["Shopify", "Liquid", "JavaScript"],
+          "companyLink": "https://sobrietypins.store",
+          "viewLink": "",
+          "companyLinkLabel": "Company Site",
+          "viewLinkLabel": "View Site",
+          "image": "/images/projects/sobriety.webp"
         }
       ]
     },

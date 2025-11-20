@@ -1,5 +1,6 @@
-import Link from "next/link";
+import Image from "next/image";
 import { getCopy } from "../../lib/getCopy";
+import Button from "../Button";
 
 type CvProjectsProps = {
   sectionId?: string;
@@ -15,7 +16,6 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
     .join(" ");
 
   const projects = getCopy().cv.projects;
-  const accessibility = getCopy().cv.accessibility;
 
   return (
     <section id={sectionId} className={sectionClassName}>
@@ -23,35 +23,74 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
         <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {projects.title}
         </h2>
-        <div className="grid gap-4">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.items.map((project) => (
-            <article key={project.name} className="space-y-3">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                <h3 className="text-lg font-semibold text-(--text-primary)">
+            <article
+              key={project.name}
+              className="overflow-hidden rounded-xl border border-(--surface-card-border) bg-white/10 [backdrop-filter:blur(12px)]"
+            >
+              {/* Preview Area */}
+              {project.image && (
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: "1000/492" }}
+                >
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} preview`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              )}
+
+              {/* Content Area */}
+              <div className="space-y-4 bg-(--surface-card) p-6">
+                <h3 className="text-xl font-semibold text-(--text-primary)">
                   {project.name}
                 </h3>
-                <Link
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-(--text-accent) transition duration-300 hover:translate-x-1 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none"
-                  aria-label={`${accessibility.projectLink}: ${project.name}`}
-                >
-                  GitHub
-                </Link>
-              </div>
-              <p className="text-sm text-(--text-secondary)">
-                {project.description}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold tracking-[0.08em] text-(--text-accent-strong) uppercase"
-                  >
-                    {tech}
-                  </span>
-                ))}
+
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-3">
+                  {/* {project.companyLink && (
+                    <Button
+                      href={project.companyLink}
+                      ariaLabel={`${project.companyLinkLabel}: ${project.name}`}
+                      buttonType="outline"
+                    >
+                      {project.companyLinkLabel}
+                    </Button>
+                  )} */}
+                  {project.viewLink && (
+                    <Button
+                      href={project.viewLink}
+                      ariaLabel={`${project.viewLinkLabel}: ${project.name}`}
+                      buttonType="primary"
+                    >
+                      {project.viewLinkLabel}
+                      <svg
+                        className="ml-2 h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </Button>
+                  )}
+                </div>
+
+                {/* Description */}
+                <p className="text-sm leading-6 text-(--text-secondary)">
+                  {project.description}
+                </p>
               </div>
             </article>
           ))}
