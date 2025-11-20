@@ -6,7 +6,7 @@ type CvEducationProps = {
 };
 
 const CvEducation = ({ className }: CvEducationProps) => {
-  const sectionClassName = ["mx-auto w-full max-w-6xl px-4 sm:px-0", className]
+  const sectionClassName = ["mx-auto w-full max-w-6xl px-0 sm:px-0", className]
     .filter(Boolean)
     .join(" ");
   const copy = getCopy();

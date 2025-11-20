@@ -62,13 +62,7 @@
             "Integrating AI services for automation and personalization.",
             "Driving UI consistency with shared component libraries."
           ],
-          "stack": [
-            "React",
-            "TypeScript",
-            "React Query",
-            "Chakra UI",
-            "AI Integrations"
-          ]
+          "stack": ["React", "TypeScript", "React Query", "Chakra UI"]
         },
         {
           "title": "Fullstack Developer",
@@ -96,7 +90,7 @@
         },
         {
           "title": "University Assistant",
-          "company": "University of Veliko Tarnovo",
+          "company": "St. Cyril and St. Methodius University of Veliko Tarnovo",
           "link": "https://www.uni-vt.bg",
           "period": "Oct 2020 - May 2022",
           "highlights": [

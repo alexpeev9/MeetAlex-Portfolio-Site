@@ -11,7 +11,8 @@ const getCompanyLogo = (company: string): string | null => {
     "Blackdeep Technologies": "/images/companies/blackdeep-technologies.webp",
     "C4 Nexus Ltd": "/images/companies/c4nexus.jpg",
     "Self Employed": "/images/companies/contract.jpg",
-    "University of Veliko Tarnovo": "/images/companies/univeristy.webp",
+    "St. Cyril and St. Methodius University of Veliko Tarnovo":
+      "/images/companies/univeristy.webp",
   };
   return logoMap[company] || null;
 };
@@ -41,7 +42,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
             return (
               <article
                 key={`${role.title}-${role.company}`}
-                className="relative space-y-3 pl-9"
+                className="relative space-y-3 pl-12"
                 aria-label={accessibility.experience}
               >
                 {!isLast && (
@@ -62,7 +63,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
                   }}
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-start gap-3">
                     {logoPath && (
                       <Image
                         src={logoPath}
