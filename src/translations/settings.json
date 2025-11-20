@@ -23,8 +23,10 @@
     "subheadline2": "Open to new opportunities.",
     "primaryCta": "View Experience",
     "secondaryCta": "Explore Projects",
+    "cvDownloadCta": "Download CV",
     "primaryCtaUrl": "#experience",
     "secondaryCtaUrl": "#projects",
+    "cvDownloadCtaUrl": "/cv.pdf",
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
@@ -181,6 +183,7 @@
   },
   "accessibility": {
     "primaryCta": "Schedule a call with Alexander Peev",
-    "secondaryCta": "View recent React work"
+    "secondaryCta": "View recent React work",
+    "cvDownloadCta": "Download Alexander Peev's CV"
   }
 }

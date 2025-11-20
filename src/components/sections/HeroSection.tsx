@@ -1,5 +1,3 @@
-'use client';
-
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
 import HeroHeadline from "./HeroHeadline";
@@ -130,5 +128,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
