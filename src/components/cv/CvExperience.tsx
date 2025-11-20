@@ -31,7 +31,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
 
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
+      <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
         <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {experience.title}
         </h2>

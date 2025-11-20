@@ -30,7 +30,7 @@ const CvEducationItem = ({ item, linkAriaLabel }: CvEducationItemProps) => {
             <span className="text-sm text-(--text-accent)">{subtitle}</span>
           </div>
           {grade && (
-            <span className="inline-flex items-center rounded-lg bg-(--text-accent)/10 px-3 py-1 text-xs font-semibold whitespace-nowrap text-(--text-accent)">
+            <span className="hidden items-center rounded-lg bg-(--text-accent)/10 px-3 py-1 text-xs font-semibold whitespace-nowrap text-(--text-accent) lg:inline-flex">
               {grade}
             </span>
           )}
@@ -48,7 +48,9 @@ const CvEducationItem = ({ item, linkAriaLabel }: CvEducationItemProps) => {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-(--text-accent) transition duration-300 hover:translate-x-1 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none"
-          aria-label={linkAriaLabel ? `${linkAriaLabel}: ${linkLabel}` : linkLabel}
+          aria-label={
+            linkAriaLabel ? `${linkAriaLabel}: ${linkLabel}` : linkLabel
+          }
         >
           {linkLabel}
         </Link>

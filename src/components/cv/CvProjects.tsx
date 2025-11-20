@@ -19,7 +19,7 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
 
   return (
     <section id={sectionId} className={sectionClassName}>
-      <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
+      <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
         <div className="space-y-3">
           <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
             {projects.title}
@@ -52,12 +52,12 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
 
               {/* Content Area */}
               <div className="space-y-4 bg-(--surface-card) p-6">
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
                   <h3 className="text-xl font-semibold text-(--text-primary)">
                     {project.name}
                   </h3>
                   {project.year && (
-                    <span className="text-xs font-semibold tracking-[0.28em] whitespace-nowrap text-(--text-muted) uppercase">
+                    <span className="self-end text-xs font-semibold tracking-[0.28em] whitespace-nowrap text-(--text-muted) uppercase">
                       {project.year}
                     </span>
                   )}
@@ -66,6 +66,11 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
                 {/* Description */}
                 <p className="text-sm leading-7 text-(--text-secondary)">
                   {project.description}
+                  {/* {project.description2 && (
+                    <span className="hidden md:inline">
+                      {project.description2}
+                    </span>
+                  )} */}
                 </p>
 
                 {/* Buttons */}

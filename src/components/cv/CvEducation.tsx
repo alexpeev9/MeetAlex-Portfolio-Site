@@ -16,7 +16,7 @@ const CvEducation = ({ className }: CvEducationProps) => {
 
   return (
     <section className={sectionClassName}>
-      <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) p-10 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)]">
+      <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
         <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
           {education.title}
         </h2>

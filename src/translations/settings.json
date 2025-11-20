@@ -56,13 +56,13 @@
           "company": "Blackdeep Technologies",
           "link": "https://blackdeep.tech",
           "period": "Jun 2024 - Present",
-          "description": "Building React applications with TypeScript, React Query, and Chakra UI to integrate AI features for image generation and chat experiences.",
+          "description": "Building React applications with TypeScript, and React Query to integrate AI features for image generation and chat experiences.",
           "highlights": [
             "Leading feature development across multiple React apps.",
             "Integrating AI services for automation and personalization.",
             "Driving UI consistency with shared component libraries."
           ],
-          "stack": ["React", "TypeScript", "React Query", "Chakra UI"]
+          "stack": ["React", "TypeScript", "React Query", "Tailwind CSS"]
         },
         {
           "title": "Fullstack Developer",
@@ -74,7 +74,7 @@
             "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
             "Worked as a part of a multinational team while following the Scrum methodology."
           ],
-          "stack": ["React", "Chakra UI", "JavaScript", "Salesforce", "SASS"]
+          "stack": ["React", "JavaScript", "Salesforce", "SASS"]
         },
         {
           "title": "Contract Developer",
@@ -86,7 +86,7 @@
             "Develop and support an e-commerce site using WordPress, jQuery, and PHP.",
             "Create and support an e-commerce site using Shopify, Liquid, and JavaScript."
           ],
-          "stack": ["Next.js", "Tailwind CSS", "Shopify"]
+          "stack": ["Next.js", "Tailwind CSS", "PostgreSQL"]
         },
         {
           "title": "University Assistant",
@@ -97,7 +97,7 @@
             "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
             "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
           ],
-          "stack": ["ASP.NET Core", "SQL", "C#", ".NET"]
+          "stack": ["ASP.NET Core", "SQL", "C#"]
         }
       ]
     },
@@ -142,7 +142,7 @@
     },
     "projects": {
       "title": "Client Projects",
-      "description": "Beyond my full-time role, I work with various companies as a freelance developer, delivering custom web solutions tailored to their specific needs. Here are some recent projects I've completed.",
+      "description": "Beyond my full-time role, I work with various companies as a freelance developer, delivering custom web solutions for their specific needs. Here are some of the projects:",
       "nda": {
         "title": "Additional Projects",
         "description": "Over the past year, I've worked on several new projects for various companies. Due to non-disclosure agreements, I'm unable to share these publicly. If you're interested in learning more about my recent work, I'd be happy to discuss these projects during a conversation.",
@@ -153,7 +153,8 @@
         {
           "name": "Company Showcase Site",
           "year": "2024",
-          "description": "Developed a modern showcase website for Bronze Initial Letters, featuring an elegant design that highlights historical manuscripts and bronze sculptures. Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and responsive navigation.",
+          "description": "Developed a modern showcase website for Bronze Initial Letters, featuring an elegant design that highlights historical manuscripts and bronze sculptures.",
+          "description2": " Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and responsive navigation.",
           "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
           "companyLink": "",
           "viewLink": "https://bronze-initial-letters.com/",
@@ -165,7 +166,8 @@
         {
           "name": "Business Online Store",
           "year": "2022",
-          "description": "Created a fully functional e-commerce platform, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout. Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
+          "description": "Created a fully functional e-commerce platform, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout.",
+          "description2": "Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
           "stack": ["WordPress", "jQuery", "PHP"],
           "viewLink": "https://escapestructures.com/",
           "viewLinkDisabled": false,
@@ -177,7 +179,8 @@
         {
           "name": "Brand Online Store",
           "year": "2024",
-          "description": "Built a custom Shopify storefront for Sobriety Pins, featuring a modern design that aligns with the brand's mission. Includes product collections, custom theme development using Liquid templates, and enhanced functionality through JavaScript.",
+          "description": "Built a custom storefront for Sobriety Pins, featuring a modern design that aligns with the brand's mission.",
+          "description2": "Built with Shopify, including custom theme development using Liquid templates, and enhanced functionality through JavaScript.",
           "stack": ["Shopify", "Liquid", "JavaScript"],
           "viewLink": "https://sobrietypins.store",
           "viewLinkDisabled": true,
