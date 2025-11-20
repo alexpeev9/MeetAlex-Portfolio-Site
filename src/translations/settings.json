@@ -82,9 +82,9 @@
           "period": "Apr 2022 - Present",
           "description": "As a fullstack contract developer, I work on diverse projects for different companies",
           "highlights": [
-            "Currently developing a showcase website for \"Metal Expert Ltd\" using Next.js, TypeScript, and Tailwind CSS.",
-            "Develop and support an e-commerce site for \"Escape Structures Ltd\" using WordPress, jQuery, and PHP.",
-            "Create and support an e-commerce site for \"Sober Coins Ltd\" using Shopify, Liquid, and JavaScript."
+            "Currently developing a showcase website using Next.js, TypeScript, and Tailwind CSS.",
+            "Develop and support an e-commerce site using WordPress, jQuery, and PHP.",
+            "Create and support an e-commerce site using Shopify, Liquid, and JavaScript."
           ],
           "stack": ["Next.js", "Tailwind CSS", "Shopify"]
         },
@@ -143,6 +143,12 @@
     "projects": {
       "title": "Client Projects",
       "description": "Beyond my full-time role, I work with various companies as a freelance developer, delivering custom web solutions tailored to their specific needs. Here are some recent projects I've completed.",
+      "nda": {
+        "title": "Additional Projects",
+        "description": "Over the past year, I've worked on several new projects for various companies. Due to non-disclosure agreements, I'm unable to share these publicly. If you're interested in learning more about my recent work, I'd be happy to discuss these projects during a conversation.",
+        "cta": "Schedule a Call",
+        "ctaUrl": "https://calendly.com/alexpeev9/30min"
+      },
       "items": [
         {
           "name": "Company Showcase Site",
@@ -159,7 +165,7 @@
         {
           "name": "Business Online Store",
           "year": "2022",
-          "description": "Created a fully functional e-commerce platform for Escape Structures, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout. Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
+          "description": "Created a fully functional e-commerce platform, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout. Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
           "stack": ["WordPress", "jQuery", "PHP"],
           "viewLink": "https://escapestructures.com/",
           "viewLinkDisabled": false,

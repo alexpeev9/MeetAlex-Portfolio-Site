@@ -100,6 +100,34 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
               </div>
             </article>
           ))}
+
+          {/* NDA Projects Card */}
+          {projects.nda && (
+            <article className="flex flex-col overflow-hidden rounded-xl border border-(--surface-card-border) bg-white/10 [backdrop-filter:blur(12px)]">
+              {/* Content Area */}
+              <div className="flex flex-1 flex-col justify-between space-y-4 bg-(--surface-card) p-6">
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-(--text-primary)">
+                    {projects.nda.title}
+                  </h3>
+                  <p className="text-sm leading-7 text-(--text-secondary)">
+                    {projects.nda.description}
+                  </p>
+                </div>
+
+                {/* Schedule Button */}
+                <div>
+                  <Button
+                    href={projects.nda.ctaUrl}
+                    buttonType="primary"
+                    ariaLabel={`${projects.nda.cta}: ${projects.nda.title}`}
+                  >
+                    {projects.nda.cta}
+                  </Button>
+                </div>
+              </div>
+            </article>
+          )}
         </div>
       </div>
     </section>
