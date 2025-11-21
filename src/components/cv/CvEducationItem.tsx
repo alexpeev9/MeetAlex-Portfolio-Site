@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../ui/Button";
 import Tag from "../ui/Tag";
 import Text from "../ui/Text";
 

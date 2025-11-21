@@ -1,6 +1,6 @@
 import React from "react";
 import { getCopy } from "../../lib/getCopy";
-import Button from "../Button";
+import Button from "../ui/Button";
 import Text from "../ui/Text";
 
 type HeroHeadlineProps = {

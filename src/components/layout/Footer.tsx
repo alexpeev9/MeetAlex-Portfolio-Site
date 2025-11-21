@@ -1,5 +1,5 @@
 import { getCopy } from "@/lib/getCopy";
-import Button from "../Button";
+import Button from "../ui/Button";
 
 type FooterProps = {
   linkAriaLabel: string;

@@ -1,5 +1,5 @@
 import { getCopy } from "@/lib/getCopy";
-import Button from "../Button";
+import Button from "../ui/Button";
 
 const Header = () => {
   const copy = getCopy();
@@ -12,7 +12,7 @@ const Header = () => {
         borderColor: "var(--surface-header-border)",
       }}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-12 lg:py-6">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-6 lg:py-6">
         <a
           href="#main"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight text-(--text-accent) transition duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"

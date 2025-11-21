@@ -15,9 +15,9 @@
   "navigation": {
     "logoPrimary": "Alexander Peev",
     "items": [
-      { "id": "projects", "label": "Projects" },
       { "id": "experience", "label": "Experience" },
-      { "id": "education", "label": "Education" }
+      { "id": "projects", "label": "Client Projects" },
+      { "id": "open-source", "label": "Open-Source" }
     ],
     "cta": "Schedule a Call",
     "ariaMenu": "Primary navigation",
@@ -151,7 +151,7 @@
     },
     "projects": {
       "title": "Client Projects",
-      "description": "Beyond my full-time role, I work with various companies as a freelance developer, delivering custom web solutions for their specific needs. Here are some of the projects:",
+      "description": "Besides my full-time role, I work with different companies as a freelance developer, delivering custom sites for their specific needs and budgets. Here are some of the projects:",
       "nda": {
         "title": "Additional Projects",
         "description": "Over the past year, I've worked on several new projects for various companies. Due to non-disclosure agreements, I'm unable to share these publicly. If you're interested in learning more about my recent work, I'd be happy to discuss these projects during a conversation.",
@@ -165,7 +165,6 @@
           "description": "Developed a modern showcase website for Bronze Initial Letters, featuring an elegant design that highlights historical manuscripts and bronze sculptures.",
           "description2": " Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and responsive navigation.",
           "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "companyLink": "",
           "viewLink": "https://bronze-initial-letters.com/",
           "viewLinkDisabled": false,
           "companyLinkLabel": "Company Site",
@@ -180,8 +179,6 @@
           "stack": ["WordPress", "jQuery", "PHP"],
           "viewLink": "https://escapestructures.com/",
           "viewLinkDisabled": false,
-          "companyLink": "",
-          "companyLinkLabel": "Company Site",
           "viewLinkLabel": "View Site",
           "image": "/images/projects/escape.webp"
         },
@@ -193,10 +190,67 @@
           "stack": ["Shopify", "Liquid", "JavaScript"],
           "viewLink": "https://sobrietypins.store",
           "viewLinkDisabled": true,
-          "companyLink": "",
-          "companyLinkLabel": "Company Site",
           "viewLinkLabel": "Temporary Closed",
           "image": "/images/projects/sobriety.webp"
+        }
+      ]
+    },
+    "openSourceProjects": {
+      "title": "Open-Source Projects",
+      "description": "I build open-source projects on GitHub to learn new tools and share my work. Here are some of the projects:",
+      "items": [
+        {
+          "name": "MERN Role-Based Platform",
+          "year": "2023",
+          "description": "MERN article platform with role-based auth. Users write, explore, and vote on articles. React/TypeScript and Express/MongoDB.",
+          "description2": "",
+          "stack": ["React", "TypeScript", "Express", "MongoDB"],
+          "viewLink": "https://silver-articles.vercel.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/SilverArticles",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/mern.webp"
+        },
+        {
+          "name": "Next.js Catalog App",
+          "year": "2024",
+          "description": "Next.js web app with PostgreSQL API and Tailwind CSS. Features dynamic routes displaying weapon categories and individual weapons.",
+          "description2": "",
+          "stack": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+          "viewLink": "https://dark-souls-weapons-project.vercel.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/NextJS-Dark-Souls-Weapons",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/next.webp"
+        },
+        {
+          "name": "Angular Landmarks App",
+          "year": "2021",
+          "description": "Angular web app with Firebase and Bootstrap. Offers interactive maps with login access and full tools for handling location data.",
+          "description2": "",
+          "stack": ["Angular", "TypeScript", "Firebase", "Bootstrap"],
+          "githubLink": "https://github.com/alexpeev9/Guiding-Light-Project",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/angular.webp"
+        },
+        {
+          "name": "Vue.js Map App",
+          "year": "2021",
+          "description": "Vue.js web app with Firebase. Features interactive maps with authentication and CRUD operations for managing locations.",
+          "description2": "",
+          "stack": ["Vue.js", "JavaScript", "Firebase"],
+          "viewLink": "https://vue-project-420.web.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/VueJS-YandexMap-Firebase-App",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/vue.webp"
         }
       ]
     },

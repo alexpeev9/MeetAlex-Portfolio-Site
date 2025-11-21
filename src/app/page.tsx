@@ -1,10 +1,11 @@
+import CvClientProjects from "@/components/cv/CvClientProjects";
 import CvEducation from "@/components/cv/CvEducation";
 import CvEducationImage from "@/components/cv/CvEducationImage";
 import CvExperience from "@/components/cv/CvExperience";
-import CvProjects from "@/components/cv/CvProjects";
 import HeroSection from "@/components/sections/HeroSection";
 import { getCopy } from "@/lib/getCopy";
 import type { Metadata } from "next";
+import CvOpenSourceProjects from "../components/cv/CvOpenSourceProjects";
 
 const copy = getCopy();
 
@@ -48,7 +49,8 @@ export default function Page() {
           <CvEducationImage className="hidden pt-0 lg:block" />
           <CvEducation className="pt-0" />
         </div>
-        <CvProjects sectionId="projects" />
+        <CvClientProjects sectionId="projects" />
+        <CvOpenSourceProjects sectionId="open-source" />
       </main>
     </>
   );
