@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { getCopy } from "../../lib/getCopy";
 import Button from "../Button";
+import ImageCarousel from "../ui/ImageCarousel";
 import Text from "../ui/Text";
 
 type CvProjectsProps = {
@@ -35,18 +35,15 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
             >
               {/* Preview Area */}
               {project.image && (
-                <div
-                  className="relative w-full overflow-hidden"
-                  style={{ aspectRatio: "1000/492" }}
-                >
-                  <Image
-                    src={project.image}
-                    alt={`${project.name} preview`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                <ImageCarousel
+                  images={
+                    Array.isArray(project.image)
+                      ? project.image
+                      : [project.image]
+                  }
+                  alt={`${project.name} preview`}
+                  aspectRatio="1000/492"
+                />
               )}
 
               {/* Content Area */}
@@ -54,7 +51,10 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
                 <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
                   <Text variant="heading3">{project.name}</Text>
                   {project.year && (
-                    <Text variant="caption" className="self-end whitespace-nowrap">
+                    <Text
+                      variant="caption"
+                      className="self-end whitespace-nowrap"
+                    >
                       {project.year}
                     </Text>
                   )}

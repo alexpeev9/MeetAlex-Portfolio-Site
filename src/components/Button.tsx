@@ -12,6 +12,7 @@ type ButtonProps = {
   size?: ButtonSize;
   disabled?: boolean;
   className?: string;
+  isWithIcon?: boolean;
 };
 
 const getSizeStyles = (size: ButtonSize): string => {
@@ -57,6 +58,7 @@ const Button: React.FC<ButtonProps> = ({
   buttonType = "primary",
   size = "md",
   disabled = false,
+  isWithIcon = false,
   className = "",
 }) => {
   const baseClassName =
@@ -95,7 +97,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-label={ariaLabel}
     >
       {children}
-      {isExternal && (
+      {isWithIcon && (
         <svg
           className="ml-2 h-4 w-4"
           fill="none"

@@ -44,6 +44,7 @@ const Header = () => {
           buttonType="primary"
           size="md"
           className="md:inline-flex"
+          isWithIcon={false}
         >
           {navigation.cta}
         </Button>

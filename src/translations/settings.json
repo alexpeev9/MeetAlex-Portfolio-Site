@@ -39,9 +39,9 @@
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
-      { "label": "Public open-source projects", "value": "12" },
+      { "label": "Years teaching courses", "value": "2" },
       { "label": "Programming book contributions", "value": "3" },
-      { "label": "Years teaching courses", "value": "2" }
+      { "label": "Published univeristy articles", "value": "30+" }
     ]
   },
   "cv": {

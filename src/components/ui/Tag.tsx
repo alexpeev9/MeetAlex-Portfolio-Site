@@ -22,7 +22,6 @@ const getVariantStyles = (variant: TagVariant): string => {
 
 const Tag: React.FC<TagProps> = ({
   variant = "default",
-  size = "sm",
   className = "",
   children,
 }) => {
@@ -30,11 +29,7 @@ const Tag: React.FC<TagProps> = ({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <span className={classes}>
-      {children}
-    </span>
-  );
+  return <span className={classes}>{children}</span>;
 };
 
 export default Tag;
