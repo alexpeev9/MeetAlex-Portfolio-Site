@@ -1,11 +1,7 @@
 import { getCopy } from "@/lib/getCopy";
 import Button from "../ui/Button";
 
-type FooterProps = {
-  linkAriaLabel: string;
-};
-
-const Footer = ({ linkAriaLabel }: FooterProps) => {
+const Footer = () => {
   const footer = getCopy().footer;
   const navigation = getCopy().navigation;
   return (
@@ -34,7 +30,7 @@ const Footer = ({ linkAriaLabel }: FooterProps) => {
               target="_blank"
               rel="noreferrer"
               className="rounded-lg px-3 py-1 text-(--text-footer) transition duration-300 hover:-translate-y-0.5 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
-              aria-label={`${linkAriaLabel}: ${link.label}`}
+              aria-label={`${link.label}`}
             >
               {link.label}
             </a>

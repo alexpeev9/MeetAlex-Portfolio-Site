@@ -42,7 +42,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <Footer linkAriaLabel={copy.accessibility.projectLink} />
+          <Footer />
         </div>
       </body>
       <script

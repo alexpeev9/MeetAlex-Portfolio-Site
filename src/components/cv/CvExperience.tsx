@@ -11,8 +11,8 @@ type CvExperienceProps = {
 const getCompanyLogo = (company: string): string | null => {
   const logoMap: Record<string, string> = {
     "Blackdeep Technologies": "/images/companies/blackdeep-technologies.webp",
-    "C4 Nexus Ltd": "/images/companies/c4nexus.jpg",
-    "Self Employed": "/images/companies/contract.jpg",
+    "C4 Nexus Ltd": "/images/companies/c4nexus.webp",
+    "Self Employed": "/images/companies/contract.webp",
     "St. Cyril and St. Methodius University of Veliko Tarnovo":
       "/images/companies/univeristy.webp",
   };
