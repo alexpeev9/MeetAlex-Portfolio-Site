@@ -3,8 +3,39 @@ import CvEducationImage from "@/components/cv/CvEducationImage";
 import CvExperience from "@/components/cv/CvExperience";
 import CvProjects from "@/components/cv/CvProjects";
 import HeroSection from "@/components/sections/HeroSection";
+import { getCopy } from "@/lib/getCopy";
+import type { Metadata } from "next";
 
-export default function CvPage() {
+const copy = getCopy();
+
+export const metadata: Metadata = {
+  title: copy.metadata.title,
+  description: copy.metadata.description,
+  openGraph: {
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    type: "website",
+    images: [
+      {
+        url: copy.hero.imageSrc,
+        width: 1080,
+        height: 1080,
+        alt: copy.hero.imageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    images: [copy.hero.imageSrc],
+  },
+  keywords: copy.metadata.keywords,
+  authors: [{ name: copy.cv.bio.name }],
+  creator: copy.cv.bio.name,
+};
+
+export default function Page() {
   return (
     <>
       <HeroSection />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getCopy } from "../../lib/getCopy";
 import Button from "../Button";
+import Text from "../ui/Text";
 
 type CvProjectsProps = {
   sectionId?: string;
@@ -21,12 +22,10 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
     <section id={sectionId} className={sectionClassName}>
       <div className="space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
         <div className="space-y-3">
-          <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
-            {projects.title}
-          </h2>
-          <p className="max-w-3xl text-base leading-7 text-(--text-secondary)">
+          <Text variant="heading2">{projects.title}</Text>
+          <Text variant="body" className="max-w-3xl leading-7">
             {projects.description}
-          </p>
+          </Text>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {projects.items.map((project) => (
@@ -53,25 +52,18 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
               {/* Content Area */}
               <div className="space-y-4 bg-(--surface-card) p-6">
                 <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
-                  <h3 className="text-xl font-semibold text-(--text-primary)">
-                    {project.name}
-                  </h3>
+                  <Text variant="heading3">{project.name}</Text>
                   {project.year && (
-                    <span className="self-end text-xs font-semibold tracking-[0.28em] whitespace-nowrap text-(--text-muted) uppercase">
+                    <Text variant="caption" className="self-end whitespace-nowrap">
                       {project.year}
-                    </span>
+                    </Text>
                   )}
                 </div>
 
                 {/* Description */}
-                <p className="text-sm leading-7 text-(--text-secondary)">
+                <Text variant="bodySmall" className="leading-7">
                   {project.description}
-                  {/* {project.description2 && (
-                    <span className="hidden md:inline">
-                      {project.description2}
-                    </span>
-                  )} */}
-                </p>
+                </Text>
 
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-3">
@@ -83,22 +75,6 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
                       disabled={project.viewLinkDisabled}
                     >
                       {project.viewLinkLabel}
-                      {!project.viewLinkDisabled && (
-                        <svg
-                          className="ml-2 h-4 w-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
-                      )}
                     </Button>
                   )}
                 </div>
@@ -112,12 +88,12 @@ const CvProjects = ({ sectionId, className }: CvProjectsProps) => {
               {/* Content Area */}
               <div className="flex flex-1 flex-col justify-between space-y-4 bg-(--surface-card) p-6">
                 <div>
-                  <h3 className="mb-3 text-xl font-semibold text-(--text-primary)">
+                  <Text variant="heading3" className="mb-3">
                     {projects.nda.title}
-                  </h3>
-                  <p className="text-sm leading-7 text-(--text-secondary)">
+                  </Text>
+                  <Text variant="bodySmall" className="leading-7">
                     {projects.nda.description}
-                  </p>
+                  </Text>
                 </div>
 
                 {/* Schedule Button */}

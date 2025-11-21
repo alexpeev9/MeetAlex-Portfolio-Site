@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { getCopy } from "../../lib/getCopy";
+import Tag from "../ui/Tag";
+import Text from "../ui/Text";
 
 type CvExperienceProps = {
   sectionId?: string;
@@ -32,9 +34,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
   return (
     <section id={sectionId} className={sectionClassName}>
       <div className="space-y-8 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
-        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
-          {experience.title}
-        </h2>
+        <Text variant="heading2">{experience.title}</Text>
         <div className="grid gap-7">
           {experience.roles.map((role, index) => {
             const isLast = index === experience.roles.length - 1;
@@ -74,9 +74,7 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
                       />
                     )}
                     <div>
-                      <h3 className="text-xl font-semibold text-(--text-primary)">
-                        {role.title}
-                      </h3>
+                      <Text variant="heading3">{role.title}</Text>
                       {role.link ? (
                         <a
                           href={role.link}
@@ -84,37 +82,32 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
                           rel="noopener noreferrer"
                           className="text-sm text-(--text-accent)"
                         >
-                          {role.company}
+                          <Text variant="label">{role.company}</Text>
                         </a>
                       ) : (
-                        <span className="text-sm text-(--text-accent)">
-                          {role.company}
-                        </span>
+                        <Text variant="label">{role.company}</Text>
                       )}
                     </div>
                   </div>
-                  <span className="text-xs font-semibold tracking-[0.28em] text-(--text-muted) uppercase">
-                    {role.period}
-                  </span>
+                  <Text variant="caption">{role.period}</Text>
                 </div>
                 {role.description && (
-                  <p className="text-sm leading-6 text-(--text-secondary)">
+                  <Text variant="bodySmall" className="leading-6">
                     {role.description}
-                  </p>
+                  </Text>
                 )}
-                <ul className="list-disc space-y-2 pl-5 text-sm text-(--text-secondary)">
+                <ul className="list-disc space-y-2 pl-5">
                   {role.highlights.map((highlight) => (
-                    <li key={`${role.title}-${highlight}`}>{highlight}</li>
+                    <li key={`${role.title}-${highlight}`}>
+                      <Text variant="bodySmall">{highlight}</Text>
+                    </li>
                   ))}
                 </ul>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {role.stack.map((item) => (
-                    <span
-                      key={item}
-                      className="inline-flex items-center justify-center rounded-full border border-(--accent-primary) bg-(--accent-tag-bg) px-4 py-1 text-xs font-semibold tracking-[0.08em] text-(--text-accent-strong) uppercase"
-                    >
+                    <Tag key={item} variant="default">
                       {item}
-                    </span>
+                    </Tag>
                   ))}
                 </div>
               </article>

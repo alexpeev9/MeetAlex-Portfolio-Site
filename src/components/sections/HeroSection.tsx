@@ -1,5 +1,6 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
+import Text from "../ui/Text";
 import HeroHeadline from "./HeroHeadline";
 
 const HeroSection = () => {
@@ -30,12 +31,10 @@ const HeroSection = () => {
             <div className="mt-3 flex flex-col gap-4 lg:mt-6">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex flex-col gap-1 text-center lg:text-left">
-                  <span className="text-2xl font-semibold text-slate-900">
-                    {cv.bio.name}
-                  </span>
-                  <span className="text-md font-bold text-blue-500">
+                  <Text variant="heading3">{cv.bio.name}</Text>
+                  <Text variant="body" size="lg" weight="bold" color="accent">
                     {cv.bio.location}
-                  </span>
+                  </Text>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
                   <a
@@ -96,12 +95,12 @@ const HeroSection = () => {
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
-                <span className="text-3xl font-semibold text-slate-900">
+                <Text variant="heading2" size="3xl">
                   {metric.value}
-                </span>
-                <span className="px-10 text-xs tracking-[0.26em] text-slate-900 uppercase lg:px-0">
+                </Text>
+                <Text variant="caption" className="px-10 tracking-[0.26em] lg:px-0">
                   {metric.label}
-                </span>
+                </Text>
               </div>
             ))}
           </div>

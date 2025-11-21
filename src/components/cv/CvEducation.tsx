@@ -1,4 +1,5 @@
 import { getCopy } from "../../lib/getCopy";
+import Text from "../ui/Text";
 import CvEducationItem from "./CvEducationItem";
 
 type CvEducationProps = {
@@ -17,9 +18,7 @@ const CvEducation = ({ className }: CvEducationProps) => {
   return (
     <section className={sectionClassName}>
       <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
-        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
-          {education.title}
-        </h2>
+        <Text variant="heading2">{education.title}</Text>
         <div className="grid gap-4">
           {education.items.map((item) => (
             <CvEducationItem
@@ -30,9 +29,7 @@ const CvEducation = ({ className }: CvEducationProps) => {
           ))}
         </div>
         <hr className="my-4 h-px border-0 bg-(--text-accent)/20" />
-        <h2 className="text-2xl font-semibold text-(--text-primary) md:text-3xl">
-          {certifications.title}
-        </h2>
+        <Text variant="heading2">{certifications.title}</Text>
         <div className="grid gap-4">
           {certifications.items.map((item) => (
             <CvEducationItem
