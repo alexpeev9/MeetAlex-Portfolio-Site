@@ -5,14 +5,14 @@
     "keywords": [
       "Bulgarian Web Developer",
       "Aleksandar Peev",
+      "Alexander Peev",
       "Alex Peev",
+      "Aleks Peev",
       "alexpeev9",
       "Portfolio",
       "Website",
       "Portfolio Website"
-    ],
-    "bannerImage": "/images/meetalex-banner.jpg",
-    "bannerImageAlt": "Preview of portfolio website"
+    ]
   },
   "navigation": {
     "logoPrimary": "Alexander Peev",
@@ -34,10 +34,8 @@
     "subheadline2": "Open to new opportunities.",
     "primaryCta": "View Experience",
     "secondaryCta": "Explore Projects",
-    "cvDownloadCta": "Download CV",
     "primaryCtaUrl": "#experience",
     "secondaryCtaUrl": "#projects",
-    "cvDownloadCtaUrl": "/cv.pdf",
     "imageSrc": "/alexpeev9.webp",
     "imageAlt": "Image of Alexander Peev with a confident smile",
     "metrics": [
@@ -169,7 +167,6 @@
           "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
           "viewLink": "https://bronze-initial-letters.com/",
           "viewLinkDisabled": false,
-          "companyLinkLabel": "Company Site",
           "viewLinkLabel": "View Site",
           "image": "/images/projects/bronze.webp"
         },
@@ -264,11 +261,10 @@
     }
   },
   "footer": {
-    "copyright": "",
     "links": [
       {
         "label": "LinkedIn",
-        "url": "htthttps://www.linkedin.com/in/alexpeev9/"
+        "url": "https://www.linkedin.com/in/alexpeev9/"
       },
       { "label": "GitHub", "url": "https://github.com/alexpeev9" },
       { "label": "YouTube", "url": "https://www.youtube.com/@alexpeev9" }
@@ -276,7 +272,6 @@
   },
   "accessibility": {
     "primaryCta": "Schedule a call with Alexander Peev",
-    "secondaryCta": "View recent React work",
-    "cvDownloadCta": "Download Alexander Peev's CV"
+    "secondaryCta": "View recent React work"
   }
 }
