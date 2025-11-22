@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import { getCopy } from "../lib/getCopy";
 import Button from "./ui/Button";
 import ImageCarousel from "./ui/ImageCarousel";
@@ -18,6 +18,7 @@ const OpenSourceProjects = ({ sectionId, className }: ProjectsProps) => {
     .join(" ");
 
   const projects = getCopy().cv.openSourceProjects;
+  const contact = getCopy().cv.contact;
 
   return (
     <section id={sectionId} className={sectionClassName}>
@@ -28,17 +29,17 @@ const OpenSourceProjects = ({ sectionId, className }: ProjectsProps) => {
             {projects.description.split("GitHub").map((part, index, array) => {
               if (index === array.length - 1) return part;
               return (
-                <React.Fragment key={index}>
+                <Fragment key={index}>
                   {part}
                   <a
-                    href="https://github.com/alexpeev9"
+                    href={contact.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-(--text-accent) hover:text-(--text-accent-strong)"
+                    className="text-(--text-accent) underline hover:text-(--text-accent-strong)"
                   >
                     GitHub
                   </a>
-                </React.Fragment>
+                </Fragment>
               );
             })}
           </Text>

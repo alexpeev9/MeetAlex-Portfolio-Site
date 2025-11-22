@@ -41,10 +41,9 @@ const HeroSection = () => {
                   <a
                     href={cv.contact.linkedin}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={`Visit ${cv.contact.linkedinLabel} profile`}
                     className="inline-flex items-center justify-center gap-15 opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
                   >
                     <Image
                       src="/images/icons/linkedin.webp"
@@ -57,10 +56,9 @@ const HeroSection = () => {
                   <a
                     href={cv.contact.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={`Visit ${cv.contact.githubLabel} profile`}
                     className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
                   >
                     <Image
                       src="/images/icons/github.webp"
@@ -73,10 +71,9 @@ const HeroSection = () => {
                   <a
                     href={cv.contact.youtube}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={`Visit ${cv.contact.youtubeLabel} channel`}
                     className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
                   >
                     <Image
                       src="/images/icons/youtube.webp"
@@ -130,21 +127,6 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
-          {/* <div className="flex flex-col gap-4">
-            <span className="text-xs tracking-[0.28em] text-slate-400 uppercase">
-              {hero.trustedTitle}
-            </span>
-            <div className="flex flex-wrap gap-3">
-              {hero.trustedBrands.map((brand) => (
-                <span
-                  key={brand}
-                  className="inline-flex items-center rounded-full border border-white/60 bg-white/90 px-4 py-2 text-sm font-semibold text-blue-600 shadow-sm"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </section>

@@ -22,6 +22,7 @@
       { "id": "open-source", "label": "Open-Source" }
     ],
     "cta": "Schedule a Call",
+    "ctaUrl": "https://calendly.com/alexpeev9/30min",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
     "logoAria": "Alexander Peev developer home"

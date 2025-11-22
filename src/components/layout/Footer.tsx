@@ -14,7 +14,7 @@ const Footer = () => {
     >
       <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between gap-6 px-6 py-10 text-sm lg:items-center lg:justify-between lg:px-0">
         <Button
-          href="https://calendly.com/alexpeev9/30min"
+          href={navigation.ctaUrl}
           ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
           buttonType="primary"
           size="md"
@@ -28,7 +28,7 @@ const Footer = () => {
               key={link.label}
               href={link.url}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="rounded-lg px-3 py-1 text-(--text-footer) transition duration-300 hover:-translate-y-0.5 hover:text-(--text-accent-strong) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
               aria-label={`${link.label}`}
             >

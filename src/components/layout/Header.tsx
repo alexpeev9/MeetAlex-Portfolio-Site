@@ -18,9 +18,6 @@ const Header = () => {
           className="flex items-center gap-2 text-lg font-semibold tracking-tight text-(--text-accent) transition duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
           aria-label={navigation.logoAria}
         >
-          {/* <span className="rounded-full bg-(--accent-muted) px-3 py-1 text-sm font-semibold text-(--badge-text)">
-            {navigation.logoSecondary}
-          </span> */}
           <span>{navigation.logoPrimary}</span>
         </a>
         <nav
@@ -39,7 +36,7 @@ const Header = () => {
           ))}
         </nav>
         <Button
-          href="https://calendly.com/alexpeev9/30min"
+          href={navigation.ctaUrl}
           ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
           buttonType="primary"
           size="md"
