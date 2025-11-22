@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   creator: copy.cv.bio.name,
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en" className="scroll-smooth">
       <body
@@ -60,4 +60,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

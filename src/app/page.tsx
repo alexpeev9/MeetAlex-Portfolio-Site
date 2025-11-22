@@ -5,7 +5,7 @@ import Experience from "@/components/Experience";
 import HeroSection from "@/components/HeroSection";
 import OpenSourceProjects from "@/components/OpenSourceProjects";
 
-export default function Page() {
+const Page = () => {
   return (
     <>
       <HeroSection />
@@ -23,4 +23,6 @@ export default function Page() {
       </main>
     </>
   );
-}
+};
+
+export default Page;
