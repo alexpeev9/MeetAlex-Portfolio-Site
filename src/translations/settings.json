@@ -106,8 +106,6 @@
           "link": "https://www.uni-vt.bg",
           "period": "Oct 2020 - May 2022",
           "logo": "/images/companies/university.webp",
-          "logoWidth": 48,
-          "logoHeight": 48,
           "highlights": [
             "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
             "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
