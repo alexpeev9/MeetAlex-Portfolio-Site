@@ -81,8 +81,6 @@ const HeroSection = () => {
               className="max-w-2xl leading-8 md:text-xl"
             >
               {hero.subheadline}
-              <br />
-              <span className="hidden lg:block">{hero.subheadline2}</span>
             </Text>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
