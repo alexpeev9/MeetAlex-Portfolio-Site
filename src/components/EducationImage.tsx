@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-type CvEducationImageProps = {
+type EducationImageProps = {
   className?: string;
 };
 
-const CvEducationImage = ({  className }: CvEducationImageProps) => {
+const EducationImage = ({  className }: EducationImageProps) => {
   const sectionClassName = ["mx-auto w-full max-w-6xl px-4 sm:px-0", className]
     .filter(Boolean)
     .join(" ");
@@ -25,5 +25,5 @@ const CvEducationImage = ({  className }: CvEducationImageProps) => {
   );
 };
 
-export default CvEducationImage;
+export default EducationImage;
 

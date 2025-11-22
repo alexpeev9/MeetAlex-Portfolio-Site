@@ -1,12 +1,12 @@
-import { getCopy } from "../../lib/getCopy";
-import Text from "../ui/Text";
-import CvEducationItem from "./CvEducationItem";
+import { getCopy } from "../lib/getCopy";
+import CvEducationItem from "./EducationItem";
+import Text from "./ui/Text";
 
-type CvEducationProps = {
+type EducationProps = {
   className?: string;
 };
 
-const CvEducation = ({ className }: CvEducationProps) => {
+const Education = ({ className }: EducationProps) => {
   const sectionClassName = ["mx-auto w-full max-w-6xl px-0 sm:px-0", className]
     .filter(Boolean)
     .join(" ");
@@ -44,4 +44,4 @@ const CvEducation = ({ className }: CvEducationProps) => {
   );
 };
 
-export default CvEducation;
+export default Education;

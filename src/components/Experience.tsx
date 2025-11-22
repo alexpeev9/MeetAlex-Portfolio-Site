@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { getCopy } from "../../lib/getCopy";
-import Tag from "../ui/Tag";
-import Text from "../ui/Text";
+import { getCopy } from "../lib/getCopy";
+import Tag from "./ui/Tag";
+import Text from "./ui/Text";
 
-type CvExperienceProps = {
+type ExperienceProps = {
   sectionId?: string;
   className?: string;
 };
@@ -19,7 +19,7 @@ const getCompanyLogo = (company: string): string | null => {
   return logoMap[company] || null;
 };
 
-const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
+const Experience = ({ sectionId, className }: ExperienceProps) => {
   const sectionClassName = [
     "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
     className,
@@ -119,4 +119,4 @@ const CvExperience = ({ sectionId, className }: CvExperienceProps) => {
   );
 };
 
-export default CvExperience;
+export default Experience;

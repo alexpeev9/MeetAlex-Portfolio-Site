@@ -1,8 +1,8 @@
-import Button from "../ui/Button";
-import Tag from "../ui/Tag";
-import Text from "../ui/Text";
+import Button from "./ui/Button";
+import Tag from "./ui/Tag";
+import Text from "./ui/Text";
 
-type CvItem = {
+type Item = {
   title: string;
   subtitle?: string;
   period?: string;
@@ -12,12 +12,12 @@ type CvItem = {
   link?: string;
 };
 
-type CvEducationItemProps = {
-  item: CvItem;
+type EducationItemProps = {
+  item: Item;
   linkAriaLabel?: string;
 };
 
-const CvEducationItem = ({ item, linkAriaLabel }: CvEducationItemProps) => {
+const EducationItem = ({ item, linkAriaLabel }: EducationItemProps) => {
   const { title, subtitle, period, description, grade, linkLabel, link } = item;
 
   return (
@@ -56,4 +56,4 @@ const CvEducationItem = ({ item, linkAriaLabel }: CvEducationItemProps) => {
   );
 };
 
-export default CvEducationItem;
+export default EducationItem;

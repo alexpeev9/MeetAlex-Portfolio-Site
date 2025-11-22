@@ -1,14 +1,14 @@
-import { getCopy } from "../../lib/getCopy";
-import Button from "../ui/Button";
-import ImageCarousel from "../ui/ImageCarousel";
-import Text from "../ui/Text";
+import { getCopy } from "../lib/getCopy";
+import Button from "./ui/Button";
+import ImageCarousel from "./ui/ImageCarousel";
+import Text from "./ui/Text";
 
-type CvProjectsProps = {
+type ProjectsProps = {
   sectionId?: string;
   className?: string;
 };
 
-const CvClientProjects = ({ sectionId, className }: CvProjectsProps) => {
+const ClientProjects = ({ sectionId, className }: ProjectsProps) => {
   const sectionClassName = [
     "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
     className,
@@ -115,4 +115,4 @@ const CvClientProjects = ({ sectionId, className }: CvProjectsProps) => {
   );
 };
 
-export default CvClientProjects;
+export default ClientProjects;

@@ -1,7 +1,7 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
-import Text from "../ui/Text";
-import HeroHeadline from "./HeroHeadline";
+import HeroButtons from "./sections/HeroButtons";
+import Text from "./ui/Text";
 
 const HeroSection = () => {
   const copy = getCopy();
@@ -24,6 +24,7 @@ const HeroSection = () => {
                 alt={hero.imageAlt}
                 width={1080}
                 height={1080}
+                loading="eager"
                 className="h-auto w-full rounded-2xl shadow-lg"
                 priority
               />
@@ -91,7 +92,29 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-fade-in order-2 flex w-full flex-col gap-6 text-center lg:order-1 lg:text-left">
-          <HeroHeadline />
+          <div className="flex flex-col items-center gap-6 lg:items-start">
+            <span className="hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
+              {hero.eyebrow}
+            </span>
+            <Text
+              variant="heading1"
+              className="text-center leading-tight lg:text-left"
+            >
+              {hero.headline}
+              <br />
+              {hero.headline2}
+            </Text>
+            <Text
+              variant="body"
+              size="lg"
+              className="max-w-2xl leading-8 md:text-xl"
+            >
+              {hero.subheadline}
+              <br />
+              <span className="hidden lg:block">{hero.subheadline2}</span>
+            </Text>
+          </div>
+          <HeroButtons  />
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
