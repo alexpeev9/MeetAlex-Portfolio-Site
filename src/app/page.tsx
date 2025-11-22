@@ -26,6 +26,7 @@ const Page = () => {
           sectionId="youtube"
           FirstComponent={YouTubeChannel}
           SecondComponent={YouTubeChannelImage}
+          isFirstComponentHiddenOnMobile={true}
         />
         <ThankYouSection />
       </main>

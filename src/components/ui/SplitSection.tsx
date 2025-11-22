@@ -5,6 +5,7 @@ type SplitSectionProps = {
   FirstComponent: ComponentType<{ className?: string }>;
   SecondComponent: ComponentType<{ className?: string }>;
   className?: string;
+  isFirstComponentHiddenOnMobile?: boolean;
 };
 
 const SplitSection = ({
@@ -12,6 +13,7 @@ const SplitSection = ({
   FirstComponent,
   SecondComponent,
   className,
+  isFirstComponentHiddenOnMobile = false,
 }: SplitSectionProps) => {
   const sectionClassName = [
     "mx-auto grid w-full max-w-6xl gap-8 px-4 pt-22 sm:px-6 sm:pt-24 lg:grid-cols-2 lg:px-6 xl:px-0",
@@ -22,8 +24,16 @@ const SplitSection = ({
 
   return (
     <div id={sectionId} className={sectionClassName}>
-      <FirstComponent className="hidden pt-0 lg:block" />
-      <SecondComponent className="pt-0" />
+      <FirstComponent
+        className={
+          isFirstComponentHiddenOnMobile ? "pt-0" : "hidden pt-0 lg:block"
+        }
+      />
+      <SecondComponent
+        className={
+          isFirstComponentHiddenOnMobile ? "hidden pt-0 lg:block" : "pt-0"
+        }
+      />
     </div>
   );
 };
