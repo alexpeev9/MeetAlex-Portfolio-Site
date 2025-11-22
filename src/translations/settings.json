@@ -1,145 +1,277 @@
 {
   "metadata": {
-    "title": "Alexander Peev | React Developer Portfolio",
-    "description": "Explore Alexander Peev's React development projects, process, and services tailored for modern web applications."
+    "title": "Alexander Peev",
+    "description": "React & TypeScript Developer with 5+ years of experience. Full-stack specialist in React, Next.js, and modern web technologies. Teaching contributor and open-source developer based in Sofia, Bulgaria.",
+    "keywords": [
+      "Bulgarian Web Developer",
+      "Aleksandar Peev",
+      "Alexander Peev",
+      "Alex Peev",
+      "Aleks Peev",
+      "alexpeev9",
+      "Portfolio",
+      "Website",
+      "Portfolio Website"
+    ]
   },
   "navigation": {
     "logoPrimary": "Alexander Peev",
-    "logoSecondary": "react.dev",
     "items": [
-      { "id": "projects", "label": "Projects" },
-      { "id": "process", "label": "Process" },
-      { "id": "about", "label": "About" }
+      { "id": "experience", "label": "Experience" },
+      { "id": "projects", "label": "Client Projects" },
+      { "id": "open-source", "label": "Open-Source" }
     ],
-    "cta": "Start a Project",
+    "cta": "Schedule a Call",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
     "logoAria": "Alexander Peev developer home"
   },
   "hero": {
-    "headline": "Beautiful React experiences for modern teams",
-    "subheadline": "I help founders and product teams craft fast, accessible, and future-proof web applications.",
-    "primaryCta": "Schedule a Call",
-    "secondaryCta": "View Recent Work",
-    "primaryCtaUrl": "https://cal.com/peev",
-    "secondaryCtaUrl": "https://github.com/alexander-peev",
-    "imageSrc": "/hero-portrait.svg",
-    "imageAlt": "Abstract illustration representing Alexander Peev with a confident smile"
-  },
-  "process": {
-    "title": "Working together",
-    "description": "We partner closely to understand your goals, design the solution, and ship production-ready React applications.",
-    "steps": [
-      {
-        "step": "01",
-        "title": "Discovery Session",
-        "copy": "Share your vision and requirements so we can align on scope and priorities."
-      },
-      {
-        "step": "02",
-        "title": "Design & Build",
-        "copy": "I prototype UI flows, build in React + TypeScript, and iterate quickly with your feedback."
-      },
-      {
-        "step": "03",
-        "title": "Deploy & Support",
-        "copy": "Launch confidently with testing, documentation, and ongoing support options."
-      }
+    "eyebrow": "Meet Alex",
+    "headline": "Developer with",
+    "headline2": "5+ years of experience",
+    "subheadline": "Working a 9-5 as a Web Developer while also supporting and developing company and client websites.",
+    "subheadline2": "Open to new opportunities.",
+    "primaryCta": "View Experience",
+    "secondaryCta": "Explore Projects",
+    "primaryCtaUrl": "#experience",
+    "secondaryCtaUrl": "#projects",
+    "imageSrc": "/alexpeev9.webp",
+    "imageAlt": "Image of Alexander Peev with a confident smile",
+    "metrics": [
+      { "label": "Years teaching courses", "value": "2" },
+      { "label": "Programming book contributions", "value": "3" },
+      { "label": "Published univeristy articles", "value": "30+" }
     ]
   },
-  "portfolio": {
-    "title": "Selected projects",
-    "description": "A snapshot of products I've shipped for startups and established teams across SaaS, e-commerce, and internal tooling.",
-    "projects": [
-      {
-        "name": "SaaS Analytics Platform",
-        "tags": ["React", "Next.js", "Tailwind"],
-        "description": "Interactive dashboards that help operators monitor real-time metrics and automate alerts.",
-        "imageSrc": "/project-analytics.svg",
-        "imageAlt": "Analytics dashboard mockup with rising line chart",
-        "actions": [
-          { "label": "Case Study", "url": "https://www.linkedin.com/in/alexander-peev" },
-          { "label": "Live Demo", "url": "https://github.com/alexander-peev" }
-        ]
-      },
-      {
-        "name": "E-commerce Launchpad",
-        "tags": ["TypeScript", "React Query", "Stripe"],
-        "description": "Headless commerce storefront with dynamic content, checkout flows, and subscription billing.",
-        "imageSrc": "/project-commerce.svg",
-        "imageAlt": "E-commerce storefront mockup with product cards and checkout",
-        "actions": [
-          { "label": "Product Tour", "url": "https://www.linkedin.com/in/alexander-peev" },
-          { "label": "View Repo", "url": "https://github.com/alexander-peev" }
-        ]
-      }
-    ]
-  },
-  "about": {
-    "title": "About Alexander",
-    "copy": "I'm a React developer based in Sofia, Bulgaria focused on building polished, resilient interfaces that feel effortless to use.",
-    "values": [
-      {
-        "title": "Custom Solutions",
-        "description": "Every project is designed around your product metrics, brand, and growth plans."
-      },
-      {
-        "title": "Reliable Delivery",
-        "description": "Transparent timelines, async updates, and fast iteration keep launches on track."
-      },
-      {
-        "title": "Performance Minded",
-        "description": "Built with modern tooling, accessibility, and lighthouse checks baked in."
-      },
-      {
-        "title": "Security First",
-        "description": "Implementing best practices for auth, API communication, and infrastructure."
-      }
-    ]
-  },
-  "contact": {
-    "title": "Let's build something great",
-    "description": "Share your project details and let's explore how we can collaborate to ship your next release.",
-    "form": {
-      "nameLabel": "Your Name",
-      "emailLabel": "Email",
-      "messageLabel": "Project Notes",
-      "submit": "Send Message",
-      "namePlaceholder": "How should I address you?",
-      "emailPlaceholder": "your@email.com",
-      "messagePlaceholder": "Tell me about the scope, timeline, and goals."
+  "cv": {
+    "bio": {
+      "name": "Alexander Peev, 25",
+      "location": "Sofia, Bulgaria"
     },
-    "cards": [
-      {
-        "title": "Book a intro call",
-        "description": "Grab a 30-minute slot to discuss goals, timelines, and next steps.",
-        "cta": "Schedule Now",
-        "url": "https://cal.com/peev"
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/alexpeev9/",
+      "linkedinLabel": "LinkedIn",
+      "github": "https://github.com/alexpeev9",
+      "githubLabel": "GitHub",
+      "youtube": "https://www.youtube.com/@alexpeev9",
+      "youtubeLabel": "Youtube"
+    },
+    "experience": {
+      "title": "Experience",
+      "roles": [
+        {
+          "title": "React Developer",
+          "company": "Blackdeep Technologies",
+          "link": "https://blackdeep.tech",
+          "period": "Jun 2024 - Present",
+          "description": "Building React applications with TypeScript and React Query, integrating AI-powered features for image generation and chat experiences.",
+          "highlights": [
+            "Leading feature development across multiple React apps.",
+            "Integrating AI services for automation and personalization.",
+            "Driving UI consistency with shared component libraries."
+          ],
+          "stack": ["React", "TypeScript", "React Query", "Tailwind CSS"]
+        },
+        {
+          "title": "Fullstack Developer",
+          "company": "C4 Nexus Ltd",
+          "link": "https://c4nexus.com",
+          "period": "Dec 2022 - May 2024",
+          "description": "As a web developer, I developed both back-end and front-end features, and the main technologies I used were JavaScript and React.",
+          "highlights": [
+            "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
+            "Worked as a part of a multinational team while following the Scrum methodology."
+          ],
+          "stack": ["React", "JavaScript", "Salesforce", "SASS"]
+        },
+        {
+          "title": "Contract Developer",
+          "company": "Self Employed",
+          "period": "Apr 2022 - Present",
+          "description": "As a fullstack contract developer, I work on diverse projects for different companies",
+          "highlights": [
+            "Currently developing a showcase website using Next.js, TypeScript, and Tailwind CSS.",
+            "Develop and support an e-commerce site using WordPress, jQuery, and PHP.",
+            "Create and support an e-commerce site using Shopify, Liquid, and JavaScript."
+          ],
+          "stack": ["Next.js", "Tailwind CSS", "PostgreSQL"]
+        },
+        {
+          "title": "University Assistant",
+          "company": "St. Cyril and St. Methodius University of Veliko Tarnovo",
+          "link": "https://www.uni-vt.bg",
+          "period": "Oct 2020 - May 2022",
+          "highlights": [
+            "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
+            "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
+          ],
+          "stack": ["ASP.NET Core", "SQL", "C#"]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "title": "Master's degree",
+          "description": "Web Technologies and Software",
+          "period": "2025 - Present",
+          "subtitle": "St. Cyril and St. Methodius University of Veliko Tarnovo"
+        },
+        {
+          "title": "Bachelor's degree",
+          "description": "Software Engineering",
+          "period": "2019 - 2023",
+          "subtitle": "St. Cyril and St. Methodius University of Veliko Tarnovo",
+          "grade": "Excellent 5.51"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        {
+          "title": "JavaScript Web Developer Diploma",
+          "subtitle": "Software University (SoftUni)",
+          "period": "2021",
+          "grade": "Excellent 5.98",
+          "linkLabel": "Certificate",
+          "link": "https://softuni.bg/certificates/details/133486/050776f5"
+        },
+        {
+          "title": "Data Structures Fundamentals",
+          "subtitle": "Software University (SoftUni)",
+          "period": "2021",
+          "grade": "Excellent 6.00",
+          "linkLabel": "Certificate",
+          "link": "https://softuni.bg/certificates/details/110044/16353ddd"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Client Projects",
+      "description": "Besides my full-time role, I work with different companies as a freelance developer, delivering custom sites for their specific needs and budgets. Here are some of the projects:",
+      "nda": {
+        "title": "Additional Projects",
+        "description": "Over the past year, I've worked on several new projects for various companies. Due to non-disclosure agreements, I'm unable to share these publicly. If you're interested in learning more about my recent work, I'd be happy to discuss these projects during a conversation.",
+        "cta": "Schedule a Call",
+        "ctaUrl": "https://calendly.com/alexpeev9/30min"
       },
-      {
-        "title": "Say hello",
-        "description": "Reach out on LinkedIn or email and I'll respond within one business day.",
-        "cta": "Contact Alexander",
-        "url": "mailto:hello@alexanderpeev.dev"
-      }
-    ],
-    "ariaCardPrefix": "Open resource"
+      "items": [
+        {
+          "name": "Company Showcase Site",
+          "year": "2024",
+          "description": "Developed a modern showcase website for Bronze Initial Letters, featuring an elegant design that highlights historical manuscripts and bronze sculptures.",
+          "description2": " Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and responsive navigation.",
+          "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+          "viewLink": "https://bronze-initial-letters.com/",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "image": "/images/projects/bronze.webp"
+        },
+        {
+          "name": "Business Online Store",
+          "year": "2022",
+          "description": "Created a fully functional e-commerce platform, specializing in climbing volumes and training equipment. Features product catalogs, shopping cart functionality, and secure checkout.",
+          "description2": "Developed using WordPress, custom PHP code, and jQuery with optimized performance.",
+          "stack": ["WordPress", "jQuery", "PHP"],
+          "viewLink": "https://escapestructures.com/",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "image": "/images/projects/escape.webp"
+        },
+        {
+          "name": "Brand Online Store",
+          "year": "2024",
+          "description": "Built a custom storefront for Sobriety Pins, featuring a modern design that aligns with the brand's mission.",
+          "description2": "Built with Shopify, including custom theme development using Liquid templates, and enhanced functionality through JavaScript.",
+          "stack": ["Shopify", "Liquid", "JavaScript"],
+          "viewLink": "https://sobrietypins.store",
+          "viewLinkDisabled": true,
+          "viewLinkLabel": "Temporary Closed",
+          "image": "/images/projects/sobriety.webp"
+        }
+      ]
+    },
+    "openSourceProjects": {
+      "title": "Open-Source Projects",
+      "description": "I build open-source projects on GitHub to learn new tools and share my work. Here are some of the projects:",
+      "items": [
+        {
+          "name": "MERN Role-Based Platform",
+          "year": "2023",
+          "description": "MERN article platform with role-based auth. Users write, explore, and vote on articles. React/TypeScript and Express/MongoDB.",
+          "description2": "",
+          "stack": ["React", "TypeScript", "Express", "MongoDB"],
+          "viewLink": "https://silver-articles.vercel.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/SilverArticles",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/mern.webp"
+        },
+        {
+          "name": "Next.js Catalog App",
+          "year": "2024",
+          "description": "Next.js web app with PostgreSQL API and Tailwind CSS. Features dynamic routes displaying weapon categories and individual weapons.",
+          "description2": "",
+          "stack": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+          "viewLink": "https://dark-souls-weapons-project.vercel.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/NextJS-Dark-Souls-Weapons",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/next.webp"
+        },
+        {
+          "name": "Angular Landmarks App",
+          "year": "2021",
+          "description": "Angular web app with Firebase and Bootstrap. Offers interactive maps with login access and full tools for handling location data.",
+          "description2": "",
+          "stack": ["Angular", "TypeScript", "Firebase", "Bootstrap"],
+          "githubLink": "https://github.com/alexpeev9/Guiding-Light-Project",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/angular.webp"
+        },
+        {
+          "name": "Vue.js Map App",
+          "year": "2021",
+          "description": "Vue.js web app with Firebase. Features interactive maps with authentication and CRUD operations for managing locations.",
+          "description2": "",
+          "stack": ["Vue.js", "JavaScript", "Firebase"],
+          "viewLink": "https://vue-project-420.web.app",
+          "viewLinkDisabled": false,
+          "viewLinkLabel": "View Site",
+          "githubLink": "https://github.com/alexpeev9/VueJS-YandexMap-Firebase-App",
+          "githubLinkDisabled": false,
+          "githubLinkLabel": "View Code",
+          "image": "/images/projects/vue.webp"
+        }
+      ]
+    },
+    "accessibility": {
+      "experience": "Experience entry",
+      "projectLink": "View project details",
+      "educationLink": "View education document",
+      "certificationLink": "View certification details"
+    }
   },
   "footer": {
-    "copyright": "© Alexander Peev. All rights reserved.",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alexander-peev" },
-      { "label": "GitHub", "url": "https://github.com/alexander-peev" },
-      { "label": "Privacy", "url": "https://alexanderpeev.dev/privacy" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alexpeev9/"
+      },
+      { "label": "GitHub", "url": "https://github.com/alexpeev9" },
+      { "label": "YouTube", "url": "https://www.youtube.com/@alexpeev9" }
     ]
   },
   "accessibility": {
-    "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu",
     "primaryCta": "Schedule a call with Alexander Peev",
-    "secondaryCta": "View recent React work",
-    "timeline": "Project delivery step",
-    "projectLink": "View project resource",
-    "submitForm": "Send project inquiry"
+    "secondaryCta": "View recent React work"
   }
 }

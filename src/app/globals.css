@@ -2,7 +2,55 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #19191a;
+  --surface-muted: #e6e6e6;
+  --surface-card: rgba(255, 255, 255, 0.92);
+  --surface-card-border: rgba(30, 111, 232, 0.32);
+  --surface-card-shadow: 0 22px 60px -32px rgba(30, 111, 232, 0.2);
+  --surface-header: rgba(255, 255, 255, 0.88);
+  --surface-header-border: rgba(30, 111, 232, 0.42);
+  --gradient-page: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #b8d9ff 25%,
+    #8fc2ff 50%,
+    #b8d9ff 75%,
+    #ffffff 100%
+  );
+  --gradient-footer: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(184, 217, 255, 0.95)
+  );
+  --gradient-timeline: linear-gradient(
+    180deg,
+    rgba(30, 111, 232, 0.25),
+    rgba(95, 168, 255, 0.15)
+  );
+  --accent-primary: #1e6fe8;
+  --accent-primary-hover: #1a5fcc;
+  --accent-muted: rgba(30, 111, 232, 0.18);
+  --accent-tag-bg: rgba(184, 217, 255, 0.6);
+  --text-primary: #19191a;
+  --text-secondary: rgba(25, 25, 26, 0.85);
+  --text-tertiary: rgba(25, 25, 26, 0.7);
+  --text-muted: rgba(25, 25, 26, 0.6);
+  --text-accent: #1e6fe8;
+  --text-accent-strong: #1a5fcc;
+  --text-nav: #1a5fcc;
+  --text-nav-hover: #1e6fe8;
+  --text-footer: rgba(25, 25, 26, 0.82);
+  --text-footer-muted: rgba(25, 25, 26, 0.65);
+  --badge-text: #1e6fe8;
+  --action-text: #ffffff;
+  --focus-ring: rgba(30, 111, 232, 0.6);
+  --focus-ring-offset: #ffffff;
+  --timeline-dot-shadow: 0 0 0 4px rgba(30, 111, 232, 0.2);
+  --scrollbar-track: rgba(184, 217, 255, 0.4);
+  --scrollbar-thumb: rgba(143, 194, 255, 0.7);
+  --scrollbar-thumb-hover: rgba(143, 194, 255, 0.9);
+  --scrollbar-thumb-firefox: #8fc2ff;
+  --scrollbar-track-firefox: #d4e7ff;
 }
 
 @theme inline {
@@ -10,6 +58,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --section-height: calc(min(100svh, 100vh) - (6rem + 5.25rem));
+  --section-height-mobile: calc(min(100svh, 100vh) - (5.25rem));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +74,53 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar Styling */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-firefox) var(--scrollbar-track-firefox);
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  opacity: 0;
+  animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-fade-in-delayed {
+  opacity: 0;
+  animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
 }

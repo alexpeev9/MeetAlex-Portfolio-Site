@@ -1,71 +1,53 @@
-import { CSSProperties, MouseEvent } from 'react';
-import styles from '@/app/page.module.css';
-import { CopyShape } from '@/lib/getCopy';
-import { handleKeyboardActivation } from '@/utils/navigation';
+import { getCopy } from "@/lib/getCopy";
+import Button from "../ui/Button";
 
-type HeaderProps = {
-  navigation: CopyShape['navigation'];
-  onNavigate: (targetId: string) => void;
-  isMounted: boolean;
-  getDelayStyle: (index?: number, baseDelay?: number) => CSSProperties | undefined;
-};
-
-const Header = ({ navigation, onNavigate, isMounted, getDelayStyle }: HeaderProps) => {
-  const handleLogoClick = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    onNavigate('hero');
-  };
-
+const Header = () => {
+  const copy = getCopy();
+  const navigation = copy.navigation;
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-12">
-        <button
-          type="button"
-          className={`flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-100 transition-transform duration-300 hover:-translate-y-0.5 hover:text-sky-300 ${
-            isMounted ? styles.fadeInUp : ''
-          }`}
+    <header
+      className="sticky top-0 z-40 border-b backdrop-blur-xl transition-shadow duration-300"
+      style={{
+        background: "var(--surface-header)",
+        borderColor: "var(--surface-header-border)",
+      }}
+    >
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-6 lg:py-6">
+        <a
+          href="#main"
+          className="flex items-center gap-2 text-lg font-semibold tracking-tight text-(--text-accent) transition duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
           aria-label={navigation.logoAria}
-          onClick={handleLogoClick}
-          onKeyDown={(event) => handleKeyboardActivation(event, () => onNavigate('hero'))}
         >
-          <span className="rounded-full bg-sky-500/10 px-3 py-1 text-sm font-semibold text-sky-300">
+          {/* <span className="rounded-full bg-(--accent-muted) px-3 py-1 text-sm font-semibold text-(--badge-text)">
             {navigation.logoSecondary}
-          </span>
+          </span> */}
           <span>{navigation.logoPrimary}</span>
-        </button>
+        </a>
         <nav
-          className={`hidden items-center gap-10 md:flex ${isMounted ? styles.fadeInUp : ''}`}
+          className="hidden items-center gap-10 md:flex"
           aria-label={navigation.ariaMenu}
-          style={getDelayStyle(0, 0.2)}
         >
-          {navigation.items.map((item, index) => (
-            <button
+          {navigation.items.map((item) => (
+            <a
               key={item.id}
-              type="button"
-              className={`text-sm font-semibold uppercase tracking-[0.3em] text-slate-300 transition duration-300 hover:text-sky-300 ${
-                isMounted ? styles.fadeInUp : ''
-              }`}
-              style={getDelayStyle(index, 0.24)}
+              href={`#${item.id}`}
+              className="text-sm font-semibold tracking-[0.3em] text-(--text-nav) uppercase transition duration-300 hover:text-(--text-nav-hover) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
               aria-label={`${navigation.ariaItemPrefix} ${item.label}`}
-              onClick={() => onNavigate(item.id)}
-              onKeyDown={(event) => handleKeyboardActivation(event, () => onNavigate(item.id))}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
-        <button
-          type="button"
-          className={`hidden rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-sky-400 md:inline-flex ${
-            isMounted ? styles.fadeInUp : ''
-          }`}
-          style={getDelayStyle(0, 0.32)}
-          aria-label={`${navigation.ariaItemPrefix} ${navigation.cta}`}
-          onClick={() => onNavigate('contact')}
-          onKeyDown={(event) => handleKeyboardActivation(event, () => onNavigate('contact'))}
+        <Button
+          href="https://calendly.com/alexpeev9/30min"
+          ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
+          buttonType="primary"
+          size="md"
+          className="md:inline-flex"
+          isWithIcon={false}
         >
           {navigation.cta}
-        </button>
+        </Button>
       </div>
     </header>
   );

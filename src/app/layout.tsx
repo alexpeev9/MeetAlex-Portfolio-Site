@@ -1,7 +1,9 @@
+import { getCopy } from "@/lib/getCopy";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
 import "./globals.css";
-import { getCopy } from "@/lib/getCopy";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +20,19 @@ const copy = getCopy();
 export const metadata: Metadata = {
   title: copy.metadata.title,
   description: copy.metadata.description,
+  openGraph: {
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+  },
+  keywords: copy.metadata.keywords,
+  authors: [{ name: copy.cv.bio.name }],
+  creator: copy.cv.bio.name,
 };
 
 export default function RootLayout({
@@ -26,11 +41,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-slate-950 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div
+          className="flex min-h-screen flex-col"
+          style={{
+            background: "var(--gradient-page)",
+            color: "var(--text-primary)",
+          }}
+          id="main"
+        >
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
