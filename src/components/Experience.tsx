@@ -8,16 +8,6 @@ type ExperienceProps = {
   className?: string;
 };
 
-const getCompanyLogo = (company: string): string | null => {
-  const logoMap: Record<string, string> = {
-    "Blackdeep Technologies": "/images/companies/blackdeep-technologies.webp",
-    "C4 Nexus Ltd": "/images/companies/c4nexus.webp",
-    "Self Employed": "/images/companies/contract.webp",
-    "St. Cyril and St. Methodius University of Veliko Tarnovo":
-      "/images/companies/univeristy.webp",
-  };
-  return logoMap[company] || null;
-};
 
 const Experience = ({ sectionId, className }: ExperienceProps) => {
   const sectionClassName = [
@@ -38,7 +28,6 @@ const Experience = ({ sectionId, className }: ExperienceProps) => {
         <div className="grid gap-7">
           {experience.roles.map((role, index) => {
             const isLast = index === experience.roles.length - 1;
-            const logoPath = getCompanyLogo(role.company);
             return (
               <article
                 key={`${role.title}-${role.company}`}
@@ -64,9 +53,9 @@ const Experience = ({ sectionId, className }: ExperienceProps) => {
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-start gap-3">
-                    {logoPath && (
+                    {role.logo && (
                       <Image
-                        src={logoPath}
+                        src={role.logo}
                         alt={`${role.company} logo`}
                         width={48}
                         height={48}

@@ -48,7 +48,7 @@ const HeroSection = () => {
                   >
                     <Image
                       src="/images/icons/linkedin.webp"
-                      alt=""
+                      alt="LinkedIn logo"
                       width={64}
                       height={64}
                       className="h-8 w-8"
@@ -64,7 +64,7 @@ const HeroSection = () => {
                   >
                     <Image
                       src="/images/icons/github.webp"
-                      alt=""
+                      alt="GitHub logo"
                       width={64}
                       height={64}
                       className="h-8 w-8"
@@ -80,7 +80,7 @@ const HeroSection = () => {
                   >
                     <Image
                       src="/images/icons/youtube.webp"
-                      alt=""
+                      alt="YouTube logo"
                       width={64}
                       height={64}
                       className="h-8 w-8"
@@ -114,7 +114,7 @@ const HeroSection = () => {
               <span className="hidden lg:block">{hero.subheadline2}</span>
             </Text>
           </div>
-          <HeroButtons  />
+          <HeroButtons />
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
