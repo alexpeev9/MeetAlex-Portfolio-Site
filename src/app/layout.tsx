@@ -17,10 +17,6 @@ const geistMono = Geist_Mono({
 
 const copy = getCopy();
 
-const getBannerImageUrl = () => {
-  return `${process.env.NEXT_PUBLIC_SITE_URL || ""}${copy.metadata.bannerImage}`;
-};
-
 export const metadata: Metadata = {
   title: copy.metadata.title,
   description: copy.metadata.description,
@@ -28,20 +24,11 @@ export const metadata: Metadata = {
     title: copy.metadata.title,
     description: copy.metadata.description,
     type: "website",
-    images: [
-      {
-        url: getBannerImageUrl(),
-        alt: copy.metadata.bannerImageAlt,
-        width: 1200,
-        height: 630,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: copy.metadata.title,
     description: copy.metadata.description,
-    images: getBannerImageUrl(),
   },
   keywords: copy.metadata.keywords,
   authors: [{ name: copy.cv.bio.name }],

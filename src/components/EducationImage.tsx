@@ -15,9 +15,9 @@ const EducationImage = ({  className }: EducationImageProps) => {
         <div className="relative h-full min-h-[400px] overflow-hidden rounded-xl">
           <Image
             src="/images/education/school.webp"
-            alt="School building"
-            objectFit="cover"
+            alt="Me at my graduation"
             fill
+            className="object-cover"
           />
         </div>
       </div>
