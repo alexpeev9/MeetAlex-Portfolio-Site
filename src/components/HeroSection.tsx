@@ -1,6 +1,6 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
-import HeroButtons from "./sections/HeroButtons";
+import Button from "./ui/Button";
 import Text from "./ui/Text";
 
 const HeroSection = () => {
@@ -111,7 +111,28 @@ const HeroSection = () => {
               <span className="hidden lg:block">{hero.subheadline2}</span>
             </Text>
           </div>
-          <HeroButtons />
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            <Button
+              href={hero.primaryCtaUrl}
+              ariaLabel={hero.primaryCta}
+              buttonType="primary"
+              size="lg"
+              isExternal={false}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.primaryCta}
+            </Button>
+            <Button
+              href={hero.secondaryCtaUrl}
+              ariaLabel={hero.secondaryCta}
+              buttonType="secondary"
+              size="lg"
+              isExternal={false}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.secondaryCta}
+            </Button>
+          </div>
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
