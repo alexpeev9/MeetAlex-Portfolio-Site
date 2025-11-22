@@ -3,14 +3,16 @@
     "title": "Alexander Peev",
     "description": "Web Developer With 5+ Years of Experience",
     "keywords": [
-      "web developer",
-      "React developer",
-      "TypeScript",
-      "Next.js",
-      "fullstack developer",
-      "frontend developer",
-      "freelance developer"
-    ]
+      "Bulgarian Web Developer",
+      "Aleksandar Peev",
+      "Alex Peev",
+      "alexpeev9",
+      "Portfolio",
+      "Website",
+      "Portfolio Website"
+    ],
+    "bannerImage": "/images/meetalex-banner.jpg",
+    "bannerImageAlt": "Preview of portfolio website"
   },
   "navigation": {
     "logoPrimary": "Alexander Peev",

@@ -46,7 +46,7 @@ const HeroSection = () => {
                     tabIndex={0}
                   >
                     <Image
-                      src="/images/icons/linkedin.png"
+                      src="/images/icons/linkedin.webp"
                       alt=""
                       width={64}
                       height={64}
@@ -62,7 +62,7 @@ const HeroSection = () => {
                     tabIndex={0}
                   >
                     <Image
-                      src="/images/icons/github.png"
+                      src="/images/icons/github.webp"
                       alt=""
                       width={64}
                       height={64}
@@ -78,7 +78,7 @@ const HeroSection = () => {
                     tabIndex={0}
                   >
                     <Image
-                      src="/images/icons/youtube.png"
+                      src="/images/icons/youtube.webp"
                       alt=""
                       width={64}
                       height={64}
@@ -98,7 +98,10 @@ const HeroSection = () => {
                 <Text variant="heading2" size="3xl">
                   {metric.value}
                 </Text>
-                <Text variant="caption" className="px-10 tracking-[0.26em] lg:px-0">
+                <Text
+                  variant="caption"
+                  className="px-10 tracking-[0.26em] lg:px-0"
+                >
                   {metric.label}
                 </Text>
               </div>

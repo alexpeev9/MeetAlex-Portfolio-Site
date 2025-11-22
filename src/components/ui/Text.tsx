@@ -81,11 +81,14 @@ const getSizeClass = (size: TextSize): string => {
 
 const getDefaultTag = (variant?: TextVariant): "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div" => {
   if (!variant) return "span";
-  const tagMap: Record<TextVariant, "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div"> = {
+  const tagMap: Record<
+    TextVariant,
+    "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div"
+  > = {
     heading1: "h1",
     heading2: "h2",
     heading3: "h3",
-    heading4: "h4",
+    heading4: "p",
     body: "p",
     bodySmall: "p",
     caption: "span",

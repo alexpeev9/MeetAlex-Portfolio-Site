@@ -17,9 +17,35 @@ const geistMono = Geist_Mono({
 
 const copy = getCopy();
 
+const getAbsoluteUrl = (path: string) => {
+  return `${process.env.NEXT_PUBLIC_SITE_URL || ""}${path}`;
+};
+
 export const metadata: Metadata = {
   title: copy.metadata.title,
   description: copy.metadata.description,
+  openGraph: {
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    type: "website",
+    images: [
+      {
+        url: getAbsoluteUrl(copy.metadata.bannerImage),
+        alt: copy.metadata.bannerImageAlt,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    images: getAbsoluteUrl(copy.hero.imageSrc),
+  },
+  keywords: copy.metadata.keywords,
+  authors: [{ name: copy.cv.bio.name }],
+  creator: copy.cv.bio.name,
 };
 
 export default function RootLayout({
