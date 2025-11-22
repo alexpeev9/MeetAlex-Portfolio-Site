@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Alexander Peev",
-    "description": "React & TypeScript Developer with 5+ years of experience. Full-stack specialist in React, Next.js, and modern web technologies. Teaching contributor and open-source developer based in Sofia, Bulgaria.",
+    "title": "Alexander Peev - 5+ Years Building Web Apps",
+    "description": "Portfolio showcasing client projects, open-source projects, and professional experience. Specializing in React, TypeScript, Next.js, and modern web technologies. Available for freelance projects and collaborations.",
     "keywords": [
       "Bulgarian Web Developer",
       "Aleksandar Peev",
@@ -22,6 +22,7 @@
       { "id": "open-source", "label": "Open-Source" }
     ],
     "cta": "Schedule a Call",
+    "ctaUrl": "https://calendly.com/alexpeev9/30min",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
     "logoAria": "Alexander Peev developer home"
@@ -31,7 +32,6 @@
     "headline": "Developer with",
     "headline2": "5+ years of experience",
     "subheadline": "Working a 9-5 as a Web Developer while also supporting and developing company and client websites.",
-    "subheadline2": "Open to new opportunities.",
     "primaryCta": "View Experience",
     "secondaryCta": "Explore Projects",
     "primaryCtaUrl": "#experience",
@@ -41,7 +41,7 @@
     "metrics": [
       { "label": "Years teaching courses", "value": "2" },
       { "label": "Programming book contributions", "value": "3" },
-      { "label": "Published univeristy articles", "value": "30+" }
+      { "label": "Published university articles", "value": "30+" }
     ]
   },
   "cv": {
@@ -65,6 +65,7 @@
           "company": "Blackdeep Technologies",
           "link": "https://blackdeep.tech",
           "period": "Jun 2024 - Present",
+          "logo": "/images/companies/blackdeep-technologies.webp",
           "description": "Building React applications with TypeScript and React Query, integrating AI-powered features for image generation and chat experiences.",
           "highlights": [
             "Leading feature development across multiple React apps.",
@@ -78,6 +79,7 @@
           "company": "C4 Nexus Ltd",
           "link": "https://c4nexus.com",
           "period": "Dec 2022 - May 2024",
+          "logo": "/images/companies/c4nexus.webp",
           "description": "As a web developer, I developed both back-end and front-end features, and the main technologies I used were JavaScript and React.",
           "highlights": [
             "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
@@ -87,8 +89,9 @@
         },
         {
           "title": "Contract Developer",
-          "company": "Self Employed",
+          "company": "Self-Employed",
           "period": "Apr 2022 - Present",
+          "logo": "/images/companies/contract.webp",
           "description": "As a fullstack contract developer, I work on diverse projects for different companies",
           "highlights": [
             "Currently developing a showcase website using Next.js, TypeScript, and Tailwind CSS.",
@@ -102,6 +105,7 @@
           "company": "St. Cyril and St. Methodius University of Veliko Tarnovo",
           "link": "https://www.uni-vt.bg",
           "period": "Oct 2020 - May 2022",
+          "logo": "/images/companies/university.webp",
           "highlights": [
             "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
             "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
@@ -258,9 +262,28 @@
       "projectLink": "View project details",
       "educationLink": "View education document",
       "certificationLink": "View certification details"
+    },
+    "youtubeChannel": {
+      "title": "YouTube Channel",
+      "description": "While working as a university assistant, I recorded a few videos so people could learn C# better:",
+      "cta": "Visit Channel",
+      "ctaLabel": "Visit YouTube Channel",
+      "topics": [
+        "AutoMapper and Error Handling in ASP.NET Core",
+        "Adding CRUD to .NET Application",
+        "Building .NET Application with Authentication",
+        "Creating Web Application with ASP.NET Core",
+        "C# - Solving Exam Task"
+      ]
     }
   },
+  "thankYou": {
+    "title": "Thank You",
+    "description": "Thanks for checking out my portfolio! Feel free to reach out if you'd like to connect or discuss a project.",
+    "cta": "Schedule a Call"
+  },
   "footer": {
+    "copyright": "© 2025 Aleksandar Peev",
     "links": [
       {
         "label": "LinkedIn",

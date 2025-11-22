@@ -1,6 +1,7 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
-import HeroButtons from "./sections/HeroButtons";
+import Button from "./ui/Button";
+import SocialLink from "./ui/SocialLink";
 import Text from "./ui/Text";
 
 const HeroSection = () => {
@@ -38,54 +39,24 @@ const HeroSection = () => {
                   </Text>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
-                  <a
+                  <SocialLink
                     href={cv.contact.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${cv.contact.linkedinLabel} profile`}
-                    className="inline-flex items-center justify-center gap-15 opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
-                  >
-                    <Image
-                      src="/images/icons/linkedin.webp"
-                      alt=""
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
-                  <a
+                    ariaLabel={`Visit ${cv.contact.linkedinLabel} profile`}
+                    iconSrc="/images/icons/linkedin.webp"
+                    iconAlt="LinkedIn logo"
+                  />
+                  <SocialLink
                     href={cv.contact.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${cv.contact.githubLabel} profile`}
-                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
-                  >
-                    <Image
-                      src="/images/icons/github.webp"
-                      alt=""
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
-                  <a
+                    ariaLabel={`Visit ${cv.contact.githubLabel} profile`}
+                    iconSrc="/images/icons/github.webp"
+                    iconAlt="GitHub logo"
+                  />
+                  <SocialLink
                     href={cv.contact.youtube}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${cv.contact.youtubeLabel} channel`}
-                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                    tabIndex={0}
-                  >
-                    <Image
-                      src="/images/icons/youtube.webp"
-                      alt=""
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
+                    ariaLabel={`Visit ${cv.contact.youtubeLabel} channel`}
+                    iconSrc="/images/icons/youtube.webp"
+                    iconAlt="YouTube logo"
+                  />
                 </div>
               </div>
             </div>
@@ -110,11 +81,30 @@ const HeroSection = () => {
               className="max-w-2xl leading-8 md:text-xl"
             >
               {hero.subheadline}
-              <br />
-              <span className="hidden lg:block">{hero.subheadline2}</span>
             </Text>
           </div>
-          <HeroButtons  />
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            <Button
+              href={hero.primaryCtaUrl}
+              ariaLabel={hero.primaryCta}
+              buttonType="primary"
+              size="lg"
+              isExternal={false}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.primaryCta}
+            </Button>
+            <Button
+              href={hero.secondaryCtaUrl}
+              ariaLabel={hero.secondaryCta}
+              buttonType="secondary"
+              size="lg"
+              isExternal={false}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.secondaryCta}
+            </Button>
+          </div>
           <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
@@ -130,21 +120,6 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
-          {/* <div className="flex flex-col gap-4">
-            <span className="text-xs tracking-[0.28em] text-slate-400 uppercase">
-              {hero.trustedTitle}
-            </span>
-            <div className="flex flex-wrap gap-3">
-              {hero.trustedBrands.map((brand) => (
-                <span
-                  key={brand}
-                  className="inline-flex items-center rounded-full border border-white/60 bg-white/90 px-4 py-2 text-sm font-semibold text-blue-600 shadow-sm"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </section>

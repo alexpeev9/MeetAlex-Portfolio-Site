@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alexander Peev - Portfolio
 
-## Getting Started
+**Next.js Full-Stack Developer**
 
-First, run the development server:
+Welcome to my portfolio website showcasing 5+ years of web development experience, client projects and my personal projects.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I'm Alexander Peev, a 25 years old full-stack web developer based in Sofia, Bulgaria, specializing in React, TypeScript, Next.js. Currently working as a React Developer I build applications with AI-powered features while also supporting various client projects as a freelance developer.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Beyond coding, I've spent 2 years teaching courses at the university, contributed to 3 programming books, and published 30+ university articles.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What You'll Find
 
-## Learn More
+Visit **[meetalex.dev](https://www.meetalex.dev)** to explore:
 
-To learn more about Next.js, take a look at the following resources:
+- **Professional Experience** - My journey from University Assistant to React Developer
+- **Client Projects** - Showcase websites and e-commerce platforms
+- **Open-Source Work** - Projects built with React, Angular, Vue.js, and Next.js
+- **Education & Certifications** - Academic background and professional certifications
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Let's Connect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I'm always open to discussing new projects, collaborations, or opportunities. Whether you're looking for a developer for your next project or want to collaborate on something interesting, feel free to reach out.
 
-## Deploy on Vercel
+**Visit the site:** [www.meetalex.dev](https://www.meetalex.dev)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built with Next.js, TypeScript, and Tailwind CSS*

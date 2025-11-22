@@ -1,6 +1,6 @@
-import { getCopy } from "../lib/getCopy";
+import { getCopy } from "../../lib/getCopy";
+import Text from "../ui/Text";
 import CvEducationItem from "./EducationItem";
-import Text from "./ui/Text";
 
 type EducationProps = {
   className?: string;
