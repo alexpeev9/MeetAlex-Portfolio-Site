@@ -1,6 +1,6 @@
-import { getCopy } from "../lib/getCopy";
-import Button from "./ui/Button";
-import Text from "./ui/Text";
+import { getCopy } from "../../lib/getCopy";
+import Button from "../ui/Button";
+import Text from "../ui/Text";
 
 type YouTubeChannelProps = {
   sectionId?: string;

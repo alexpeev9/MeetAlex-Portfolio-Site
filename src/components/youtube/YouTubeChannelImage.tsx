@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getCopy } from "../lib/getCopy";
+import { getCopy } from "../../lib/getCopy";
 
 type YouTubeChannelImageProps = {
   className?: string;

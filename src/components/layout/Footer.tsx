@@ -1,9 +1,8 @@
 import { getCopy } from "@/lib/getCopy";
-import Button from "../ui/Button";
+import Text from "../ui/Text";
 
 const Footer = () => {
   const footer = getCopy().footer;
-  const navigation = getCopy().navigation;
   return (
     <footer
       className="mt-12 border-t"
@@ -12,17 +11,14 @@ const Footer = () => {
         background: "var(--gradient-footer)",
       }}
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between gap-6 px-6 py-10 text-sm lg:items-center lg:justify-between lg:px-0">
-        <Button
-          href={navigation.ctaUrl}
-          ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
-          buttonType="primary"
-          size="md"
-          className="md:inline-flex"
+      <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-center gap-6 px-6 py-10 text-sm lg:items-center lg:justify-between lg:px-0">
+        <Text
+          variant="bodySmall"
+          className="hidden text-(--text-footer) lg:block"
         >
-          {navigation.cta}
-        </Button>
-        <div className="flex flex-col flex-wrap gap-4 sm:flex-row">
+          {footer.copyright}
+        </Text>
+        <div className="flex flex-row flex-wrap gap-4">
           {footer.links.map((link) => (
             <a
               key={link.label}

@@ -268,7 +268,7 @@
     },
     "youtubeChannel": {
       "title": "YouTube Channel",
-      "description": "While working as a university assistant, I recorded a few videos so people could learn C# better. All content is in Bulgarian.",
+      "description": "While working as a university assistant, I recorded a few videos so people could learn C# better. All the content is in Bulgarian.",
       "cta": "Visit Channel",
       "ctaLabel": "Visit YouTube Channel",
       "topics": [
@@ -280,7 +280,13 @@
       ]
     }
   },
+  "thankYou": {
+    "title": "Thank You",
+    "description": "Thanks for checking out my portfolio! Feel free to reach out if you'd like to connect or discuss a project.",
+    "cta": "Schedule a Call"
+  },
   "footer": {
+    "copyright": "© 2025 Aleksandar Peev",
     "links": [
       {
         "label": "LinkedIn",

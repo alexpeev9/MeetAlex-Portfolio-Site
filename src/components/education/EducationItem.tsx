@@ -1,6 +1,6 @@
-import Button from "./ui/Button";
-import Tag from "./ui/Tag";
-import Text from "./ui/Text";
+import Button from "../ui/Button";
+import Tag from "../ui/Tag";
+import Text from "../ui/Text";
 
 type Item = {
   title: string;
