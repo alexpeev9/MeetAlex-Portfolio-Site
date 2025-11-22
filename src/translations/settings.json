@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Alexander Peev",
-    "description": "Web Developer With 5+ Years of Experience",
+    "description": "React & TypeScript Developer with 5+ years of experience. Full-stack specialist in React, Next.js, and modern web technologies. Teaching contributor and open-source developer based in Sofia, Bulgaria.",
     "keywords": [
       "Bulgarian Web Developer",
       "Aleksandar Peev",
@@ -65,7 +65,7 @@
           "company": "Blackdeep Technologies",
           "link": "https://blackdeep.tech",
           "period": "Jun 2024 - Present",
-          "description": "Building React applications with TypeScript, and React Query to integrate AI features for image generation and chat experiences.",
+          "description": "Building React applications with TypeScript and React Query, integrating AI-powered features for image generation and chat experiences.",
           "highlights": [
             "Leading feature development across multiple React apps.",
             "Integrating AI services for automation and personalization.",
