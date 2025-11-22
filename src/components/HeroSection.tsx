@@ -1,6 +1,7 @@
 import { getCopy } from "@/lib/getCopy";
 import Image from "next/image";
 import Button from "./ui/Button";
+import SocialLink from "./ui/SocialLink";
 import Text from "./ui/Text";
 
 const HeroSection = () => {
@@ -38,51 +39,24 @@ const HeroSection = () => {
                   </Text>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
-                  <a
+                  <SocialLink
                     href={cv.contact.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${cv.contact.linkedinLabel} profile`}
-                    className="inline-flex items-center justify-center gap-15 opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    <Image
-                      src="/images/icons/linkedin.webp"
-                      alt="LinkedIn logo"
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
-                  <a
+                    ariaLabel={`Visit ${cv.contact.linkedinLabel} profile`}
+                    iconSrc="/images/icons/linkedin.webp"
+                    iconAlt="LinkedIn logo"
+                  />
+                  <SocialLink
                     href={cv.contact.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${cv.contact.githubLabel} profile`}
-                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    <Image
-                      src="/images/icons/github.webp"
-                      alt="GitHub logo"
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
-                  <a
+                    ariaLabel={`Visit ${cv.contact.githubLabel} profile`}
+                    iconSrc="/images/icons/github.webp"
+                    iconAlt="GitHub logo"
+                  />
+                  <SocialLink
                     href={cv.contact.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${cv.contact.youtubeLabel} channel`}
-                    className="inline-flex items-center justify-center opacity-80 transition hover:opacity-100 focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    <Image
-                      src="/images/icons/youtube.webp"
-                      alt="YouTube logo"
-                      width={64}
-                      height={64}
-                      className="h-8 w-8"
-                    />
-                  </a>
+                    ariaLabel={`Visit ${cv.contact.youtubeLabel} channel`}
+                    iconSrc="/images/icons/youtube.webp"
+                    iconAlt="YouTube logo"
+                  />
                 </div>
               </div>
             </div>
