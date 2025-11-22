@@ -42,7 +42,7 @@
     "metrics": [
       { "label": "Years teaching courses", "value": "2" },
       { "label": "Programming book contributions", "value": "3" },
-      { "label": "Published univeristy articles", "value": "30+" }
+      { "label": "Published university articles", "value": "30+" }
     ]
   },
   "cv": {
@@ -90,7 +90,7 @@
         },
         {
           "title": "Contract Developer",
-          "company": "Self Employed",
+          "company": "Self-Employed",
           "period": "Apr 2022 - Present",
           "logo": "/images/companies/contract.webp",
           "description": "As a fullstack contract developer, I work on diverse projects for different companies",
@@ -106,7 +106,7 @@
           "company": "St. Cyril and St. Methodius University of Veliko Tarnovo",
           "link": "https://www.uni-vt.bg",
           "period": "Oct 2020 - May 2022",
-          "logo": "/images/companies/univeristy.webp",
+          "logo": "/images/companies/university.webp",
           "logoWidth": 48,
           "logoHeight": 48,
           "highlights": [
@@ -265,6 +265,19 @@
       "projectLink": "View project details",
       "educationLink": "View education document",
       "certificationLink": "View certification details"
+    },
+    "youtubeChannel": {
+      "title": "YouTube Channel",
+      "description": "While working as a university assistant, I recorded a few videos so people could learn C# better. All content is in Bulgarian.",
+      "cta": "Visit Channel",
+      "ctaLabel": "Visit YouTube Channel",
+      "topics": [
+        "AutoMapper and Error Handling in ASP.NET Core",
+        "Adding CRUD to .NET Application",
+        "Building .NET Application with Authentication",
+        "Creating Web Application with ASP.NET Core",
+        "C# - Solving Exam Task"
+      ]
     }
   },
   "footer": {

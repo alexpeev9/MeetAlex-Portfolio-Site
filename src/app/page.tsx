@@ -4,6 +4,8 @@ import EducationImage from "@/components/EducationImage";
 import Experience from "@/components/Experience";
 import HeroSection from "@/components/HeroSection";
 import OpenSourceProjects from "@/components/OpenSourceProjects";
+import YouTubeChannel from "@/components/YouTubeChannel";
+import YouTubeChannelImage from "@/components/YouTubeChannelImage";
 
 const Page = () => {
   return (
@@ -20,6 +22,13 @@ const Page = () => {
         </div>
         <ClientProjects sectionId="projects" />
         <OpenSourceProjects sectionId="open-source" />
+        <div
+          id="youtube"
+          className="mx-auto grid w-full max-w-6xl gap-8 px-4 pt-22 sm:px-6 sm:pt-24 lg:grid-cols-2 lg:px-6 xl:px-0"
+        >
+          <YouTubeChannel className="pt-0" />
+          <YouTubeChannelImage className="hidden pt-0 lg:block" />
+        </div>
       </main>
     </>
   );
