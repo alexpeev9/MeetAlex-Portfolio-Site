@@ -70,9 +70,8 @@
           "description": "Develop and maintain React applications using TypeScript and React Query.",
           "highlights": [
             "Lead a small frontend team, and ensure code quality through PR reviews.",
-            "Integrate AI services for chat experiences and image generation.",
-            "Implement subscription and payment processing.",
-            "Build a live notification chat system."
+            "Integrate AI services for a real-time chat and image generation.",
+            "Implement subscription and payment processing."
           ],
           "stack": ["React", "TypeScript", "React Query", "Tailwind CSS"]
         },
