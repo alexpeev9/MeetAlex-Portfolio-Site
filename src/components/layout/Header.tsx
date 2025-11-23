@@ -28,7 +28,7 @@ const Header = () => {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-sm font-semibold tracking-[0.3em] text-(--text-nav) uppercase transition duration-300 hover:text-(--text-nav-hover) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
+              className="text-base font-semibold tracking-tight text-(--text-nav) transition duration-300 hover:text-(--text-nav-hover) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset)"
               aria-label={`${navigation.ariaItemPrefix} ${item.label}`}
             >
               {item.label}

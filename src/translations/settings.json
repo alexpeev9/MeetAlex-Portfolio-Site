@@ -18,6 +18,7 @@
     "logoPrimary": "Alexander Peev",
     "items": [
       { "id": "experience", "label": "Experience" },
+      { "id": "education", "label": "Education" },
       { "id": "projects", "label": "Client Projects" },
       { "id": "open-source", "label": "Open-Source" }
     ],
