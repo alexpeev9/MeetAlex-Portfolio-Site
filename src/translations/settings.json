@@ -66,11 +66,12 @@
           "link": "https://blackdeep.tech",
           "period": "Jun 2024 - Present",
           "logo": "/images/companies/blackdeep-technologies.webp",
-          "description": "Building React applications with TypeScript and React Query, integrating AI-powered features for image generation and chat experiences.",
+          "description": "Develop and maintain React applications using TypeScript and React Query.",
           "highlights": [
-            "Leading feature development across multiple React apps.",
-            "Integrating AI services for automation and personalization.",
-            "Driving UI consistency with shared component libraries."
+            "Lead a small frontend team, and ensure code quality through PR reviews.",
+            "Integrate AI services for chat experiences and image generation.",
+            "Implement subscription and payment processing.",
+            "Build a live notification chat system."
           ],
           "stack": ["React", "TypeScript", "React Query", "Tailwind CSS"]
         },
@@ -80,7 +81,7 @@
           "link": "https://c4nexus.com",
           "period": "Dec 2022 - May 2024",
           "logo": "/images/companies/c4nexus.webp",
-          "description": "As a web developer, I developed both back-end and front-end features, and the main technologies I used were JavaScript and React.",
+          "description": "Built and maintained both back-end and front-end features using JavaScript and React.",
           "highlights": [
             "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
             "Worked as a part of a multinational team while following the Scrum methodology."
