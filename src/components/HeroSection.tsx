@@ -89,7 +89,7 @@ const HeroSection = () => {
               ariaLabel={hero.primaryCta}
               buttonType="primary"
               size="lg"
-              isExternal={false}
+              isExternal={true}
               className="w-68 tracking-[0.2em] uppercase"
             >
               {hero.primaryCta}
