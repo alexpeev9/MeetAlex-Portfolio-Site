@@ -20,8 +20,8 @@ const Page = () => {
           FirstComponent={EducationImage}
           SecondComponent={Education}
         />
-        <ClientProjects sectionId="projects" />
         <OpenSourceProjects sectionId="open-source" />
+        <ClientProjects sectionId="projects" />
         <SplitSection
           sectionId="youtube"
           FirstComponent={YouTubeChannel}

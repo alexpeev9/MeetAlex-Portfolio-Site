@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "title": "Alexander Peev - 5+ Years Building Web Apps",
+    "title": "Alexandar Peev | 5+ Years Building Web Apps",
     "description": "Portfolio showcasing client projects, open-source projects, and professional experience. Specializing in React, TypeScript, Next.js, and modern web technologies. Available for freelance projects and collaborations.",
     "keywords": [
       "Bulgarian Web Developer",
       "Aleksandar Peev",
-      "Alexander Peev",
+      "Alexandar Peev",
       "Alex Peev",
       "Aleks Peev",
       "alexpeev9",
@@ -15,30 +15,30 @@
     ]
   },
   "navigation": {
-    "logoPrimary": "Alexander Peev",
+    "logoPrimary": "Alexandar Peev",
     "items": [
       { "id": "experience", "label": "Experience" },
       { "id": "education", "label": "Education" },
-      { "id": "projects", "label": "Client Projects" },
-      { "id": "open-source", "label": "Open-Source" }
+      { "id": "open-source", "label": "Open-Source" },
+      { "id": "projects", "label": "Client Projects" }
     ],
     "cta": "Schedule a Call",
     "ctaUrl": "https://calendly.com/alexpeev9/30min",
     "ariaMenu": "Primary navigation",
     "ariaItemPrefix": "Go to",
-    "logoAria": "Alexander Peev developer home"
+    "logoAria": "Alexandar Peev developer home"
   },
   "hero": {
     "eyebrow": "Meet Alex",
     "headline": "Developer with",
     "headline2": "5+ years of experience",
     "subheadline": "Working a 9-5 as a Web Developer while also supporting and developing company and client websites.",
-    "primaryCta": "View Experience",
-    "secondaryCta": "Explore Projects",
-    "primaryCtaUrl": "#experience",
-    "secondaryCtaUrl": "#projects",
+    "primaryCta": "Download CV",
+    "secondaryCta": "View Experience",
+    "primaryCtaUrl": "/Aleksandar-Peev-CV.pdf",
+    "secondaryCtaUrl": "#experience",
     "imageSrc": "/alexpeev9.webp",
-    "imageAlt": "Image of Alexander Peev with a confident smile",
+    "imageAlt": "Image of Alexandar Peev with a confident smile",
     "metrics": [
       { "label": "Years teaching courses", "value": "2" },
       { "label": "Programming book contributions", "value": "3" },
@@ -47,7 +47,7 @@
   },
   "cv": {
     "bio": {
-      "name": "Alexander Peev, 25",
+      "name": "Alexandar Peev, 25",
       "location": "Sofia, Bulgaria"
     },
     "contact": {
@@ -295,7 +295,7 @@
     ]
   },
   "accessibility": {
-    "primaryCta": "Schedule a call with Alexander Peev",
+    "primaryCta": "Schedule a call with Alexandar Peev",
     "secondaryCta": "View recent React work"
   }
 }

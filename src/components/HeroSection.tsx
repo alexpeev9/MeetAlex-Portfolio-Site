@@ -85,11 +85,12 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <Button
+              download={hero.primaryCtaUrl}
               href={hero.primaryCtaUrl}
               ariaLabel={hero.primaryCta}
               buttonType="primary"
               size="lg"
-              isExternal={false}
+              isExternal={true}
               className="w-68 tracking-[0.2em] uppercase"
             >
               {hero.primaryCta}

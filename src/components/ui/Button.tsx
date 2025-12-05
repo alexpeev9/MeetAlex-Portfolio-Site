@@ -13,6 +13,7 @@ type ButtonProps = {
   disabled?: boolean;
   className?: string;
   isWithIcon?: boolean;
+  download?: string;
 };
 
 const getSizeStyles = (size: ButtonSize): string => {
@@ -60,6 +61,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   isWithIcon = false,
   className = "",
+  download,
 }) => {
   const baseClassName =
     "inline-flex items-center justify-center font-semibold focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none";
@@ -92,6 +94,9 @@ const Button: React.FC<ButtonProps> = ({
       {...(isExternal && {
         target: "_blank",
         rel: "noopener noreferrer",
+      })}
+      {...(download && {
+        download: download,
       })}
       className={buttonClassName}
       aria-label={ariaLabel}
