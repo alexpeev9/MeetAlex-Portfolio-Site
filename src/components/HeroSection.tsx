@@ -85,6 +85,7 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <Button
+              download={hero.primaryCtaUrl}
               href={hero.primaryCtaUrl}
               ariaLabel={hero.primaryCta}
               buttonType="primary"
