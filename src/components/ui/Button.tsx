@@ -95,6 +95,7 @@ const Button: React.FC<ButtonProps> = ({
         target: "_blank",
         rel: "noopener noreferrer",
       })}
+      {...(download && {
         download: download,
       })}
       className={buttonClassName}
