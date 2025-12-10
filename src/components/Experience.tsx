@@ -11,7 +11,7 @@ type ExperienceProps = {
 
 const Experience = ({ sectionId, className }: ExperienceProps) => {
   const sectionClassName = [
-    "mx-auto w-full max-w-6xl px-4 pt-22 sm:px-6 sm:pt-24 xl:px-0",
+    "mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-24 xl:px-0",
     className,
   ]
     .filter(Boolean)
