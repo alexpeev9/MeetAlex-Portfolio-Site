@@ -6,7 +6,7 @@ const Header = () => {
   const navigation = copy.navigation;
   return (
     <header
-      className="sticky top-0 z-40 border-b backdrop-blur-xl transition-shadow duration-300"
+      className="fixed top-0 z-40 w-full border-b backdrop-blur-xl transition-shadow duration-300"
       style={{
         background: "var(--surface-header)",
         borderColor: "var(--surface-header-border)",

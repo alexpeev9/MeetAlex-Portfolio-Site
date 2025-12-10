@@ -1,5 +1,4 @@
 import { getCopy } from "@/lib/getCopy";
-import Image from "next/image";
 import Button from "./ui/Button";
 import SocialLink from "./ui/SocialLink";
 import Text from "./ui/Text";
@@ -9,28 +8,19 @@ const HeroSection = () => {
   const { hero, cv } = copy;
 
   return (
-    <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-4 sm:px-6 lg:h-(--section-height) lg:px-12 lg:pt-0">
-      <div className="relative z-10 grid w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-        <div className="hero-fade-in-delayed order-1 mx-auto flex h-(--section-height-mobile) w-full max-w-sm flex-col items-center justify-center gap-4 sm:h-auto lg:order-2 lg:mx-0 lg:max-w-none">
-          <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
+    <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-[4.8rem] sm:px-6 lg:h-(--section-height) lg:pt-21">
+      <div className="relative z-10 grid h-full w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:py-6">
+        <div className="hero-fade-in-delayed order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 pt-4 lg:order-2 lg:mx-0 lg:max-w-none lg:pt-0">
+          <div className="flex h-full max-h-[650px] min-h-0 w-full flex-col rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
             <div
-              className="rounded-2xl"
+              className="aspect-square min-h-0 w-full flex-1 rounded-2xl bg-cover bg-top shadow-lg lg:aspect-auto"
               style={{
-                background:
-                  "linear-gradient(to bottom right, #E6F2FF, #FFFFFF)",
+                backgroundImage: `url(${hero.imageSrc})`,
               }}
-            >
-              <Image
-                src={hero.imageSrc}
-                alt={hero.imageAlt}
-                width={1080}
-                height={1080}
-                loading="eager"
-                className="h-auto w-full rounded-2xl shadow-lg"
-                priority
-              />
-            </div>
-            <div className="mt-3 flex flex-col gap-4 lg:mt-6">
+              role="img"
+              aria-label={hero.imageAlt}
+            />
+            <div className="flex shrink-0 flex-col gap-4 pt-3 lg:pt-6">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex flex-col gap-1 text-center lg:text-left">
                   <Text variant="heading3">{cv.bio.name}</Text>
@@ -62,7 +52,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="hero-fade-in order-2 flex w-full flex-col gap-6 text-center lg:order-1 lg:text-left">
+        <div className="hero-fade-in order-2 flex w-full flex-col justify-center gap-6 text-center lg:order-1 lg:text-left">
           <div className="flex flex-col items-center gap-6 lg:items-start">
             <span className="hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
               {hero.eyebrow}
@@ -75,38 +65,8 @@ const HeroSection = () => {
               <br />
               {hero.headline2}
             </Text>
-            <Text
-              variant="body"
-              size="lg"
-              className="max-w-2xl leading-8 md:text-xl"
-            >
-              {hero.subheadline}
-            </Text>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-            <Button
-              download={hero.primaryCtaUrl}
-              href={hero.primaryCtaUrl}
-              ariaLabel={hero.primaryCta}
-              buttonType="primary"
-              size="lg"
-              isExternal={true}
-              className="w-68 tracking-[0.2em] uppercase"
-            >
-              {hero.primaryCta}
-            </Button>
-            <Button
-              href={hero.secondaryCtaUrl}
-              ariaLabel={hero.secondaryCta}
-              buttonType="secondary"
-              size="lg"
-              isExternal={false}
-              className="w-68 tracking-[0.2em] uppercase"
-            >
-              {hero.secondaryCta}
-            </Button>
-          </div>
-          <div className="flex flex-col gap-16 pt-12 lg:flex-row lg:gap-6 lg:pt-0">
+          <div className="flex flex-col gap-12 lg:flex-row lg:pt-0">
             {hero.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col gap-2">
                 <Text variant="heading2" size="3xl">
@@ -120,6 +80,29 @@ const HeroSection = () => {
                 </Text>
               </div>
             ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-6 lg:justify-start lg:pt-0">
+            <Button
+              download={hero.primaryCtaUrl}
+              href={hero.primaryCtaUrl}
+              ariaLabel={hero.primaryCta}
+              buttonType="primary"
+              size="lg"
+              isExternal={true}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.primaryCta}
+            </Button>
+            {/* <Button
+              href={hero.secondaryCtaUrl}
+              ariaLabel={hero.secondaryCta}
+              buttonType="secondary"
+              size="lg"
+              isExternal={false}
+              className="w-68 tracking-[0.2em] uppercase"
+            >
+              {hero.secondaryCta}
+            </Button> */}
           </div>
         </div>
       </div>
