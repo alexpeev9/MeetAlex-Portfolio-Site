@@ -1,5 +1,4 @@
 import { getCopy } from "@/lib/getCopy";
-import Image from "next/image";
 import Button from "./ui/Button";
 import SocialLink from "./ui/SocialLink";
 import Text from "./ui/Text";
@@ -12,17 +11,16 @@ const HeroSection = () => {
     <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-[4.8rem] sm:px-6 lg:h-(--section-height) lg:pt-21">
       <div className="relative z-10 grid h-full w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:py-6">
         <div className="hero-fade-in-delayed order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 lg:order-2 lg:mx-0 lg:max-w-none">
-          <div className="relative w-full overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
-            <Image
-              src={hero.imageSrc}
-              alt={hero.imageAlt}
-              width={1080}
-              height={1080}
-              loading="eager"
-              className="h-max-content w-full rounded-2xl object-cover object-top shadow-lg"
-              priority
+          <div className="flex h-full min-h-0 w-full flex-col rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
+            <div
+              className="min-h-0 w-full flex-1 rounded-2xl bg-cover bg-top shadow-lg"
+              style={{
+                backgroundImage: `url(${hero.imageSrc})`,
+              }}
+              role="img"
+              aria-label={hero.imageAlt}
             />
-            <div className="mt-3 flex flex-col gap-4 lg:mt-6">
+            <div className="flex shrink-0 flex-col gap-4 pt-3 lg:pt-6">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex flex-col gap-1 text-center lg:text-left">
                   <Text variant="heading3">{cv.bio.name}</Text>
