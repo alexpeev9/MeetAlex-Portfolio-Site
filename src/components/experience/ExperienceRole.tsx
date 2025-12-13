@@ -29,10 +29,7 @@ const ExperienceRole = ({
   const isLast = index === total - 1;
 
   return (
-    <article
-      className="relative space-y-3 pl-12"
-      aria-label={ariaLabel}
-    >
+    <article className="relative space-y-3 pb-2 pl-12" aria-label={ariaLabel}>
       {!isLast && (
         <span
           aria-hidden="true"
@@ -103,4 +100,3 @@ const ExperienceRole = ({
 };
 
 export default ExperienceRole;
-

@@ -288,7 +288,8 @@
       "experience": "Experience entry",
       "projectLink": "View project details",
       "educationLink": "View education document",
-      "certificationLink": "View certification details"
+      "certificationLink": "View certification details",
+      "recommendation": "Recommendation from"
     },
     "youtubeChannel": {
       "title": "YouTube Channel",
@@ -303,6 +304,30 @@
         "C# - Solving Exam Task"
       ]
     }
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "source": "Recommendation from LinkedIn",
+    "items": [
+      {
+        "name": "Örsan Dagdelen",
+        "title": "Backend Tech Lead",
+        "company": "Chalhoub Group",
+        "relationship": "Örsan managed me directly during my time at C4 Nexus Ltd.",
+        "date": "May 31, 2024",
+        "text": "Aleks is a great developer. I had the pleasure to closely work with him. His JavaScript knowledge is great. You can give him a task and don’t need to worry about the rest. He will manage it successfully.",
+        "link": "https://www.linkedin.com/in/orsan-dagdelen/"
+      },
+      {
+        "name": "Yulia Vushkova",
+        "title": "Marketing specialist",
+        "company": "SoftUni Global",
+        "relationship": "Yulia worked with me during my time at SoftUni Global.",
+        "date": "May 30, 2022",
+        "text": "I work closely with Aleksandar on many successful projects. He is knowledgeable, detail-orientated, and open-minded when presented with new ideas or problem solutions. He executes individual projects fast and thoroughly, is efficient at both multi- and solo tasking, and is quick to help when needed. Aleksander contributes to a positive and productive work environment and is a valuable teammate.",
+        "link": "https://www.linkedin.com/in/yulia-vushkova/"
+      }
+    ]
   },
   "thankYou": {
     "title": "Thank You",
