@@ -60,6 +60,7 @@
     },
     "experience": {
       "title": "Experience",
+      "showMore": "Show More",
       "roles": [
         {
           "title": "React Developer",
