@@ -60,6 +60,8 @@
     },
     "experience": {
       "title": "Experience",
+      "showMore": "Show More",
+      "showLess": "Show Less",
       "roles": [
         {
           "title": "React Developer",
@@ -93,7 +95,7 @@
           "company": "Self-Employed",
           "period": "Apr 2022 - Present",
           "logo": "/images/companies/contract.webp",
-          "description": "As a fullstack contract developer, I work on diverse projects for different companies",
+          "description": "As a fullstack contract developer, I work on diverse projects for different companies.",
           "highlights": [
             "Currently developing a showcase website using Next.js, TypeScript, and Tailwind CSS.",
             "Develop and support an e-commerce site using WordPress, jQuery, and PHP.",
@@ -108,10 +110,34 @@
           "period": "Oct 2020 - May 2022",
           "logo": "/images/companies/university.webp",
           "highlights": [
-            "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\"",
+            "Led courses in \"Web Development with ASP.NET Core\", \"Desktop Applications with .NET\", and \"Programming Basics with C#\".",
             "Recorded YouTube tutorials in which people could follow me step by step as I built projects."
           ],
           "stack": ["ASP.NET Core", "SQL", "C#"]
+        },
+        {
+          "title": "Content Specialist",
+          "company": "SoftUni Global",
+          "link": "https://softuni.org",
+          "period": "Jun 2021 - May 2022",
+          "logo": "/images/companies/softuni.webp",
+          "highlights": [
+            "Published 30+ programming blog posts and contributed to 3 programming books.",
+            "Made a six part workshop in which I built an advanced Java Spring application."
+          ],
+          "stack": ["Java", "Spring", "JavaScript"]
+        },
+        {
+          "title": "Frontend Developer Intern",
+          "company": "Webcode",
+          "link": "https://webcode.bg",
+          "period": "Oct 2020 - Jan 2021",
+          "logo": "/images/companies/webcode.webp",
+          "highlights": [
+            "Developed demonstration projects using Vue.js.",
+            "Actively contributed to a live project utilizing Laravel."
+          ],
+          "stack": ["Vue.js", "PHP", "Laravel"]
         }
       ]
     },
@@ -262,7 +288,8 @@
       "experience": "Experience entry",
       "projectLink": "View project details",
       "educationLink": "View education document",
-      "certificationLink": "View certification details"
+      "certificationLink": "View certification details",
+      "recommendation": "Recommendation from"
     },
     "youtubeChannel": {
       "title": "YouTube Channel",
@@ -277,6 +304,30 @@
         "C# - Solving Exam Task"
       ]
     }
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "source": "Recommendation from LinkedIn",
+    "items": [
+      {
+        "name": "Örsan Dagdelen",
+        "title": "Backend Tech Lead",
+        "company": "Chalhoub Group",
+        "relationship": "Örsan managed me directly during my time at C4 Nexus Ltd.",
+        "date": "May 31, 2024",
+        "text": "Aleks is a great developer. I had the pleasure to closely work with him. His JavaScript knowledge is great. You can give him a task and don’t need to worry about the rest. He will manage it successfully.",
+        "link": "https://www.linkedin.com/in/orsan-dagdelen/"
+      },
+      {
+        "name": "Yulia Vushkova",
+        "title": "Marketing specialist",
+        "company": "SoftUni Global",
+        "relationship": "Yulia worked with me during my time at SoftUni Global.",
+        "date": "May 30, 2022",
+        "text": "I work closely with Aleksandar on many successful projects. He is knowledgeable, detail-orientated, and open-minded when presented with new ideas or problem solutions.",
+        "link": "https://www.linkedin.com/in/yulia-vushkova/"
+      }
+    ]
   },
   "thankYou": {
     "title": "Thank You",
