@@ -29,7 +29,14 @@ const HeroSection = () => {
           delay={0.2}
           className="order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 pt-4 lg:order-2 lg:mx-0 lg:max-w-none lg:pt-0"
         >
-          <div className="group relative flex h-full max-h-[650px] min-h-0 w-full flex-col overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur transition-all duration-500 hover:shadow-[0_40px_100px_-35px_rgba(30,111,232,0.4)] sm:p-6">
+          <div
+            className="group relative flex h-full max-h-[650px] min-h-0 w-full flex-col overflow-hidden rounded-3xl border p-4 backdrop-blur transition-all duration-500 sm:p-6"
+            style={{
+              borderColor: "var(--hero-card-border)",
+              background: "var(--hero-card-bg)",
+              boxShadow: "var(--hero-card-shadow)",
+            }}
+          >
             <div
               className="aspect-square min-h-0 w-full flex-1 rounded-2xl bg-cover bg-top shadow-lg lg:aspect-auto"
               style={{
@@ -77,7 +84,14 @@ const HeroSection = () => {
           className="order-2 flex w-full flex-col justify-center gap-6 text-center lg:order-1 lg:text-left"
         >
           <div className="flex flex-col items-center gap-6 lg:items-start">
-            <span className="animate-shimmer hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-linear-to-r from-white/70 via-blue-50/80 to-white/70 bg-size-[200%_100%] px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
+            <span
+              className="animate-shimmer hidden w-fit items-center gap-3 rounded-full border bg-linear-to-r bg-size-[200%_100%] px-5 py-2 text-xs font-semibold tracking-[0.32em] uppercase shadow-sm lg:inline-flex"
+              style={{
+                borderColor: "var(--badge-border)",
+                background: "var(--badge-bg)",
+                color: "var(--badge-text-color)",
+              }}
+            >
               {hero.eyebrow}
             </span>
             <div className="leading-tight">

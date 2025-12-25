@@ -63,7 +63,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden touch-pan-y ${className}`}
+      className={`relative w-full touch-pan-y overflow-hidden ${className}`}
       style={{ aspectRatio }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -92,7 +92,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             onClick={handlePrevious}
             onKeyDown={(e) => handleKeyDown(e, handlePrevious)}
-            className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-opacity hover:bg-black/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50"
+            className="absolute top-1/2 left-2 hidden -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-opacity hover:bg-black/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50 md:block"
             aria-label="Previous image"
             tabIndex={0}
           >
@@ -116,7 +116,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             onClick={handleNext}
             onKeyDown={(e) => handleKeyDown(e, handleNext)}
-            className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-opacity hover:bg-black/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50"
+            className="absolute top-1/2 right-2 hidden -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-opacity hover:bg-black/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50 md:block"
             aria-label="Next image"
             tabIndex={0}
           >
@@ -149,10 +149,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
                   }
                 }}
                 className={`h-2 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "w-8 bg-white"
-                    : "w-2 bg-white/50 hover:bg-white/75"
+                  index === currentIndex ? "w-8" : "w-2"
                 }`}
+                style={{
+                  backgroundColor:
+                    index === currentIndex
+                      ? "var(--color-white)"
+                      : "var(--carousel-dot-bg)",
+                }}
                 aria-label={`Go to image ${index + 1}`}
                 tabIndex={0}
               />

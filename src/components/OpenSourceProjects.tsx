@@ -58,7 +58,12 @@ const OpenSourceProjects = ({ sectionId, className }: ProjectsProps) => {
                 delay={index * 0.1}
                 threshold={0.1}
               >
-                <article className="flex h-full flex-col overflow-hidden rounded-xl border border-(--surface-card-border) bg-white/10 [backdrop-filter:blur(12px)] transition-all duration-300 hover:border-blue-200/60">
+                <article
+                  className="flex h-full flex-col overflow-hidden rounded-xl border border-(--surface-card-border) [backdrop-filter:blur(12px)] transition-all duration-300"
+                  style={{
+                    background: "var(--project-card-bg)",
+                  }}
+                >
                   {/* Preview Area */}
                   {project.image && (
                     <ImageCarousel
