@@ -16,7 +16,7 @@ const Header = () => {
           <span>{navigation.logoPrimary}</span>
         </a>
         <nav
-          className="hidden items-center gap-10 md:flex"
+          className="hidden items-center gap-10 lg:flex"
           aria-label={navigation.ariaMenu}
         >
           {navigation.items.map((item) => (
