@@ -29,14 +29,7 @@ const HeroSection = () => {
           delay={0.2}
           className="order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 pt-4 lg:order-2 lg:mx-0 lg:max-w-none lg:pt-0"
         >
-          <div
-            className="group relative flex h-full max-h-[650px] min-h-0 w-full flex-col overflow-hidden rounded-3xl border p-4 backdrop-blur transition-all duration-500 sm:p-6"
-            style={{
-              borderColor: "var(--hero-card-border)",
-              background: "var(--hero-card-bg)",
-              boxShadow: "var(--hero-card-shadow)",
-            }}
-          >
+          <div className="group relative flex h-full max-h-[650px] min-h-0 w-full flex-col overflow-hidden rounded-3xl border border-(--hero-card-border) bg-(--hero-card-bg) p-4 [box-shadow:var(--hero-card-shadow)] backdrop-blur transition-all duration-500 hover:[box-shadow:var(--hero-card-shadow-hover)] sm:p-6">
             <div
               className="aspect-square min-h-0 w-full flex-1 rounded-2xl bg-cover bg-top shadow-lg lg:aspect-auto"
               style={{
@@ -84,14 +77,7 @@ const HeroSection = () => {
           className="order-2 flex w-full flex-col justify-center gap-6 text-center lg:order-1 lg:text-left"
         >
           <div className="flex flex-col items-center gap-6 lg:items-start">
-            <span
-              className="animate-shimmer hidden w-fit items-center gap-3 rounded-full border bg-linear-to-r bg-size-[200%_100%] px-5 py-2 text-xs font-semibold tracking-[0.32em] uppercase shadow-sm lg:inline-flex"
-              style={{
-                borderColor: "var(--badge-border)",
-                background: "var(--badge-bg)",
-                color: "var(--badge-text-color)",
-              }}
-            >
+            <span className="animate-shimmer hidden w-fit items-center gap-3 rounded-full border border-(--badge-border) bg-(--badge-bg) bg-linear-to-r bg-size-[200%_100%] px-5 py-2 text-xs font-semibold tracking-[0.32em] text-(--badge-text-color) uppercase shadow-sm lg:inline-flex">
               {hero.eyebrow}
             </span>
             <div className="leading-tight">

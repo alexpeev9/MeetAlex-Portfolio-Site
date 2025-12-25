@@ -149,14 +149,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
                   }
                 }}
                 className={`h-2 rounded-full transition-all ${
-                  index === currentIndex ? "w-8" : "w-2"
+                  index === currentIndex
+                    ? "w-8 bg-white"
+                    : "w-2 bg-(--carousel-dot-bg) hover:bg-(--carousel-dot-bg-hover)"
                 }`}
-                style={{
-                  backgroundColor:
-                    index === currentIndex
-                      ? "var(--color-white)"
-                      : "var(--carousel-dot-bg)",
-                }}
                 aria-label={`Go to image ${index + 1}`}
                 tabIndex={0}
               />

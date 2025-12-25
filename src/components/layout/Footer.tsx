@@ -4,13 +4,7 @@ import Text from "../ui/Text";
 const Footer = () => {
   const footer = getCopy().footer;
   return (
-    <footer
-      className="mt-12 border-t"
-      style={{
-        borderColor: "var(--surface-card-border)",
-        background: "var(--gradient-footer)",
-      }}
-    >
+    <footer className="mt-12 border-t border-(--surface-card-border) bg-[var(--gradient-footer)]">
       <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-center gap-6 px-6 py-10 text-sm lg:items-center lg:justify-between lg:px-0">
         <Text
           variant="bodySmall"

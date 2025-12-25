@@ -33,12 +33,7 @@ const Recommendations = ({ sectionId, className }: RecommendationsProps) => {
                 delay={index * 0.15}
                 threshold={0.1}
               >
-                <article
-                  className="flex h-full flex-col rounded-xl border border-(--surface-card-border) p-6 [backdrop-filter:blur(12px)] transition-all duration-300"
-                  style={{
-                    background: "var(--project-card-bg)",
-                  }}
-                >
+                <article className="flex h-full flex-col rounded-xl border border-(--surface-card-border) bg-(--project-card-bg) p-6 [backdrop-filter:blur(12px)] transition-all duration-300 hover:border-(--project-card-border-hover)">
                   <div className="flex flex-1 flex-col space-y-3">
                     <div>
                       <a

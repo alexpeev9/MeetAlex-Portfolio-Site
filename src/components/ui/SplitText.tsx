@@ -62,8 +62,7 @@ const SplitText = ({
       return children.split(" ").map((word, index, arr) => (
         <span
           key={index}
-          className="split-item inline-block opacity-0"
-          style={{ willChange: "transform, opacity" }}
+          className="split-item inline-block opacity-0 will-change-[transform,opacity]"
         >
           {word}
           {index < arr.length - 1 && "\u00A0"}
@@ -74,8 +73,7 @@ const SplitText = ({
     return children.split("").map((char, index) => (
       <span
         key={index}
-        className="split-item inline-block opacity-0"
-        style={{ willChange: "transform, opacity" }}
+        className="split-item inline-block opacity-0 will-change-[transform,opacity]"
       >
         {char === " " ? "\u00A0" : char}
       </span>

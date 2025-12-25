@@ -6,13 +6,7 @@ const Header = () => {
   const copy = getCopy();
   const navigation = copy.navigation;
   return (
-    <header
-      className="fixed top-0 z-40 w-full border-b backdrop-blur-xl transition-shadow duration-300"
-      style={{
-        background: "var(--surface-header)",
-        borderColor: "var(--surface-header-border)",
-      }}
-    >
+    <header className="fixed top-0 z-40 w-full border-b border-(--surface-header-border) bg-(--surface-header) backdrop-blur-xl transition-shadow duration-300">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-6 lg:py-6">
         <a
           href="#main"

@@ -92,10 +92,9 @@ const Aurora = ({
     <canvas
       ref={canvasRef}
       className={cn(
-        "pointer-events-none fixed inset-0 -z-10 h-full w-full",
+        "pointer-events-none fixed inset-0 -z-10 h-full w-full [filter:blur(80px)]",
         className
       )}
-      style={{ filter: "blur(80px)" }}
       aria-hidden="true"
     />
   );
