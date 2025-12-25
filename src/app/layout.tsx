@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
+import Beams from "../components/ui/Beams";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,18 +42,13 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="dark scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div
-          className="flex min-h-screen flex-col"
-          style={{
-            background: "var(--gradient-page)",
-            color: "var(--text-primary)",
-          }}
-          id="main"
-        >
+        <div className="flex min-h-screen flex-col" id="main">
+          {/* Beams Background */}
+          <Beams beamOpacity={0.12} speed={25} />
           <Header />
           {children}
           <Footer />

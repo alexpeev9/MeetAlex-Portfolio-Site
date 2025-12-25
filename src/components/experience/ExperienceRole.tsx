@@ -33,19 +33,12 @@ const ExperienceRole = ({
       {!isLast && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute top-6 left-[1.4rem] h-full w-px"
-          style={{
-            background: "var(--gradient-timeline)",
-          }}
+          className="pointer-events-none absolute top-6 left-[1.4rem] h-full w-px bg-[var(--gradient-timeline)]"
         />
       )}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute top-2 left-[0.85rem] h-3 w-3 rounded-full"
-        style={{
-          background: "var(--accent-primary)",
-          boxShadow: "var(--timeline-dot-shadow)",
-        }}
+        className="pointer-events-none absolute top-2 left-[0.85rem] h-3 w-3 rounded-full bg-(--accent-primary) [box-shadow:var(--timeline-dot-shadow)]"
       />
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">

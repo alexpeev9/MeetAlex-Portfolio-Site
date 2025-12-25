@@ -1,6 +1,6 @@
 import React from "react";
 
-type TextVariant =
+export type TextVariant =
   | "heading1"
   | "heading2"
   | "heading3"
@@ -27,21 +27,21 @@ type TextProps = {
   as?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div";
 };
 
+export const textVariantStyles: Record<TextVariant, string> = {
+  heading1:
+    "text-2xl lg:text-4xl lg:text-[3.5rem] font-semibold text-(--text-primary)",
+  heading2: "text-2xl md:text-3xl font-semibold text-(--text-primary)",
+  heading3: "text-xl font-semibold text-(--text-primary)",
+  heading4: "text-lg font-semibold text-(--text-primary)",
+  body: "text-base font-normal text-(--text-secondary)",
+  bodySmall: "text-sm font-normal text-(--text-secondary)",
+  caption:
+    "text-xs font-semibold text-(--text-muted) uppercase tracking-[0.28em]",
+  label: "text-sm font-semibold text-(--text-accent)",
+};
+
 const getVariantStyles = (variant: TextVariant): string => {
-  const variantMap: Record<TextVariant, string> = {
-    heading1:
-      "text-2xl lg:text-4xl lg:text-[3.5rem] font-semibold text-(--text-primary)",
-    heading2:
-      "text-2xl md:text-3xl font-semibold text-(--text-primary)",
-    heading3: "text-xl font-semibold text-(--text-primary)",
-    heading4: "text-lg font-semibold text-(--text-primary)",
-    body: "text-base font-normal text-(--text-secondary)",
-    bodySmall: "text-sm font-normal text-(--text-secondary)",
-    caption:
-      "text-xs font-semibold text-(--text-muted) uppercase tracking-[0.28em]",
-    label: "text-sm font-semibold text-(--text-accent)",
-  };
-  return variantMap[variant];
+  return textVariantStyles[variant];
 };
 
 const getColorClass = (color: TextColor): string => {

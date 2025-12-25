@@ -1,17 +1,12 @@
 import { getCopy } from "@/lib/getCopy";
 import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const Header = () => {
   const copy = getCopy();
   const navigation = copy.navigation;
   return (
-    <header
-      className="fixed top-0 z-40 w-full border-b backdrop-blur-xl transition-shadow duration-300"
-      style={{
-        background: "var(--surface-header)",
-        borderColor: "var(--surface-header-border)",
-      }}
-    >
+    <header className="fixed top-0 z-40 w-full border-b border-(--surface-header-border) bg-(--surface-header) backdrop-blur-xl transition-shadow duration-300">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5 lg:px-6 lg:py-6">
         <a
           href="#main"
@@ -21,7 +16,7 @@ const Header = () => {
           <span>{navigation.logoPrimary}</span>
         </a>
         <nav
-          className="hidden items-center gap-10 md:flex"
+          className="hidden items-center gap-10 lg:flex"
           aria-label={navigation.ariaMenu}
         >
           {navigation.items.map((item) => (
@@ -35,16 +30,19 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <Button
-          href={navigation.ctaUrl}
-          ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
-          buttonType="primary"
-          size="md"
-          className="md:inline-flex"
-          isWithIcon={false}
-        >
-          {navigation.cta}
-        </Button>
+        <div className="flex flex-row-reverse items-center gap-4 md:flex-row">
+          <ThemeToggle />
+          <Button
+            href={navigation.ctaUrl}
+            ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
+            buttonType="primary"
+            size="md"
+            className="md:inline-flex"
+            isWithIcon={false}
+          >
+            {navigation.cta}
+          </Button>
+        </div>
       </div>
     </header>
   );
