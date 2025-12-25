@@ -58,6 +58,7 @@ const HeroSection = () => {
                     ariaLabel={`Visit ${cv.contact.githubLabel} profile`}
                     iconSrc="/images/icons/github.webp"
                     iconAlt="GitHub logo"
+                    classNameIcon="dark:brightness-0 dark:invert"
                   />
                   <SocialLink
                     href={cv.contact.youtube}

@@ -6,6 +6,7 @@ type SocialLinkProps = {
   iconSrc: string;
   iconAlt: string;
   className?: string;
+  classNameIcon?: string;
 };
 
 const SocialLink = ({
@@ -14,6 +15,7 @@ const SocialLink = ({
   iconSrc,
   iconAlt,
   className = "",
+  classNameIcon = "",
 }: SocialLinkProps) => {
   return (
     <a
@@ -28,7 +30,7 @@ const SocialLink = ({
         alt={iconAlt}
         width={64}
         height={64}
-        className="h-8 w-8"
+        className={`h-8 w-8 ${classNameIcon}`}
       />
     </a>
   );
