@@ -22,14 +22,10 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="flex items-center justify-center rounded-lg p-2 text-(--text-nav) transition-colors duration-200 hover:bg-(--accent-muted) hover:text-(--text-nav-hover) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none"
+      className="flex cursor-pointer items-center justify-center rounded-lg p-2 text-(--text-nav) transition-colors duration-200 hover:text-(--text-nav-hover) focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--focus-ring-offset) focus-visible:outline-none"
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
     >
-      {isDark ? (
-        <Sun className="h-5 w-5" />
-      ) : (
-        <Moon className="h-5 w-5" />
-      )}
+      {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>
   );
 };

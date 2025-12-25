@@ -30,7 +30,7 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-row-reverse items-center gap-4 md:flex-row">
           <ThemeToggle />
           <Button
             href={navigation.ctaUrl}
