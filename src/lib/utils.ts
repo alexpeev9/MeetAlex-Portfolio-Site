@@ -60,21 +60,38 @@ const calculateDuration = (startDate: Date, endDate: Date): string => {
   return `${years} ${years === 1 ? "yr" : "yrs"} ${months} ${months === 1 ? "mo" : "mos"}`;
 };
 
-export const formatPeriodWithDuration = (period: string): string => {
-  const parts = period.split(" - ");
-  if (parts.length !== 2) return period;
+const formatDate = (date: Date): string => {
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+};
 
-  const startStr = parts[0].trim();
-  const endStr = parts[1].trim();
+export const formatPeriodWithDuration = (
+  startDateStr: string,
+  endDateStr: string | null,
+): string => {
+  const startDate = parseDate(startDateStr);
+  if (!startDate) return `${startDateStr} - ${endDateStr || "Present"}`;
 
-  const startDate = parseDate(startStr);
-  if (!startDate) return period;
+  const endDate = endDateStr ? parseDate(endDateStr) : new Date();
+  if (!endDate) return `${startDateStr} - ${endDateStr || "Present"}`;
 
-  const endDate =
-    endStr.toLowerCase() === "present" ? new Date() : parseDate(endStr);
-
-  if (!endDate) return period;
+  const periodStr = endDateStr
+    ? `${formatDate(startDate)} - ${formatDate(endDate)}`
+    : `${formatDate(startDate)} - Present`;
 
   const duration = calculateDuration(startDate, endDate);
-  return `${period} · ${duration}`;
+  return `${periodStr} · ${duration}`;
 };

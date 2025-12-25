@@ -7,7 +7,8 @@ type Role = {
   title: string;
   company: string;
   link?: string;
-  period: string;
+  startDate: string;
+  endDate: string | null;
   logo?: string;
   description?: string;
   highlights: string[];
@@ -49,7 +50,9 @@ const ExperienceRole = ({ role, ariaLabel }: ExperienceRoleProps) => {
             )}
           </div>
         </div>
-        <Text variant="caption">{formatPeriodWithDuration(role.period)}</Text>
+        <Text variant="caption">
+          {formatPeriodWithDuration(role.startDate, role.endDate)}
+        </Text>
       </div>
       {role.description && (
         <Text variant="bodySmall" className="leading-6">
