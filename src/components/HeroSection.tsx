@@ -6,7 +6,7 @@ import CountUp from "./ui/CountUp";
 import FadeContent from "./ui/FadeContent";
 import SocialLink from "./ui/SocialLink";
 import SplitText from "./ui/SplitText";
-import Text from "./ui/Text";
+import Text, { textVariantStyles } from "./ui/Text";
 
 const HeroSection = () => {
   const copy = getCopy();
@@ -85,25 +85,25 @@ const HeroSection = () => {
                 splitBy="words"
                 animation="fadeUp"
                 stagger={0.08}
-                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+                className={textVariantStyles.heading1}
               >
                 {hero.headline}
               </SplitText>
               <SplitText
                 splitBy="words"
                 animation="fadeUp"
-                delay={0.3}
+                delay={0.1}
                 stagger={0.08}
-                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+                className={textVariantStyles.heading1}
               >
                 {hero.headline2}
               </SplitText>
               <SplitText
                 splitBy="words"
                 animation="fadeUp"
-                delay={0.6}
+                delay={0.3}
                 stagger={0.08}
-                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+                className={textVariantStyles.heading1}
               >
                 {hero.headline3}
               </SplitText>
