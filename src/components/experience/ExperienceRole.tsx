@@ -1,3 +1,4 @@
+import { formatPeriodWithDuration } from "@/lib/utils";
 import Image from "next/image";
 import Tag from "../ui/Tag";
 import Text from "../ui/Text";
@@ -48,7 +49,7 @@ const ExperienceRole = ({ role, ariaLabel }: ExperienceRoleProps) => {
             )}
           </div>
         </div>
-        <Text variant="caption">{role.period}</Text>
+        <Text variant="caption">{formatPeriodWithDuration(role.period)}</Text>
       </div>
       {role.description && (
         <Text variant="bodySmall" className="leading-6">
