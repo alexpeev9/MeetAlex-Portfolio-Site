@@ -15,31 +15,12 @@ type Role = {
 
 type ExperienceRoleProps = {
   role: Role;
-  index: number;
-  total: number;
   ariaLabel: string;
 };
 
-const ExperienceRole = ({
-  role,
-  index,
-  total,
-  ariaLabel,
-}: ExperienceRoleProps) => {
-  const isLast = index === total - 1;
-
+const ExperienceRole = ({ role, ariaLabel }: ExperienceRoleProps) => {
   return (
-    <article className="relative space-y-3 pb-2 pl-12" aria-label={ariaLabel}>
-      {!isLast && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute top-6 left-[1.4rem] h-full w-px bg-[var(--gradient-timeline)]"
-        />
-      )}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-2 left-[0.85rem] h-3 w-3 rounded-full bg-(--accent-primary) [box-shadow:var(--timeline-dot-shadow)]"
-      />
+    <article className="relative space-y-3 pb-2" aria-label={ariaLabel}>
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
           {role.logo && (
