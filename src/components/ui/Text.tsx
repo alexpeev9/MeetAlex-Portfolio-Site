@@ -36,7 +36,7 @@ export const textVariantStyles: Record<TextVariant, string> = {
   body: "text-base font-normal text-(--text-secondary)",
   bodySmall: "text-sm font-normal text-(--text-secondary)",
   caption:
-    "text-xs font-semibold text-(--text-muted) uppercase tracking-[0.28em]",
+    "text-xs font-semibold text-(--text-secondary) uppercase tracking-[0.28em]",
   label: "text-sm font-semibold text-(--text-accent)",
 };
 

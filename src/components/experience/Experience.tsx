@@ -1,8 +1,6 @@
-"use client";
-
 import { getCopy } from "../../lib/getCopy";
-import Text from "../ui/Text";
 import FadeContent from "../ui/FadeContent";
+import Text from "../ui/Text";
 import ExperienceExpandable from "./ExperienceExpandable";
 import ExperienceRole from "./ExperienceRole";
 
@@ -26,8 +24,6 @@ const Experience = ({ sectionId, className }: ExperienceProps) => {
   const initialRoles = experience.roles.slice(0, 4);
   const remainingRoles = experience.roles.slice(4);
   const hasMore = remainingRoles.length > 0;
-  const totalRoles =
-    initialRoles.length + (hasMore ? remainingRoles.length : 0);
 
   return (
     <section id={sectionId} className={sectionClassName}>
@@ -44,8 +40,6 @@ const Experience = ({ sectionId, className }: ExperienceProps) => {
               >
                 <ExperienceRole
                   role={role}
-                  index={index}
-                  total={totalRoles}
                   ariaLabel={accessibility.experience}
                 />
               </FadeContent>

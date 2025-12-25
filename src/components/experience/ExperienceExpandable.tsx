@@ -5,7 +5,8 @@ type Role = {
   title: string;
   company: string;
   link?: string;
-  period: string;
+  startDate: string;
+  endDate: string | null;
   logo?: string;
   description?: string;
   highlights: string[];
@@ -44,12 +45,7 @@ const ExperienceExpandable = ({
               transitionDelay: `${index * 80 + 100}ms`,
             }}
           >
-            <ExperienceRole
-              role={role}
-              index={initialRolesCount + index}
-              total={totalRoles}
-              ariaLabel={ariaLabel}
-            />
+            <ExperienceRole role={role} ariaLabel={ariaLabel} />
           </div>
         ))}
       </div>
