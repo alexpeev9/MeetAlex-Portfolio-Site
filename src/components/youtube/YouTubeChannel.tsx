@@ -1,5 +1,3 @@
-"use client";
-
 import { getCopy } from "../../lib/getCopy";
 import Button from "../ui/Button";
 import FadeContent from "../ui/FadeContent";

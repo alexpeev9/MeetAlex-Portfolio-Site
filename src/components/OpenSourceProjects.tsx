@@ -1,5 +1,3 @@
-"use client";
-
 import { Fragment } from "react";
 import { getCopy } from "../lib/getCopy";
 import Button from "./ui/Button";

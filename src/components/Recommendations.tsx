@@ -1,5 +1,3 @@
-"use client";
-
 import { getCopy } from "../lib/getCopy";
 import FadeContent from "./ui/FadeContent";
 import Text from "./ui/Text";
