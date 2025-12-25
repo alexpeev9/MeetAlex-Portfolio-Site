@@ -4,7 +4,7 @@ import { Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const handleToggle = () => {
     const htmlElement = document.documentElement;
