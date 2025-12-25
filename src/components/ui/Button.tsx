@@ -37,7 +37,7 @@ const getVariantStyles = (
     primary:
       "bg-(--accent-primary) text-(--action-text) transition duration-300 hover:-translate-y-0.5 hover:bg-(--accent-primary-hover)",
     secondary:
-      "bg-white border border-(--accent-primary) text-(--accent-primary) transition duration-300 hover:-translate-y-0.5 hover:border-(--accent-primary-hover) hover:text-(--accent-primary-hover)",
+      "bg-white dark:bg-transparent border border-(--accent-primary) text-(--accent-primary) transition duration-300 hover:-translate-y-0.5 hover:border-(--accent-primary-hover) hover:text-(--accent-primary-hover)",
     outline:
       "border border-(--accent-primary) bg-transparent text-(--accent-primary) transition duration-300 hover:-translate-y-0.5 hover:bg-(--accent-primary)/10",
   };

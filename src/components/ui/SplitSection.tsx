@@ -1,4 +1,5 @@
 import { ComponentType } from "react";
+import FadeContent from "./FadeContent";
 
 type SplitSectionProps = {
   sectionId?: string;
@@ -23,18 +24,20 @@ const SplitSection = ({
     .join(" ");
 
   return (
-    <div id={sectionId} className={sectionClassName}>
-      <FirstComponent
-        className={
-          isSecondComponentHiddenOnMobile ? "pt-0" : "hidden pt-0 lg:block"
-        }
-      />
-      <SecondComponent
-        className={
-          isSecondComponentHiddenOnMobile ? "hidden pt-0 lg:block" : "pt-0"
-        }
-      />
-    </div>
+    <FadeContent direction="up" threshold={0.1}>
+      <div id={sectionId} className={sectionClassName}>
+        <FirstComponent
+          className={
+            isSecondComponentHiddenOnMobile ? "pt-0" : "hidden pt-0 lg:block"
+          }
+        />
+        <SecondComponent
+          className={
+            isSecondComponentHiddenOnMobile ? "hidden pt-0 lg:block" : "pt-0"
+          }
+        />
+      </div>
+    </FadeContent>
   );
 };
 

@@ -31,7 +31,8 @@
   "hero": {
     "eyebrow": "Meet Alex",
     "headline": "Developer with",
-    "headline2": "5+ years of experience",
+    "headline2": "5+ years of",
+    "headline3": "experience",
     "subheadline": "Working a 9-5 as a Web Developer while also supporting and developing company and client websites.",
     "primaryCta": "Download CV",
     "secondaryCta": "View Experience",
@@ -78,19 +79,6 @@
           "stack": ["React", "TypeScript", "React Query", "Tailwind CSS"]
         },
         {
-          "title": "Fullstack Developer",
-          "company": "C4 Nexus Ltd",
-          "link": "https://c4nexus.com",
-          "period": "Dec 2022 - May 2024",
-          "logo": "/images/companies/c4nexus.webp",
-          "description": "Built and maintained both back-end and front-end features using JavaScript and React.",
-          "highlights": [
-            "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
-            "Worked as a part of a multinational team while following the Scrum methodology."
-          ],
-          "stack": ["React", "JavaScript", "Salesforce", "SASS"]
-        },
-        {
           "title": "Contract Developer",
           "company": "Self-Employed",
           "period": "Apr 2022 - Present",
@@ -102,6 +90,19 @@
             "Create and support an e-commerce site using Shopify, Liquid, and JavaScript."
           ],
           "stack": ["Next.js", "Tailwind CSS", "PostgreSQL"]
+        },
+        {
+          "title": "Fullstack Developer",
+          "company": "C4 Nexus Ltd",
+          "link": "https://c4nexus.com",
+          "period": "Dec 2022 - May 2024",
+          "logo": "/images/companies/c4nexus.webp",
+          "description": "Built and maintained both back-end and front-end features using JavaScript and React.",
+          "highlights": [
+            "Worked on two e-commerce projects: SFRA application, and a React PWA Kit application.",
+            "Worked as a part of a multinational team while following the Scrum methodology."
+          ],
+          "stack": ["React", "JavaScript", "Salesforce", "SASS"]
         },
         {
           "title": "University Assistant",
