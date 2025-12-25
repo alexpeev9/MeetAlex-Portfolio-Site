@@ -1,4 +1,7 @@
+"use client";
+
 import { getCopy } from "../../lib/getCopy";
+import FadeContent from "../ui/FadeContent";
 import Text from "../ui/Text";
 import CvEducationItem from "./EducationItem";
 
@@ -17,29 +20,43 @@ const Education = ({ className }: EducationProps) => {
 
   return (
     <section className={sectionClassName}>
-      <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
-        <Text variant="heading2">{education.title}</Text>
-        <div className="grid gap-4">
-          {education.items.map((item) => (
-            <CvEducationItem
-              key={`${item.title}-${item.subtitle}`}
-              item={item}
-              linkAriaLabel={accessibility.educationLink}
-            />
-          ))}
+      <FadeContent direction="up" threshold={0.1}>
+        <div className="h-full space-y-6 rounded-[1.75rem] border border-(--surface-card-border) bg-(--surface-card) px-4 py-8 [box-shadow:var(--surface-card-shadow)] [backdrop-filter:blur(18px)] lg:p-10">
+          <Text variant="heading2">{education.title}</Text>
+          <div className="grid gap-4">
+            {education.items.map((item, index) => (
+              <FadeContent
+                key={`${item.title}-${item.subtitle}`}
+                direction="left"
+                delay={index * 0.1}
+                threshold={0.1}
+              >
+                <CvEducationItem
+                  item={item}
+                  linkAriaLabel={accessibility.educationLink}
+                />
+              </FadeContent>
+            ))}
+          </div>
+          <hr className="my-4 h-px border-0 bg-(--text-accent)/20" />
+          <Text variant="heading2">{certifications.title}</Text>
+          <div className="grid gap-4">
+            {certifications.items.map((item, index) => (
+              <FadeContent
+                key={`${item.title}-${item.subtitle}`}
+                direction="left"
+                delay={index * 0.1}
+                threshold={0.1}
+              >
+                <CvEducationItem
+                  item={item}
+                  linkAriaLabel={accessibility.certificationLink}
+                />
+              </FadeContent>
+            ))}
+          </div>
         </div>
-        <hr className="my-4 h-px border-0 bg-(--text-accent)/20" />
-        <Text variant="heading2">{certifications.title}</Text>
-        <div className="grid gap-4">
-          {certifications.items.map((item) => (
-            <CvEducationItem
-              key={`${item.title}-${item.subtitle}`}
-              item={item}
-              linkAriaLabel={accessibility.certificationLink}
-            />
-          ))}
-        </div>
-      </div>
+      </FadeContent>
     </section>
   );
 };
