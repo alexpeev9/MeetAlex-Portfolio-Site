@@ -1,5 +1,6 @@
 import { getCopy } from "@/lib/getCopy";
 import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const Header = () => {
   const copy = getCopy();
@@ -35,16 +36,19 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <Button
-          href={navigation.ctaUrl}
-          ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
-          buttonType="primary"
-          size="md"
-          className="md:inline-flex"
-          isWithIcon={false}
-        >
-          {navigation.cta}
-        </Button>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <Button
+            href={navigation.ctaUrl}
+            ariaLabel={`${navigation.ariaItemPrefix} ${navigation.cta}`}
+            buttonType="primary"
+            size="md"
+            className="md:inline-flex"
+            isWithIcon={false}
+          >
+            {navigation.cta}
+          </Button>
+        </div>
       </div>
     </header>
   );

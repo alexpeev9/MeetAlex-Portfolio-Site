@@ -4,23 +4,81 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --surface-muted: #e6e6e6;
-  --surface-card: rgba(255, 255, 255, 0.92);
+  /* ============================================
+     BASE COLORS
+     ============================================ */
+  --color-blue-primary: #1e6fe8;
+  --color-blue-primary-hover: #1a5fcc;
+  --color-blue-light: #5fa8ff;
+  --color-blue-lighter: #b8d9ff;
+  --color-blue-lightest: #8fc2ff;
+  --color-blue-pale: #d4e7ff;
+  --color-blue-pale-light: #e8f4ff;
+
+  --color-text-dark: #19191a;
+  --color-text-dark-85: rgba(25, 25, 26, 0.85);
+  --color-text-dark-82: rgba(25, 25, 26, 0.82);
+  --color-text-dark-70: rgba(25, 25, 26, 0.7);
+  --color-text-dark-65: rgba(25, 25, 26, 0.65);
+  --color-text-dark-60: rgba(25, 25, 26, 0.6);
+
+  --color-white: #ffffff;
+  --color-white-98: rgba(255, 255, 255, 0.98);
+  --color-white-95: rgba(255, 255, 255, 0.95);
+  --color-white-92: rgba(255, 255, 255, 0.92);
+  --color-white-88: rgba(255, 255, 255, 0.88);
+  --color-white-85: rgba(255, 255, 255, 0.85);
+
+  --color-gray-light: #e6e6e6;
+
+  /* ============================================
+     ACCENT COLORS (using base colors)
+     ============================================ */
+  --accent-primary: var(--color-blue-primary);
+  --accent-primary-hover: var(--color-blue-primary-hover);
+  --accent-muted: rgba(30, 111, 232, 0.18);
+  --accent-tag-bg: rgba(184, 217, 255, 0.6);
+
+  /* ============================================
+     TEXT COLORS (using base colors)
+     ============================================ */
+  --text-primary: var(--color-text-dark);
+  --text-secondary: var(--color-text-dark-85);
+  --text-tertiary: var(--color-text-dark-70);
+  --text-muted: var(--color-text-dark-60);
+  --text-accent: var(--color-blue-primary);
+  --text-accent-strong: var(--color-blue-primary-hover);
+  --text-nav: var(--color-blue-primary-hover);
+  --text-nav-hover: var(--color-blue-primary);
+  --text-footer: var(--color-text-dark-82);
+  --text-footer-muted: var(--color-text-dark-65);
+  --badge-text: var(--color-blue-primary);
+  --action-text: var(--color-white);
+
+  /* ============================================
+     SURFACE COLORS (using base colors)
+     ============================================ */
+  --surface-muted: var(--color-gray-light);
+  --surface-card: var(--color-white-92);
   --surface-card-border: rgba(30, 111, 232, 0.32);
   --surface-card-shadow: 0 22px 60px -32px rgba(30, 111, 232, 0.2);
-  --surface-header: rgba(255, 255, 255, 0.88);
+  --surface-header: var(--color-white-88);
   --surface-header-border: rgba(30, 111, 232, 0.42);
+
+  /* ============================================
+     GRADIENTS (using base colors)
+     ============================================ */
   --gradient-page: linear-gradient(
     135deg,
-    #ffffff 0%,
-    #b8d9ff 25%,
-    #8fc2ff 50%,
-    #b8d9ff 75%,
-    #ffffff 100%
+    var(--color-white) 0%,
+    var(--color-blue-lighter) 25%,
+    var(--color-blue-lightest) 50%,
+    var(--color-blue-lighter) 75%,
+    var(--color-white) 100%
   );
   --gradient-footer: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.98),
+    var(--color-white-98),
     rgba(184, 217, 255, 0.95)
   );
   --gradient-timeline: linear-gradient(
@@ -28,31 +86,27 @@
     rgba(30, 111, 232, 0.25),
     rgba(95, 168, 255, 0.15)
   );
-  --accent-primary: #1e6fe8;
-  --accent-primary-hover: #1a5fcc;
-  --accent-muted: rgba(30, 111, 232, 0.18);
-  --accent-tag-bg: rgba(184, 217, 255, 0.6);
-  --text-primary: #19191a;
-  --text-secondary: rgba(25, 25, 26, 0.85);
-  --text-tertiary: rgba(25, 25, 26, 0.7);
-  --text-muted: rgba(25, 25, 26, 0.6);
-  --text-accent: #1e6fe8;
-  --text-accent-strong: #1a5fcc;
-  --text-nav: #1a5fcc;
-  --text-nav-hover: #1e6fe8;
-  --text-footer: rgba(25, 25, 26, 0.82);
-  --text-footer-muted: rgba(25, 25, 26, 0.65);
-  --badge-text: #1e6fe8;
-  --action-text: #ffffff;
+
+  /* ============================================
+     UI COLORS (using base colors)
+     ============================================ */
   --focus-ring: rgba(30, 111, 232, 0.6);
-  --focus-ring-offset: #ffffff;
+  --focus-ring-offset: var(--color-white);
   --timeline-dot-shadow: 0 0 0 4px rgba(30, 111, 232, 0.2);
   --scrollbar-track: rgba(184, 217, 255, 0.4);
   --scrollbar-thumb: rgba(143, 194, 255, 0.7);
   --scrollbar-thumb-hover: rgba(143, 194, 255, 0.9);
-  --scrollbar-thumb-firefox: #8fc2ff;
-  --scrollbar-track-firefox: #d4e7ff;
+  --scrollbar-thumb-firefox: var(--color-blue-lightest);
+  --scrollbar-track-firefox: var(--color-blue-pale);
+
+  /* ============================================
+     SPACING & LAYOUT
+     ============================================ */
   --radius: 0.625rem;
+
+  /* ============================================
+     THEME COLORS (Tailwind/Shadcn)
+     ============================================ */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -95,75 +149,43 @@
   --section-height: calc(min(100svh, 100vh));
 
   --color-sidebar-ring: var(--sidebar-ring);
-
   --color-sidebar-border: var(--sidebar-border);
-
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-
   --color-sidebar-accent: var(--sidebar-accent);
-
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-
   --color-sidebar-primary: var(--sidebar-primary);
-
   --color-sidebar-foreground: var(--sidebar-foreground);
-
   --color-sidebar: var(--sidebar);
 
   --color-chart-5: var(--chart-5);
-
   --color-chart-4: var(--chart-4);
-
   --color-chart-3: var(--chart-3);
-
   --color-chart-2: var(--chart-2);
-
   --color-chart-1: var(--chart-1);
 
   --color-ring: var(--ring);
-
   --color-input: var(--input);
-
   --color-border: var(--border);
-
   --color-destructive: var(--destructive);
-
   --color-accent-foreground: var(--accent-foreground);
-
   --color-accent: var(--accent);
-
   --color-muted-foreground: var(--muted-foreground);
-
   --color-muted: var(--muted);
-
   --color-secondary-foreground: var(--secondary-foreground);
-
   --color-secondary: var(--secondary);
-
   --color-primary-foreground: var(--primary-foreground);
-
   --color-primary: var(--primary);
-
   --color-popover-foreground: var(--popover-foreground);
-
   --color-popover: var(--popover);
-
   --color-card-foreground: var(--card-foreground);
-
   --color-card: var(--card);
 
   --radius-sm: calc(var(--radius) - 4px);
-
   --radius-md: calc(var(--radius) - 2px);
-
   --radius-lg: var(--radius);
-
   --radius-xl: calc(var(--radius) + 4px);
-
   --radius-2xl: calc(var(--radius) + 8px);
-
   --radius-3xl: calc(var(--radius) + 12px);
-
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
@@ -349,7 +371,7 @@ body {
 }
 
 .animate-gradient-text {
-  background: linear-gradient(90deg, #1e6fe8, #5fa8ff, #1a5fcc, #1e6fe8);
+  background: linear-gradient(90deg, var(--color-blue-primary), var(--color-blue-light), var(--color-blue-primary-hover), var(--color-blue-primary));
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -358,6 +380,7 @@ body {
 }
 
 .dark {
+  /* Theme Colors */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -389,6 +412,33 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Dark Mode Gradients */
+  --gradient-page: linear-gradient(
+    135deg,
+    oklch(0.145 0 0) 0%,
+    oklch(0.2 0.05 250) 25%,
+    oklch(0.25 0.08 240) 50%,
+    oklch(0.2 0.05 250) 75%,
+    oklch(0.145 0 0) 100%
+  );
+  --gradient-footer: linear-gradient(
+    180deg,
+    oklch(0.145 0 0),
+    oklch(0.2 0.05 250)
+  );
+
+  /* Dark Mode Text Colors */
+  --text-primary: oklch(0.985 0 0);
+  --text-secondary: oklch(0.85 0 0);
+  --text-tertiary: oklch(0.7 0 0);
+  --text-muted: oklch(0.6 0 0);
+  --text-footer: oklch(0.82 0 0);
+  --text-footer-muted: oklch(0.65 0 0);
+
+  /* Dark Mode Surface Colors */
+  --surface-card: oklch(0.205 0 0 / 0.8);
+  --surface-header: oklch(0.205 0 0 / 0.9);
 }
 
 @layer base {
