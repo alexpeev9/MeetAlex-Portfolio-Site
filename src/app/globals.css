@@ -13,7 +13,6 @@
   --color-blue-lighter: #b8d9ff;
   --color-blue-lightest: #8fc2ff;
   --color-blue-pale: #d4e7ff;
-  --color-blue-pale-light: #e8f4ff;
 
   --color-text-dark: #19191a;
   --color-text-dark-85: rgba(25, 25, 26, 0.85);
@@ -29,8 +28,6 @@
   --color-white-88: rgba(255, 255, 255, 0.88);
   --color-white-85: rgba(255, 255, 255, 0.85);
 
-  --color-gray-light: #e6e6e6;
-
   /* ============================================
      ACCENT COLORS (using base colors)
      ============================================ */
@@ -44,7 +41,6 @@
      ============================================ */
   --text-primary: var(--color-text-dark);
   --text-secondary: var(--color-text-dark-85);
-  --text-tertiary: var(--color-text-dark-70);
   --text-muted: var(--color-text-dark-60);
   --text-accent: var(--color-blue-primary);
   --text-accent-strong: var(--color-blue-primary-hover);
@@ -58,7 +54,6 @@
   /* ============================================
      SURFACE COLORS (using base colors)
      ============================================ */
-  --surface-muted: var(--color-gray-light);
   --surface-card: var(--color-white-92);
   --surface-card-border: rgba(30, 111, 232, 0.32);
   --surface-card-shadow: 0 22px 60px -32px rgba(30, 111, 232, 0.2);
@@ -110,7 +105,6 @@
   --hero-card-bg: rgba(255, 255, 255, 0.85);
   --hero-card-border: rgba(184, 217, 255, 0.8);
   --hero-card-shadow: 0 30px 80px -35px rgba(30, 111, 232, 0.3);
-  --hero-card-shadow-hover: 0 40px 100px -35px rgba(30, 111, 232, 0.4);
   --project-card-bg: rgba(255, 255, 255, 0.1);
   --project-card-border-hover: rgba(184, 217, 255, 0.6);
   --badge-bg: rgba(184, 217, 255, 0.6);
@@ -236,84 +230,6 @@ body {
   scrollbar-color: var(--scrollbar-thumb-firefox) var(--scrollbar-track-firefox);
 }
 
-@keyframes fade-slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-fade-in {
-  opacity: 0;
-  animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.hero-fade-in-delayed {
-  opacity: 0;
-  animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
-}
-
-/* Modern floating animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-20px) translateX(10px);
-  }
-  50% {
-    transform: translateY(-10px) translateX(-5px);
-  }
-  75% {
-    transform: translateY(-25px) translateX(5px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(15px) translateX(-10px);
-  }
-  50% {
-    transform: translateY(-20px) translateX(8px);
-  }
-  75% {
-    transform: translateY(10px) translateX(-5px);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0) translateX(0) scale(1);
-  }
-  33% {
-    transform: translateY(-15px) translateX(15px) scale(1.05);
-  }
-  66% {
-    transform: translateY(10px) translateX(-10px) scale(0.95);
-  }
-}
-
-.animate-float {
-  animation: float 12s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 15s ease-in-out infinite;
-  animation-delay: -5s;
-}
-
-.animate-float-slow {
-  animation: float-slow 20s ease-in-out infinite;
-  animation-delay: -8s;
-}
-
 /* Shimmer animation for badges */
 @keyframes shimmer {
   0% {
@@ -326,72 +242,6 @@ body {
 
 .animate-shimmer {
   animation: shimmer 8s linear infinite;
-}
-
-/* Scroll indicator animations */
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(4px);
-  }
-}
-
-@keyframes scroll-indicator {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(16px);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 2s ease-in-out infinite;
-}
-
-.animate-scroll-indicator {
-  animation: scroll-indicator 2s ease-in-out infinite;
-}
-
-/* Glow pulse for interactive elements */
-@keyframes glow-pulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(30, 111, 232, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(30, 111, 232, 0.4);
-  }
-}
-
-.animate-glow-pulse {
-  animation: glow-pulse 3s ease-in-out infinite;
-}
-
-/* Gradient text animation */
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient-text {
-  background: linear-gradient(90deg, var(--color-blue-primary), var(--color-blue-light), var(--color-blue-primary-hover), var(--color-blue-primary));
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradient-shift 6s ease-in-out infinite;
 }
 
 /* Beam animation for hero background */
@@ -453,7 +303,6 @@ body {
   --color-blue-lighter: #a8d0ff;
   --color-blue-lightest: #b8d9ff;
   --color-blue-pale: #1a2a3a;
-  --color-blue-pale-light: #1e3244;
 
   --color-text-dark: oklch(0.98 0 0);
   --color-text-dark-85: oklch(0.9 0 0);
@@ -469,8 +318,6 @@ body {
   --color-white-88: oklch(0.88 0 0);
   --color-white-85: oklch(0.85 0 0);
 
-  --color-gray-light: oklch(0.3 0 0);
-
   /* Dark Mode Accent Colors */
   --accent-primary: var(--color-blue-primary);
   --accent-primary-hover: var(--color-blue-primary-hover);
@@ -480,7 +327,6 @@ body {
   /* Dark Mode Text Colors */
   --text-primary: oklch(0.98 0 0);
   --text-secondary: oklch(0.88 0 0);
-  --text-tertiary: oklch(0.8 0 0);
   --text-muted: oklch(0.7 0 0);
   --text-accent: var(--color-blue-primary);
   --text-accent-strong: var(--color-blue-primary-hover);
@@ -492,7 +338,6 @@ body {
   --action-text: oklch(0.12 0 0);
 
   /* Dark Mode Surface Colors */
-  --surface-muted: oklch(0.25 0 0);
   --surface-card: oklch(0.18 0 0 / 0.95);
   --surface-card-border: rgba(95, 168, 255, 0.25);
   --surface-card-shadow: 0 22px 60px -32px rgba(0, 0, 0, 0.5);
@@ -533,7 +378,6 @@ body {
   --hero-card-bg: oklch(0.2 0 0 / 0.9);
   --hero-card-border: rgba(95, 168, 255, 0.2);
   --hero-card-shadow: 0 30px 80px -35px rgba(0, 0, 0, 0.6);
-  --hero-card-shadow-hover: 0 40px 100px -35px rgba(95, 168, 255, 0.3);
   --project-card-bg: oklch(0.2 0 0 / 0.6);
   --project-card-border-hover: rgba(95, 168, 255, 0.4);
   --badge-bg: rgba(95, 168, 255, 0.15);
