@@ -1,17 +1,35 @@
+"use client";
+
 import { getCopy } from "@/lib/getCopy";
 import Button from "./ui/Button";
+import CountUp from "./ui/CountUp";
+import FadeContent from "./ui/FadeContent";
 import SocialLink from "./ui/SocialLink";
+import SplitText from "./ui/SplitText";
 import Text from "./ui/Text";
 
 const HeroSection = () => {
   const copy = getCopy();
   const { hero, cv } = copy;
 
+  const parseMetricValue = (value: string): { num: number; suffix: string } => {
+    const match = value.match(/^(\d+)(.*)$/);
+    if (match) {
+      return { num: parseInt(match[1], 10), suffix: match[2] };
+    }
+    return { num: 0, suffix: value };
+  };
+
   return (
-    <section className="relative isolate flex h-full w-full items-center justify-center px-4 pt-[4.8rem] sm:px-6 lg:h-(--section-height) lg:pt-21">
+    <section className="relative isolate flex h-full w-full items-center justify-center overflow-hidden px-4 pt-[4.8rem] sm:px-6 lg:h-(--section-height) lg:pt-21">
       <div className="relative z-10 grid h-full w-full max-w-6xl gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:py-6">
-        <div className="hero-fade-in-delayed order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 pt-4 lg:order-2 lg:mx-0 lg:max-w-none lg:pt-0">
-          <div className="flex h-full max-h-[650px] min-h-0 w-full flex-col rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur sm:p-6">
+        {/* Profile Card */}
+        <FadeContent
+          direction="right"
+          delay={0.2}
+          className="order-1 mx-auto flex h-full w-full max-w-100 flex-col items-center justify-center gap-4 pt-4 lg:order-2 lg:mx-0 lg:max-w-none lg:pt-0"
+        >
+          <div className="group relative flex h-full max-h-[650px] min-h-0 w-full flex-col overflow-hidden rounded-3xl border border-blue-100 bg-white/85 p-4 shadow-[0_30px_80px_-35px_rgba(30,111,232,0.3)] backdrop-blur transition-all duration-500 hover:shadow-[0_40px_100px_-35px_rgba(30,111,232,0.4)] sm:p-6">
             <div
               className="aspect-square min-h-0 w-full flex-1 rounded-2xl bg-cover bg-top shadow-lg lg:aspect-auto"
               style={{
@@ -51,37 +69,83 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="hero-fade-in order-2 flex w-full flex-col justify-center gap-6 text-center lg:order-1 lg:text-left">
+        </FadeContent>
+
+        {/* Text Content */}
+        <FadeContent
+          direction="left"
+          className="order-2 flex w-full flex-col justify-center gap-6 text-center lg:order-1 lg:text-left"
+        >
           <div className="flex flex-col items-center gap-6 lg:items-start">
-            <span className="hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
+            <span className="animate-shimmer hidden w-fit items-center gap-3 rounded-full border border-blue-200 bg-linear-to-r from-white/70 via-blue-50/80 to-white/70 bg-size-[200%_100%] px-5 py-2 text-xs font-semibold tracking-[0.32em] text-blue-500 uppercase shadow-sm lg:inline-flex">
               {hero.eyebrow}
             </span>
-            <Text
-              variant="heading1"
-              className="text-center leading-tight lg:text-left"
-            >
-              {hero.headline}
-              <br />
-              {hero.headline2}
-            </Text>
+            <div className="leading-tight">
+              <SplitText
+                splitBy="words"
+                animation="fadeUp"
+                stagger={0.08}
+                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+              >
+                {hero.headline}
+              </SplitText>
+              <SplitText
+                splitBy="words"
+                animation="fadeUp"
+                delay={0.3}
+                stagger={0.08}
+                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+              >
+                {hero.headline2}
+              </SplitText>
+              <SplitText
+                splitBy="words"
+                animation="fadeUp"
+                delay={0.6}
+                stagger={0.08}
+                className="text-center text-[2rem] font-bold tracking-tight text-(--text-primary) sm:text-4xl lg:text-left lg:text-5xl"
+              >
+                {hero.headline3}
+              </SplitText>
+            </div>
           </div>
+
+          {/* Animated Metrics */}
           <div className="flex flex-col gap-12 lg:flex-row lg:pt-0">
-            {hero.metrics.map((metric) => (
-              <div key={metric.label} className="flex flex-col gap-2">
-                <Text variant="heading2" size="3xl">
-                  {metric.value}
-                </Text>
-                <Text
-                  variant="caption"
-                  className="px-10 tracking-[0.26em] lg:px-0"
+            {hero.metrics.map((metric, index) => {
+              const { num, suffix } = parseMetricValue(metric.value);
+              return (
+                <FadeContent
+                  key={metric.label}
+                  direction="up"
+                  delay={0.4 + index * 0.15}
+                  className="flex flex-col gap-2"
                 >
-                  {metric.label}
-                </Text>
-              </div>
-            ))}
+                  <Text variant="heading2" size="3xl">
+                    <CountUp
+                      end={num}
+                      duration={2000}
+                      delay={600 + index * 200}
+                      suffix={suffix}
+                    />
+                  </Text>
+                  <Text
+                    variant="caption"
+                    className="px-10 tracking-[0.26em] lg:px-0"
+                  >
+                    {metric.label}
+                  </Text>
+                </FadeContent>
+              );
+            })}
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-6 lg:justify-start lg:pt-0">
+
+          {/* CTA Buttons */}
+          <FadeContent
+            direction="up"
+            delay={0.8}
+            className="flex flex-wrap items-center justify-center gap-4 pt-6 lg:justify-start lg:pt-0"
+          >
             <Button
               download={hero.primaryCtaUrl}
               href={hero.primaryCtaUrl}
@@ -89,23 +153,20 @@ const HeroSection = () => {
               buttonType="primary"
               size="lg"
               isExternal={true}
-              className="w-68 tracking-[0.2em] uppercase"
+              className="group relative w-68 overflow-hidden tracking-[0.2em] uppercase transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
             >
-              {hero.primaryCta}
+              <span className="relative z-10">{hero.primaryCta}</span>
             </Button>
-            {/* <Button
-              href={hero.secondaryCtaUrl}
-              ariaLabel={hero.secondaryCta}
-              buttonType="secondary"
-              size="lg"
-              isExternal={false}
-              className="w-68 tracking-[0.2em] uppercase"
-            >
-              {hero.secondaryCta}
-            </Button> */}
-          </div>
-        </div>
+          </FadeContent>
+        </FadeContent>
       </div>
+
+      {/* Scroll indicator */}
+      {/* <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex">
+        <div className="animate-bounce-slow h-12 w-6 rounded-full border-2 border-blue-300/50 p-1">
+          <div className="animate-scroll-indicator h-2 w-full rounded-full bg-blue-400/60" />
+        </div>
+      </div> */}
     </section>
   );
 };
