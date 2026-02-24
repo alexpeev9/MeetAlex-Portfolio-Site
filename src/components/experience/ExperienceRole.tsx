@@ -1,5 +1,5 @@
-import { formatPeriodWithDuration } from "@/lib/utils";
 import Image from "next/image";
+import PeriodDisplay from "./PeriodDisplay";
 import Tag from "../ui/Tag";
 import Text from "../ui/Text";
 
@@ -50,9 +50,7 @@ const ExperienceRole = ({ role, ariaLabel }: ExperienceRoleProps) => {
             )}
           </div>
         </div>
-        <Text variant="caption">
-          {formatPeriodWithDuration(role.startDate, role.endDate)}
-        </Text>
+        <PeriodDisplay startDate={role.startDate} endDate={role.endDate} />
       </div>
       {role.description && (
         <Text variant="bodySmall" className="leading-6">

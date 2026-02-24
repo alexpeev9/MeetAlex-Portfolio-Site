@@ -25,6 +25,7 @@ type TextProps = {
   className?: string;
   children: React.ReactNode;
   as?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div";
+  suppressHydrationWarning?: boolean;
 };
 
 export const textVariantStyles: Record<TextVariant, string> = {
@@ -106,6 +107,7 @@ const Text: React.FC<TextProps> = ({
   className = "",
   children,
   as,
+  suppressHydrationWarning,
 }) => {
   const tag = as || getDefaultTag(variant);
 
@@ -120,7 +122,10 @@ const Text: React.FC<TextProps> = ({
     .filter(Boolean)
     .join(" ");
 
-  return React.createElement(tag, { className: classes }, children);
+  return React.createElement(tag, {
+    className: classes,
+    suppressHydrationWarning,
+  }, children);
 };
 
 export default Text;
