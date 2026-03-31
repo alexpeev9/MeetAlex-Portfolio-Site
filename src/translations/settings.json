@@ -355,5 +355,68 @@
   "accessibility": {
     "primaryCta": "Schedule a call with Alexandar Peev",
     "secondaryCta": "View recent React work"
+  },
+  "connect": {
+    "process": {
+      "title": "What is the process?",
+      "description": "First, we'll have a call to get to know each other. Then I'll prepare a contract and start working. When the project is finished, we'll have a call to make any changes you want and then I'll launch your site.",
+      "steps": {
+        "consultation": {
+          "number": "01",
+          "title": "Free Consultation",
+          "description": "Tell me your project needs"
+        },
+        "development": {
+          "number": "02",
+          "title": "Development",
+          "description": "I design and build it"
+        },
+        "launch": {
+          "number": "03",
+          "title": "Deploy & Go Live",
+          "description": "Your site is ready"
+        }
+      }
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I'm a passionate web developer who loves creating beautiful websites. Based in the Balkans, I serve clients worldwide with high-quality, professional web solutions.",
+      "features": {
+        "customMade": {
+          "title": "Custom Made",
+          "description": "Every website is designed to fit your brand and goals."
+        },
+        "fastDelivery": {
+          "title": "Fast Delivery",
+          "description": "Quick and friendly support whenever you need help."
+        },
+        "fastSite": {
+          "title": "Fast Site",
+          "description": "Your website will load instantly for every visitor."
+        },
+        "bestSecurity": {
+          "title": "Best Security",
+          "description": "Your website is built with the latest technologies."
+        }
+      }
+    },
+    "portfolio": {
+      "title": "My Portfolio",
+      "description": "See how I've helped solo entrepreneurs and companies build beautiful websites that attract customers and grow online.",
+      "projects": {
+        "ecommerce": {
+          "title": "Ecommerce Site",
+          "type": "Company Site",
+          "description": "This site supports purchases."
+        },
+        "showcase": {
+          "title": "Company Showcase",
+          "type": "Showcase",
+          "description": "Elegant showcase site highlighting products and services. Responsive design with smooth animations."
+        }
+      },
+      "placeholderText": "Project Preview",
+      "viewSiteButton": "View Site"
+    }
   }
 }
